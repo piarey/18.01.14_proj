@@ -1,3 +1,52 @@
+@charset "utf-8";
+
+/* 나눔고딕 웹폰트 CDN, import 방식X */
+@font-face {
+    font-family:"Nanum Gothic";
+    font-style:normal;
+    font-weight:400;
+    src:local("NanumGothic"), url("../font/NanumGothic-Regular.ttf") format("truetype");
+}
+@font-face {
+    font-family:"Nanum Gothic";
+    font-style:normal;
+    font-weight:700;
+    src:local("NanumGothicBold", "NanumGothic Bold"), url("../font/NanumGothic-Bold.ttf") format("truetype");
+}
+@font-face {
+    font-family:"Nanum Gothic";
+    font-style:normal;
+    font-weight:800;
+    src:local("NanumGothicExtraBold", "NanumGothic ExtraBold"), url("../font/NanumGothic-ExtraBold.ttf") format("truetype");
+}
+
+/* FOUC 화면깜빡임 방지 */
 #no_js {display:none;}
 
-html, body, div, header, nav, section, article, footer {margin:0; padding:0;}
+/* 기본 css의 마진패딩 제거 */
+html, body, div, header, nav, section, article, footer, p, ul, ol, li, dl, dd, dt, h1, h2, h3, h4, h5, h6, form, input, legend, textarea, select, fieldset, button {margin:0; padding:0;}
+
+/* 사이트 기본 설정 */
+html {font-family:"Nanum Gothic"; letter-spacing:2px; font-weight:400; font-size:12px; color:#2e2e2e;}
+a {text-decoration:none; color:inherit;}
+ul, ol {list-style-type:none;}
+input:focus, button:focus {outline:none;}
+/*table 해야함*/
+
+/* 크로스브라우징 용 */
+ button {  
+	width:100%;
+	background: none;
+    border: 0;
+    color: inherit;
+	cursor:pointer;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+	-webkit-appearance: button; 
+    -webkit-user-select: none; 
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
