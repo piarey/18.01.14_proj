@@ -11,13 +11,13 @@
     font-family:"Nanum Gothic";
     font-style:normal;
     font-weight:700;
-    src:local("NanumGothicBold", "NanumGothic Bold"), url("../font/NanumGothic-Bold.ttf") format("truetype");
+    src:local("NanumGothicBold, NanumGothic Bold"), url("../font/NanumGothic-Bold.ttf") format("truetype");
 }
 @font-face {
     font-family:"Nanum Gothic";
     font-style:normal;
     font-weight:800;
-    src:local("NanumGothicExtraBold", "NanumGothic ExtraBold"), url("../font/NanumGothic-ExtraBold.ttf") format("truetype");
+    src:local("NanumGothicExtraBold, NanumGothic ExtraBold"), url("../font/NanumGothic-ExtraBold.ttf") format("truetype");
 }
 
 /* FOUC 화면깜빡임 방지 */
