@@ -1,37 +1,108 @@
 <!DOCTYPE html>
 <html lang="ko" id="no_js">
-
 <head>
-    <title>bib</title>
     <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="blueyoun" />
     <meta name="description" content=" html5/웹표준/웹접근성 지켜서 만든 포폴 사이트(ie9 이상 지원)" />
     <meta name="keywords" content="html5, web standard, web accessibility, ie9" />
-    <link rel="stylesheet" href="css/99ie9support.css" />  
+    <title>bib</title>
+    <link rel="stylesheet" href="css/99ie9support.css" />
     <link rel="stylesheet" href="css/99common00.css" />
     <link rel="stylesheet" href="css/00index.css" />
+    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
     <script src="js/99common00.js"></script>
+    <script src="js/00index.js"></script>
     <script src="js/99ie9support.js"></script>
 </head>
 
-<body>    
-    <div id="title_header_outer">
-        <header id="title_header">ㅎㅎ</header>
-    </div>
-    <div id="title_nav_outer">
-        <nav id="title_nav">
-        </nav>
-        <section id="title_nav_cont"></section>
-    </div>
-    <div id="title_main_outer">
-        <main role="main" id="title_main">
-            <section id="main_sec1"></section>
-            <section id="main_sec2"></section>
+<body>
+    <div style="position:fixed; top:100px; left:100px; z-index:999;" id="test">값 : </div>
+    <div id="tit_outer">
+        <header id="tit_header">
+            <h1>bib 의 포트폴리오</h1>
+            <div class="sec_whitebox_b"></div>
+        </header>
+        <main role="main" id="tit_main">
+            <h2 class="cleartxt">사이트 주 메뉴</h2>
+            <section class="main_sec click_ev1">
+                <!-- <a href="html/01sub00.html"> -->
+                <a>
+                    <h3>자기소개</h3>
+                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
+                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
+                </a>
+            </section>
+            <section class="main_sec">
+                <a>
+                    <h3>기술이력</h3>
+                    <video id="sec_video1" class="central_sorting" autoplay="autoplay" loop="loop" muted="muted">
+                        <source src="video/video1.mp4" type="video/mp4"> Your browser does not support the video tag.
+                    </video>
+                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
+                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
+                </a>
+            </section>
+            <section class="main_sec">
+                <a>
+                    <h3>만든사이트들</h3>
+                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
+                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
+                </a>
+            </section>
+            <section class="main_sec">
+                <a>
+                    <h3>개인공부한거간단정리</h3>
+                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
+                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
+                </a>
+            </section>
+            <section class="main_sec">
+                <a>
+                    <h3>개인공부실습</h3>
+                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
+                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
+                </a>
+            </section>
         </main>
-    </div>
-    <div id="title_footer_outer">
-        <footer id="title_footer"></footer>
+        <div class="tit_whitebox">
+            <div class="sec_whitebox_t cleartxt">윗구분선</div>
+        </div>
+        <aside id="tit_aside">
+            <div id="aside_sec">
+                <h2 class="cleartxt">개인 링크 모음</h2>
+                <ul id="sec_iconbox">
+                    <li><a href="#" class="cleartxt" title="네이버블로그">네이버블로그</a></li><!--
+                    --><li><a href="#" class="cleartxt" title="페이스북">페이스북</a></li><!--
+                    --><li><a href="#" class="cleartxt" title="깃허브">깃허브</a></li><!--
+                    --><li><a href="#" class="cleartxt" title="인스타그램">인스타그램</a></li><!--
+                    --><li><a href="#" class="cleartxt" title="유튜브">유튜브</a></li><!--
+                    --><li><a href="#" class="cleartxt" title="트위터">트위터</a></li>
+                </ul>
+            </div>
+        </aside>
+        <div class="tit_whitebox">
+            <div class="sec_whitebox_t cleartxt">윗구분선</div>
+        </div>
+        <footer id="tit_footer">
+            <div id="footer_sec">
+                <em>&copy; 2018 백인범 All pictures cannot be copied without permission.</em>
+                <address>
+                    <dl>
+                        <dt>만든이</dt>
+                        <dd>백인범</dd>
+                        <dt>핸드폰 번호</dt>
+                        <dd>010 7774 8695</dd>
+                        <dt>주소</dt>
+                        <dd>경기도 군포시 금산로47, 107동 1501호</dd>
+                        <dt>이메일</dt>
+                        <dd><a href="#">bekinbum@naver.com</a></dd>
+                    </dl>
+                </address>
+            </div>
+        </footer>
     </div>
 </body>
 

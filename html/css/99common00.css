@@ -11,28 +11,52 @@
     font-family:"Nanum Gothic";
     font-style:normal;
     font-weight:700;
-    src:local("NanumGothicBold, NanumGothic Bold"), url("../font/NanumGothic-Bold.ttf") format("truetype");
+    src:local("NanumGothicBold"), url("../font/NanumGothic-Bold.ttf") format("truetype");
 }
 @font-face {
     font-family:"Nanum Gothic";
     font-style:normal;
     font-weight:800;
-    src:local("NanumGothicExtraBold, NanumGothic ExtraBold"), url("../font/NanumGothic-ExtraBold.ttf") format("truetype");
+    src:local("NanumGothicExtraBold"), url("../font/NanumGothic-ExtraBold.ttf") format("truetype");
+}
+
+@font-face {
+  font-family:"Jeju Gothic";
+  font-style: normal;
+  font-weight: 400;
+  src:local("Jeju Gothic"), url("../font/JejuGothic-Regular.ttf") format("truetype");
 }
 
 /* FOUC 화면깜빡임 방지 */
 #no_js {display:none;}
 
 /* 기본 css의 마진패딩 제거 */
-html, body, div, header, nav, section, article, footer, p, ul, ol, li, dl, dd, dt, h1, h2, h3, h4, h5, h6, form, input, legend, textarea, select, fieldset, button {margin:0; padding:0;}
+html, body, div, span 
+, header, nav, section, article, footer, aside
+, p, ul, ol, li, dl, dd, dt, h1, h2, h3, h4, h5, h6
+, form, input, fieldset, legend, textarea, select, button, label
+, figure, figcaption
+, table, caption, tbody, tfoot, thead, tr, th, td
+{margin:0; padding:0; box-sizing:border-box;}
 
 /* 사이트 기본 설정 */
-html {font-family:"Nanum Gothic"; letter-spacing:2px; font-weight:400; font-size:12px; color:#2e2e2e;}
+html {font-family:"Nanum Gothic"; letter-spacing:2px; font-weight:400; font-size:18px; color:#2e2e2e;}
+body {position:relative;}
 a {text-decoration:none; color:inherit;}
+a:hover {text-decoration:underline;}
 ul, ol {list-style-type:none;}
 img, fieldset {border:0px;}
-input:focus, button:focus {outline:none;}
-/*table 해야함*/
+/* tab 접근성때문에 흠... */
+input:focus, button:focus, textarea:focus {outline:none;}
+em, address {font-style:normal;}
+/* collapse 를 기본으로 두는게 맞긴한데 */
+table {border:0px; border-spacing:0px;}
+button > span {position:relative;}
+h1,h2,h3,h4,h5,h6 {font-family:"Jeju Gothic"; letter-spacing:3px;}
+fieldset, caption, legend {display:block; text-indent:-9999px; width:0px; height:0px;}
+
+input, select, textarea, button {color:inherit; font-size:inherit; font-family: inherit; border:1px solid #d6d6d6; }
+textarea {resize:none;}
 
 /* 크로스브라우징 용 */
  button {  
@@ -50,4 +74,13 @@ input:focus, button:focus {outline:none;}
        -moz-user-select: none;
         -ms-user-select: none;
 }
+/* placeholder 크로스브라우징 */
+input:focus::-webkit-input-placeholder {color: transparent;}  
+input:focus::-moz-placeholder {color: transparent;}  
 
+/* 익스9 부터는 구지 안적어도 되지만 일단 적어놓음 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+
+/* 이하 자주쓰는 css */
+.cleartxt {display:block; text-indent:-9999px; width:0px; height:0px;}
+.central_sorting {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
