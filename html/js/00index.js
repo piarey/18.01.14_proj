@@ -111,7 +111,7 @@ $(window).on("load", function () {
         var aaa = $(this).offset().top;
         winWdControlEvent();
         winHtControlEvent();
-        $("html").stop().animate({ scrollTop: aaa - $winHt/4}, 900, "easeInOutBack");
+        $("html, body").stop().animate({ scrollTop: aaa - $winHt/4}, 900, "easeInOutBack");
 
         
         var $wboxTop = $(".sec_whitebox_t");
