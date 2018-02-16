@@ -8,7 +8,7 @@ body {background-color:#fafafa; }
 .main_sec {position:relative; height:50vh; background-position:center center; background-size:cover; background-repeat:no-repeat;}
 .main_sec:nth-child(2) {background-image:url("../images/test1.jpg");}
 .main_sec:nth-child(3) {background-image:url("../images/test1.jpg"); overflow:hidden;}
-.main_sec:nth-child(4) {background-image:url("../images/test1.jpg");}
+.main_sec:nth-child(4) {background-image:url("../images/gif1.gif");}
 .main_sec:nth-child(5) {background-image:url("../images/test1.jpg");}
 .main_sec:nth-child(6) {background-image:url("../images/test1.jpg");}
 .main_sec a {display:block; height:100%;}
