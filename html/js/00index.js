@@ -10,6 +10,11 @@ $(window).on("load", function () {
     var timer3 = null;
     var $winWd = 0;
     var $winHt = 0;
+    var $wboxTop = $(".sec_whitebox_t");
+    var $wboxBottom = $(".sec_whitebox_b");
+    var speed150 = 150;
+    var speed250 = 250;
+    var speed300 = 300;
 
     /* window 너비 해상도에 따라 조절 이벤트 */
     var winWdControlEvent = function () {
@@ -28,9 +33,6 @@ $(window).on("load", function () {
 
     /* main 와이트박스 border값 조절 이벤트 */
     var whiteboxControlEvent = function () {
-
-        var $wboxTop = $(".sec_whitebox_t");
-        var $wboxBottom = $(".sec_whitebox_b");
 
         var thisEvent = function () {
             winWdControlEvent();
@@ -101,38 +103,133 @@ $(window).on("load", function () {
     });
 
 
-    
 
-    /* */
-    var a = $(".main_sec");
+    /* 메인메뉴 클릭이벤트 */
+    var $mainSec = $(".main_sec");
 
-    $(a).one("click", function () {
+    $($mainSec).one("click", function () {
 
-        var aaa = $(this).offset().top;
+        var $mainSecOffset = $(this).offset().top;
+        var $thisH3 = $(this).find("h3").text();
         winWdControlEvent();
         winHtControlEvent();
-        $("html, body").stop().animate({ scrollTop: aaa - $winHt/4}, 900, "easeInOutBack");
-
-        
-        var $wboxTop = $(".sec_whitebox_t");
-        var $wboxBottom = $(".sec_whitebox_b");
+        $("html, body").stop().animate({ scrollTop: $mainSecOffset - $winHt / 4 }, 900, "easeInOutBack");
 
         setTimeout(function () {
             $($wboxTop).css("border-left", 0 + "px solid transparent");
-            $($wboxTop).stop().animate({ borderLeftWidth: $winWd }, 500);
+            $($wboxTop).stop().animate({ borderLeftWidth: $winWd }, speed300);
             $($wboxBottom).css("border-left", 0 + "px solid #fafafa");
-            $($wboxBottom).stop().animate({ borderLeftWidth: $winWd }, 500);
+            $($wboxBottom).stop().animate({ borderLeftWidth: $winWd }, speed300);
             setTimeout(function () {
+                $("html").stop().animate({ opacity: 0 }, speed250);
                 $($wboxTop).css("border-right", 0);
                 $($wboxBottom).css("border-right", 0);
-                //window.location = "html/01sub00.html";
-            }, 500);
+                setTimeout(function () {
+                    //alert($thisH3);
+
+                    switch ($thisH3) {
+                        case "자기소개": window.location = "html/01sub00.html";
+                            break;
+                        case "본인능력": alert("22");
+                            break;
+                        case "만든사이트들": alert("33");
+                            break;
+                        case "개인공부정리": alert("44");
+                            break;
+                        case "포트폴리오기술명세서": alert("55");
+                            break;
+                    }
+                }, speed300);
+            }, speed300);
         }, 700);
-
-
     });
 
+    /* header 글씨 써지는 효과 */
+    var qqq = function () {
+        var hBg1TxtElement = document.getElementById("header_bg1_txt");
+        var hBg2TxtElement = document.getElementById("header_bg2_txt");
+        var hBg1TxtCont = "의 자 에 쌓 인 눈";
+        var hBg2TxtCont = "아 른 거 리 는 반 딧 불";
+        var hBg1TxtSplit = hBg1TxtCont.split(" ");
+        var hBg2TxtSplit = hBg2TxtCont.split(" ");
 
+
+        var thisEvent = function ee(counter, evInhBgTxtElement, evInhBgTxtSplit) {
+            var alength = evInhBgTxtSplit.length;
+            var onOff = false;
+
+            if (counter < alength && onOff == false) {
+                setTimeout(function () {
+                    if (counter == alength - 1) {
+                        onOff = true;
+                    }
+                    evInhBgTxtElement.innerHTML += "<em>" + evInhBgTxtSplit[counter] + "</em>";
+                    var $x = $("#" + evInhBgTxtElement.attributes[1].value + " em");
+                    $x.animate({ opacity: 1 }, 200);
+                    counter++;
+                    ee(counter, evInhBgTxtElement, evInhBgTxtSplit);
+                }, 200);
+            } else {
+                setTimeout(function () {
+                    onOff = false;
+                    counter = 0;
+                    var $x = $("#" + evInhBgTxtElement.attributes[1].value + " em");
+                    $x.animate({ marginTop: "10px", opacity: 0 }, 200);
+                    setTimeout(function () {
+                        evInhBgTxtElement.innerHTML = "";
+                    }, 200);
+                    ee(counter, evInhBgTxtElement, evInhBgTxtSplit);
+                }, 1000);
+            }
+        }
+
+        thisEvent(0, hBg1TxtElement, hBg1TxtSplit);
+        thisEvent(0, hBg2TxtElement, hBg2TxtSplit);
+
+        //"<em class=" + "\"h_bg1_txt"
+
+    };
+    qqq();
+
+
+    /* */
+    function zz() {
+        setTimeout(function () {
+            var x = Math.floor(Math.random() * 150);
+            var y = Math.floor(Math.random() * 150);
+            var aa = $("#header_svg_circle1");
+            var bb = $("#header_svg_circle2");
+            aa.animate({top:x, left:y});
+            bb.animate({bottom:x, right:y});
+            zz();
+        }, 1000);
+    };
+
+    zz();
+
+
+
+    /*
+        pathes.each(function (i, path) {
+            // 1번 부분
+            var total_length = path.getTotalLength();
+            // 2번 부분
+            path.style.strokeDasharray = total_length + " " + total_length;
+            // 3번 부분
+            path.style.strokeDashoffset = total_length;
+            // 4번 부분
+            $(path).animate({
+                "strokeDashoffset": 0
+            }, 1500);
+            setTimeout(function(){
+                $(path).css("background-color", "#CC435A");
+            }, 700);
+        });
+    */
+
+
+
+    $("#etc_fouc").css("opacity", "1");
 });
 
 

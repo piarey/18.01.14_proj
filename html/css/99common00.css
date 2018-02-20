@@ -28,7 +28,7 @@
 }
 
 /* FOUC 화면깜빡임 방지 */
-#no_js {display:none;}
+#etc_fouc {opacity:0;}
 
 /* 기본 css의 마진패딩 제거 */
 html, body, div, span 
@@ -47,13 +47,13 @@ a:hover {text-decoration:underline;}
 ul, ol {list-style-type:none;}
 img, fieldset {border:0px;}
 /* tab 접근성때문에 흠... */
-input:focus, button:focus, textarea:focus {outline:none;}
+/* input:focus, button:focus, textarea:focus {outline:none;}*/
 em, address {font-style:normal;}
 /* collapse 를 기본으로 두는게 맞긴한데 */
 table {border:0px; border-spacing:0px;}
 button > span {position:relative;}
 h1,h2,h3,h4,h5,h6 {font-family:"Jeju Gothic"; letter-spacing:3px;}
-fieldset, caption, legend {display:block; text-indent:-9999px; width:0px; height:0px;}
+fieldset, caption, legend {display:block; overflow:hidden; position:absolute; width:1px; height:1px; margin:-1px;}
 
 input, select, textarea, button {color:inherit; font-size:inherit; font-family: inherit; border:1px solid #d6d6d6; }
 textarea {resize:none;}
@@ -82,5 +82,8 @@ input:focus::-moz-placeholder {color: transparent;}
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
 
 /* 이하 자주쓰는 css */
-.cleartxt {display:block; text-indent:-9999px; width:0px; height:0px;}
+/*.cleartxt {display:block; text-indent:-9999px; width:0; height:0;}*/
+.cleartxt_nocont {display:block; overflow:hidden; position:absolute; width:1px; height:1px; margin:-1px;}
+.cleartxt_yescont {text-indent:-9999px; overflow:hidden;}
+
 .central_sorting {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}

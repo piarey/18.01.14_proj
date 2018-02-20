@@ -1,0 +1,24 @@
+
+html {opacity:0;}
+
+#tit_header {z-index:2;}
+#tit_header .tit_whitebox {position:relative; height:25vh; background-color: #343642; overflow:hidden;}
+#header_sec {position:relative; height:50vh; background:url("../images/common/mainbg1h.jpg") center center/cover no-repeat; }
+
+#header_sec h2 {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
+
+
+.sec_whitebox_logo {display:block; position:absolute; width:120px; height:68px; top:50%;right:40px; transform:translate(0, -50%); background:url("../images/common/headersvg.svg") center center/cover no-repeat;}
+
+
+#tit_main {z-index:3; height:900px; background-color: #fafafa;}
+
+
+
+@media only screen and (max-width:480px) {
+    .sec_whitebox_logo {width:100px; height:56px; }
+
+}
+
+
+

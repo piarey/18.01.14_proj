@@ -1,5 +1,6 @@
 <!DOCTYPE html>
-<html lang="ko" id="no_js">
+<html lang="ko" id="etc_fouc">
+
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +10,7 @@
     <title>bib</title>
     <link rel="stylesheet" href="css/99ie9support.css" />
     <link rel="stylesheet" href="css/99common00.css" />
+    <link rel="stylesheet" href="css/99common01.css" />
     <link rel="stylesheet" href="css/00index.css" />
     <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
     <script src="js/jquery-3.2.1.min.js"></script>
@@ -22,72 +24,90 @@
     <div style="position:fixed; top:100px; left:100px; z-index:999;" id="test">값 : </div>
     <div id="tit_outer">
         <header id="tit_header">
-            <h1>bib 의 포트폴리오</h1>
-                    <video autoplay="autoplay" loop="loop" muted="muted">
-                        <source src="video/common/video1.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
+            <div class="header_bg_common header_bg1 cleartxt_yescont">의자에 쌓인 눈 배경이미지</div>
+            <div class="header_bg_common header_bg2 cleartxt_yescont">아른거리는 반딧불 배경이미지</div>
+            <div class="header_svg_outer">
+                <div class="header_svg_inner">
+                    <span title="의자에 쌓인 눈" id="header_bg1_txt"></span>
+                    <span title="아른거리는 반딧불" id="header_bg2_txt" ></span>
+                    <div id="header_svg_circle1"></div>
+                    <div id="header_svg_circle2"></div>
+                    <object type="image/svg+xml" data="images/common/headersvg.svg" tabindex="-1"></object>
+                </div>   
+            </div>
+            <h1 style="opacity:0">bib 의 포트폴리오 메인 페이지</h1>
             <div class="sec_whitebox_b"></div>
         </header>
         <main role="main" id="tit_main">
-            <h2 class="cleartxt">사이트 주 메뉴</h2>
-            <section class="main_sec click_ev1">
-                <!-- <a href="html/01sub00.html"> -->
-                <a>
-                    <h3>자기소개</h3>
-                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
-                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
-                </a>
-            </section>
-            <section class="main_sec">
-                <a>
-                    <h3>기술이력</h3>
-                    <video id="sec_video1" class="central_sorting" autoplay="autoplay" loop="loop" muted="muted" playsinline>
-                        <source src="video/common/video1.mp4" type="video/mp4"> Your browser does not support the video tag.
-                    </video>
-                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
-                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
-                </a>
-            </section>
-            <section class="main_sec">
-                <a>
-                    <h3>만든사이트들</h3>
-                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
-                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
-                </a>
-            </section>
-            <section class="main_sec">
-                <a>
-                    <h3>개인공부한거간단정리</h3>
-                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
-                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
-                </a>
-            </section>
-            <section class="main_sec">
-                <a>
-                    <h3>개인공부실습</h3>
-                    <div class="sec_whitebox_t cleartxt">윗구분선</div>
-                    <div class="sec_whitebox_b cleartxt">아래구분선</div>
-                </a>
-            </section>
+            <article>
+                <h2 class="cleartxt_nocont">사이트 주 메뉴</h2>
+                <section class="main_sec">
+                    <a href="at_js">
+                        <h3>자기소개</h3>
+                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                    </a>
+                </section>
+                <section class="main_sec">
+                    <a href="at_js">
+                        <h3>본인능력</h3>
+                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                    </a>
+                </section>
+                <section class="main_sec">
+                    <a href="at_js">
+                        <h3>만든사이트들</h3>
+                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                    </a>
+                </section>
+                <section class="main_sec">
+                    <a href="at_js">
+                        <h3>개인공부정리</h3>
+                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                    </a>
+                </section>
+                <section class="main_sec">
+                    <a href="at_js">
+                        <h3>포트폴리오기술명세서</h3>
+                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                    </a>
+                </section>
+            </article>
         </main>
         <div class="tit_whitebox">
-            <div class="sec_whitebox_t cleartxt">윗구분선</div>
+            <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
         </div>
         <aside id="tit_aside">
             <div id="aside_sec">
-                <h2 class="cleartxt">개인 링크 모음</h2>
+                <h2 class="cleartxt_nocont">개인 링크 모음</h2>
                 <ul id="sec_iconbox">
-                    <li><a href="#" class="cleartxt" title="네이버블로그">네이버블로그</a></li><!--
-                    --><li><a href="#" class="cleartxt" title="페이스북">페이스북</a></li><!--
-                    --><li><a href="#" class="cleartxt" title="깃허브">깃허브</a></li><!--
-                    --><li><a href="#" class="cleartxt" title="인스타그램">인스타그램</a></li><!--
-                    --><li><a href="#" class="cleartxt" title="유튜브">유튜브</a></li><!--
-                    --><li><a href="#" class="cleartxt" title="트위터">트위터</a></li>
+                    <li>
+                        <a href="#" class="cleartxt_yescont" title="네이버블로그">네이버블로그</a>
+                    </li><!--
+                    --><li>
+                        <a href="#" class="cleartxt_yescont" title="페이스북">페이스북</a>
+                    </li><!--
+                    --><li>
+                        <a href="#" class="cleartxt_yescont" title="깃허브">깃허브</a>
+                    </li><!--
+                    --><li>
+                        <a href="#" class="cleartxt_yescont" title="인스타그램">인스타그램</a>
+                    </li><!--
+                    --><li>
+                        <a href="#" class="cleartxt_yescont" title="유튜브">유튜브</a>
+                    </li><!--
+                    --><li>
+                        <a href="#" class="cleartxt_yescont" title="트위터">트위터</a>
+                    </li>
                 </ul>
             </div>
         </aside>
-        <div class="tit_whitebox">
-            <div class="sec_whitebox_t cleartxt">윗구분선</div>
+        <div class="tit_whitebox etc_footer_margintop">
+            <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
         </div>
         <footer id="tit_footer">
             <div id="footer_sec">
@@ -101,7 +121,9 @@
                         <dt>주소</dt>
                         <dd>경기도 군포시 금산로47, 107동 1501호</dd>
                         <dt>이메일</dt>
-                        <dd><a href="#">bekinbum@naver.com</a></dd>
+                        <dd>
+                            <a href="#">bekinbum@naver.com</a>
+                        </dd>
                     </dl>
                 </address>
             </div>
