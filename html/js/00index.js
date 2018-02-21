@@ -51,30 +51,7 @@ $(window).on("load", function () {
     whiteboxControlEvent();
 
 
-    /* */
-    /*
-    var lastScroll = 0;
 
-    $(window).scroll(function () {
-        clearTimeout(timer);
-        timer = setTimeout(function () {
-            var $aaa = $(".main_sec");
-            var $bb = $(this).scrollTop();
-
-            if ($bb > lastScroll) {
-                $aaa.stop().animate({ marginTop: "10px" }, 300);
-
-            }
-            else {
-                $aaa.stop().animate({ marginTop: "0px" }, 300);
-
-            }
-            lastScroll = $bb;
-
-
-        }, sec)
-    });
-    */
 
     /* 스크롤 opacity 이벤트 */
     var mainOpcChangeEvent = function () {
@@ -128,15 +105,15 @@ $(window).on("load", function () {
                     //alert($thisH3);
 
                     switch ($thisH3) {
-                        case "자기소개": window.location = "html/01sub00.html";
+                        case "사용기술목록": window.location = "html/01sub00.html";
                             break;
-                        case "본인능력": alert("22");
+                        case "자기소개": window.location = "html/02sub00.html";
                             break;
-                        case "만든사이트들": alert("33");
+                        case "보유기술": window.location = "html/03sub00.html";
                             break;
-                        case "개인공부정리": alert("44");
+                        case "포트폴리오": window.location = "html/04sub00.html";
                             break;
-                        case "포트폴리오기술명세서": alert("55");
+                        case "개인공부정리": window.location = "html/05sub00.html";
                             break;
                     }
                 }, speed300);

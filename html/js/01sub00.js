@@ -11,6 +11,7 @@ $(window).on("load", function () {
     var $winHt = 0;
     var $wboxTop = $(".sec_whitebox_t");
     var $wboxBottom = $(".sec_whitebox_b");
+    var speed300 = 300;
 
     /* window 너비 해상도에 따라 조절 이벤트 */
     var winWdControlEvent = function () {
@@ -46,6 +47,41 @@ $(window).on("load", function () {
     };
     whiteboxControlEvent();
 
+
+
+    /* */
+    var navMobileOpenEvent = function(){
+        var $thisElement = $("#tit_nav_mobile");
+        $(".nav_gnb_mobile_open").on("click", function () {
+
+            $thisElement.show().stop().animate({opacity:1}, speed300);
+        });        
+
+    };
+    navMobileOpenEvent();
+
+    /* */
+    var navMobileCancelEvent = function () {
+        var $thisElement = $("#tit_nav_mobile");
+        $(".nav_mobile_cancel").on("click", function () {
+            $thisElement.stop().animate({opacity:0}, speed300);
+            setTimeout(function () {
+                $thisElement.css("display", "none");
+            }, speed300);
+        });
+    };
+    navMobileCancelEvent();
+
+
+    /* */
+    $(".nav_gnb").draggable({cursor:"all-scroll",containment:"html"});
+
+    $(".nav_gnb").hover(function(){
+        $(".test").css("opacity", 1);
+    }, function(){
+        $(".test").css("opacity", 0);
+    });
+    
 
     /* */
     $("#etc_fouc").stop().animate({ opacity: 1 }, 250);

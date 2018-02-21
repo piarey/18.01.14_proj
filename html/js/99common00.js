@@ -1,11 +1,13 @@
 $(window).on("load", function () {
-    
+
     var timer1 = null;
+    var timer2 = null;
     var sec = 100;
     var $winHt = $(window).height();
     var $footer = $("#tit_footer");
     var $titOuter = $("#tit_outer");
     var $htmlHt = $("html").height();
+    var speed300 = 300;
 
     var $winHtRe = function () {
         $(window).on("resize", function () {
@@ -16,10 +18,10 @@ $(window).on("load", function () {
         });
     };
 
-    var $htmlHtRe = function(){
-        $(window).on("resize", function(){
+    var $htmlHtRe = function () {
+        $(window).on("resize", function () {
             clearTimeout(timer1);
-            setTimeout(function(){
+            setTimeout(function () {
                 $htmlHt = $("html").height();
             });
         });
@@ -52,7 +54,7 @@ $(window).on("load", function () {
         /* 일반+스크롤+리사이즈 */
         var thisEvent2 = function () {
             $htmlHtRe();
-            if ($winScrollTop + $winHt > $htmlHt - ($footerHt + $footerHt/3)) {
+            if ($winScrollTop + $winHt > $htmlHt - ($footerHt + $footerHt / 3)) {
                 $footer.css("opacity", 1);
                 $titOuter.css("background-color", "#cc435a");
             } else {
@@ -66,7 +68,7 @@ $(window).on("load", function () {
             /* 스크롤 이벤트 마다 값이 변함 */
             $winScrollTop = $(window).scrollTop();
             /* 리사이즈 후 스크롤 방지 */
-            $winHtRe(); 
+            $winHtRe();
             thisEvent2();
         });
 
@@ -79,6 +81,31 @@ $(window).on("load", function () {
         });
     };
     footerFxOpEVent();
+
+
+
+    /* gnb 스크롤 + - 이벤트 */
+    var gnbScrollEvent = function () {
+        var lastScroll = 0;
+        var $thisElement = $("#tit_nav");
+
+        $(window).scroll(function () {
+            clearTimeout(timer2);
+            timer2 = setTimeout(function () {
+                $htmlHtRe();
+                var $scrollValue = $(this).scrollTop();
+
+                if ($scrollValue > $winHt && $scrollValue > lastScroll) {
+                    $thisElement.css("position", "fixed");
+                }
+                else {
+                    $thisElement.css("position", "absolute");
+                }
+                lastScroll = $scrollValue;
+            }, sec)
+        });
+    };
+    gnbScrollEvent();
 
 
 

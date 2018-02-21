@@ -1,23 +1,55 @@
 
 html {opacity:0;}
 
+#tit_nav {z-index:4; position:absolute; width:100%; top:20px;left:50%; transform:translate(-50%); text-align:center;}
+.nav_gnb {display:inline-block; background-color:rgba(204,67,90,0.6);}
+.nav_gnb:hover {cursor:all-scroll;}
+.nav_gnb li {display:inline-block; margin:0 10px 0 0;}
+.nav_gnb li a {display:block; color:#fafafa; font-family:"Jeju Gothic";}
+.nav_gnb li:first-child {margin:0 10px 0 10px;}
+.nav_gnb li:last-child {vertical-align:middle;}
+.nav_gnb li:last-child a {width:80px; height:45px; padding:5px 0;}
+.nav_gnb li:last-child img {width:80px; height:45px;}
+
+.nav_gnb_mobile_open {display:none; width:50px; height:50px; background-color:#cc435a; color:#fafafa; font-size:30px; font-weight:normal;}
+.nav_gnb_mobile_open span {display:block; margin:-3px 0 0 0;}
+
+
+
 #tit_header {z-index:2;}
 #tit_header .tit_whitebox {position:relative; height:25vh; background-color: #343642; overflow:hidden;}
 #header_sec {position:relative; height:50vh; background:url("../images/common/mainbg1h.jpg") center center/cover no-repeat; }
 
 #header_sec h2 {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
 
+.test {opacity:0;}
 
-.sec_whitebox_logo {display:block; position:absolute; width:120px; height:68px; top:50%;right:40px; transform:translate(0, -50%); background:url("../images/common/headersvg.svg") center center/cover no-repeat;}
+
+#tit_nav_mobile {display:none; position:fixed; z-index:9999; width:100%; height:100%; top:0;left:0; background-color:rgba(204,67,90,0.9); opacity:0;}
+.nav_mobile_gnb {width:100%; height:100%;}
+.nav_mobile_gnb li {position:relative; width:100%; height:16.6%; }
+.nav_mobile_gnb li a {display:block; width:100%; height:100%; color:#fafafa;}
+.nav_mobile_gnb li a .n_m_g_center {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
+
+.nav_mobile_cancel {position:absolute; width:500px; height:80px; transform:rotate(45deg); top:0; right:-200px; color:#fafafa; font-size:70px; background-color:#343642;}
+
 
 
 #tit_main {z-index:3; height:900px; background-color: #fafafa;}
 
 
+@media only screen and (max-width:1280px) {
+
+}
+
+@media only screen and (max-width:600px) {
+    .nav_gnb_mobile_open {display:block;}
+    .nav_gnb {display:none;}
+    #tit_nav {padding:0 0 0 20px;}
+}
 
 @media only screen and (max-width:480px) {
-    .sec_whitebox_logo {width:100px; height:56px; }
-
+    
 }
 
 

@@ -26,10 +26,11 @@
 .main_sec:nth-child(5) {background-image:url("../images/common/mainbg4h.jpg");}
 .main_sec:nth-child(6) {background-image:url("../images/common/mainbg5h.jpg");}
 .main_sec a {display:block; height:100%;}
-.main_sec a h3 {position:absolute; z-index:2; left:50%;top:50%; transform:translate(-50%, -50%);color:#fafafa;}
+.main_sec a h3 {position:absolute; z-index:2; left:50%;top:50%; transform:translate(-50%, -50%); color:#fafafa; letter-spacing:5px; white-space:nowrap;}
 
 
 @media only screen and (max-width:480px) {
-    #header_bg1_txt {top:20%;left:42%;}
-    #header_bg2_txt {top:75%;left:20%;}
+    /* 가로스크롤 생김 방지 */
+    .header_svg_inner {padding:40px;}
+    #header_bg1_txt {top:0%;left:30%;}
 }

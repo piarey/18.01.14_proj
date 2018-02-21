@@ -1,7 +1,9 @@
 
-body, #tit_outer, #tit_header, #tit_main, #tit_aside, #tit_footer {position:relative; width:100%;}
+/* #tit_nav 는 서브만 존재 */
+body, #tit_outer, #tit_nav, #tit_header, #tit_main, #tit_aside, #tit_footer {position:relative; width:100%;}
 body {background-color:#fafafa; }
-#tit_outer {max-width:2560px; height:auto; margin:0 auto; overflow: hidden;}
+/* overflow 속성을 줘야 margin 값도 인식하여 부모가 height 값을 자동으로 받나봄 */
+#tit_outer {overflow-x:hidden; max-width:2560px; height:auto; margin:0 auto;}
 
 .sec_whitebox_t, .sec_whitebox_b {z-index:3; position:absolute;}
 .sec_whitebox_t {border-top:9vh solid #fafafa; top:0; left:0px; }
@@ -20,7 +22,7 @@ body {background-color:#fafafa; }
 
 #tit_aside {z-index:2; background-color:#343642;}
 /* #aside_sec {position:absolute; z-index:4; top:50%; left:50%; transform:translate(-50%);}  */
-#aside_sec {width:1200px; height:100%; margin:0 auto; } 
+#aside_sec {width:1200px; height:auto; margin:0 auto; } 
 /* #aside_sec {display:table-cell; vertical-align: middle;} */
 ul#sec_iconbox {text-align:center;}
 ul#sec_iconbox li {display:inline-block;}
@@ -39,8 +41,8 @@ ul#sec_iconbox li:nth-child(6) a {background-position:0px -200px;}
 ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 
 /* position 값은 js에서 조정 */
-#tit_footer {z-index:1; padding:50px 0 50px 0;  bottom:0;left:0;}
-#footer_sec {width:1200px; height:100%; margin:0 auto;}
+#tit_footer {z-index:1; padding:50px 0 50px 0; height:auto; bottom:0;left:0;}
+#footer_sec {width:1200px; height:auto; margin:0 auto;}
 
 
 /* 미디어쿼리 */
