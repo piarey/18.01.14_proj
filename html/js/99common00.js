@@ -9,7 +9,7 @@ $(window).on("load", function () {
     var $htmlHt = $("html").height();
     var speed300 = 300;
 
-    var $winHtRe = function () {
+    var winHtReControlEvent = function () {
         $(window).on("resize", function () {
             clearTimeout(timer1);
             setTimeout(function () {
@@ -68,7 +68,7 @@ $(window).on("load", function () {
             /* 스크롤 이벤트 마다 값이 변함 */
             $winScrollTop = $(window).scrollTop();
             /* 리사이즈 후 스크롤 방지 */
-            $winHtRe();
+            winHtReControlEvent();
             thisEvent2();
         });
 
@@ -84,28 +84,7 @@ $(window).on("load", function () {
 
 
 
-    /* gnb 스크롤 + - 이벤트 */
-    var gnbScrollEvent = function () {
-        var lastScroll = 0;
-        var $thisElement = $("#tit_nav");
 
-        $(window).scroll(function () {
-            clearTimeout(timer2);
-            timer2 = setTimeout(function () {
-                $htmlHtRe();
-                var $scrollValue = $(this).scrollTop();
-
-                if ($scrollValue > $winHt && $scrollValue > lastScroll) {
-                    $thisElement.css("position", "fixed");
-                }
-                else {
-                    $thisElement.css("position", "absolute");
-                }
-                lastScroll = $scrollValue;
-            }, sec)
-        });
-    };
-    gnbScrollEvent();
 
 
 

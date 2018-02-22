@@ -122,7 +122,7 @@ $(window).on("load", function () {
     });
 
     /* header 글씨 써지는 효과 */
-    var qqq = function () {
+    var headerWriteEvent = function () {
         var hBg1TxtElement = document.getElementById("header_bg1_txt");
         var hBg2TxtElement = document.getElementById("header_bg2_txt");
         var hBg1TxtCont = "의 자 에 쌓 인 눈";
@@ -166,11 +166,11 @@ $(window).on("load", function () {
         //"<em class=" + "\"h_bg1_txt"
 
     };
-    qqq();
+    headerWriteEvent();
 
 
-    /* */
-    function zz() {
+    /* header 동그라미 움직이는 효과 */
+    function headerCircleMoveEvent() {
         setTimeout(function () {
             var x = Math.floor(Math.random() * 150);
             var y = Math.floor(Math.random() * 150);
@@ -178,11 +178,11 @@ $(window).on("load", function () {
             var bb = $("#header_svg_circle2");
             aa.animate({top:x, left:y});
             bb.animate({bottom:x, right:y});
-            zz();
+            headerCircleMoveEvent();
         }, 1000);
     };
 
-    zz();
+    headerCircleMoveEvent();
 
 
 

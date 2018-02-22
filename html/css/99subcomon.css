@@ -1,45 +1,50 @@
 
 html {opacity:0;}
 
-#tit_nav {z-index:4; position:absolute; width:100%; top:20px;left:50%; transform:translate(-50%); text-align:center;}
-.nav_gnb {display:inline-block; background-color:rgba(204,67,90,0.6);}
+/* tit_nav */
+#tit_nav {z-index:4; position:absolute; width:100%; top:6px;left:50%; transform:translate(-50%); background-color:rgba(204,67,90,1);}
+#nav_gnb_outer {width:1200px; margin:0 auto;}
+.nav_gnb {background-color:rgba(204,67,90,0.6); line-height:55px;}
+.nav_gnb:after {content:""; display:block; clear:both;}
 .nav_gnb:hover {cursor:all-scroll;}
-.nav_gnb li {display:inline-block; margin:0 10px 0 0;}
+.nav_gnb li {float:left; margin:0 10px 0 0;}
 .nav_gnb li a {display:block; color:#fafafa; font-family:"Jeju Gothic";}
 .nav_gnb li:first-child {margin:0 10px 0 10px;}
-.nav_gnb li:last-child {vertical-align:middle;}
+.nav_gnb li:last-child {float:right;}
 .nav_gnb li:last-child a {width:80px; height:45px; padding:5px 0;}
 .nav_gnb li:last-child img {width:80px; height:45px;}
 
-.nav_gnb_mobile_open {display:none; width:50px; height:50px; background-color:#cc435a; color:#fafafa; font-size:30px; font-weight:normal;}
+.nav_gnb_mobile_open {display:none; width:55px; height:55px; background-color:rgba(204,67,90,0.6); color:#fafafa; font-size:30px; font-weight:normal;}
 .nav_gnb_mobile_open span {display:block; margin:-3px 0 0 0;}
+.nav_gnb_tooltip {position:absolute; padding:10px; background-color:rgba(204,67,90,0.6); left:50%; transform:translate(-50%); opacity:0;
+font-size:12px; color:#fafafa; border-radius:10px;}
 
 
-
-#tit_header {z-index:2;}
-#tit_header .tit_whitebox {position:relative; height:25vh; background-color: #343642; overflow:hidden;}
-#header_sec {position:relative; height:50vh; background:url("../images/common/mainbg1h.jpg") center center/cover no-repeat; }
-
-#header_sec h2 {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
-
-.test {opacity:0;}
-
-
-#tit_nav_mobile {display:none; position:fixed; z-index:9999; width:100%; height:100%; top:0;left:0; background-color:rgba(204,67,90,0.9); opacity:0;}
+/* tit_nav_mobile */
+#tit_nav_mobile {display:none; position:fixed; z-index:9999; width:100%; height:100%; top:0;left:0; background-color:rgba(204,67,90,0.9); opacity:0; font-family:"Jeju Gothic";}
 .nav_mobile_gnb {width:100%; height:100%;}
 .nav_mobile_gnb li {position:relative; width:100%; height:16.6%; }
 .nav_mobile_gnb li a {display:block; width:100%; height:100%; color:#fafafa;}
 .nav_mobile_gnb li a .n_m_g_center {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
 
-.nav_mobile_cancel {position:absolute; width:500px; height:80px; transform:rotate(45deg); top:0; right:-200px; color:#fafafa; font-size:70px; background-color:#343642;}
+.nav_mobile_cancel {position:absolute; width:490px; height:80px; transform:rotate(45deg); top:0; right:-200px; color:#fafafa; font-size:50px; background-color:#343642;}
 
 
+/* tit_header */
+#tit_header {z-index:2;}
+#tit_header .tit_whitebox {position:relative; height:25vh; background-color: #343642; overflow:hidden;}
+#tit_header .tit_whitebox:nth-of-type(1) {background-image:url(../images/subcommon/topbg.jpg); background-repeat:repeat-x;}
+#header_sec {position:relative; height:50vh; background:url("../images/common/mainbg1h.jpg") center center/cover no-repeat; }
 
+#header_sec h2 {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
+
+
+/* tit_main */
 #tit_main {z-index:3; height:900px; background-color: #fafafa;}
 
 
 @media only screen and (max-width:1280px) {
-
+    #nav_gnb_outer {width:100%;}
 }
 
 @media only screen and (max-width:600px) {
