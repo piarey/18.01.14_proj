@@ -32,12 +32,15 @@
                     <li><a href="03sub00.html">보유기술</a></li>
                     <li><a href="04sub00.html">포트폴리오</a></li>
                     <li><a href="05sub00.html">개인공부정리</a></li>
-                    <li><a href="../index.html" title="홈으로 가기"><img src="../images/common/headersvg.svg" alt="로고이미지 홈 버튼"></a></li>
+                    <li><a href="../index.html" title="홈으로 가기"><img src="../images/subcommon/headersvg_b.svg" alt="로고이미지 홈 버튼"></a></li>
                 </ul>
             </div>
             <button type="button" class="nav_gnb_mobile_open" title="메뉴열기"><span>&#9776;</span></button>
-            <div class="nav_gnb_tooltip">
-                <strong>클릭 드래그가 가능합니다</strong>
+            <div class="nav_gnb_tooltip_outer">
+                <div class="nav_gnb_tooltip">
+                    <span class="n_g_t_warning">&#9888;</span>
+                    <strong id="n_g_t_id">이 곳은 클릭 드래그가 불가능합니다</strong>
+                </div>
             </div>
         </nav>
         <nav id="tit_nav_mobile">
@@ -66,15 +69,18 @@
                 <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
             </div>
         </header>
+        <div class="tit_whitebox_main">
+            <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+        </div>
         <main role="main" id="tit_main">
-            <article>
+            <article id="tit_main_inner">
                 <h2>메인내용</h2>
                 <section>
                     <h3>메인메인1</h3>
                 </section>
             </article>
         </main>
-        <div class="tit_whitebox">
+        <div class="tit_whitebox_a_common tit_whitebox_aside1">
             <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
         </div>
         <aside id="tit_aside">
@@ -102,7 +108,7 @@
                 </ul>
             </div>
         </aside>
-        <div class="tit_whitebox etc_footer_margintop">
+        <div class="tit_whitebox_a_common tit_whitebox_aside2 etc_footer_margintop">
             <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
         </div>
         <footer id="tit_footer">

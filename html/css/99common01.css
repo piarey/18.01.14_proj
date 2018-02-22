@@ -7,16 +7,19 @@ body {background-color:#fafafa; }
 
 .sec_whitebox_t, .sec_whitebox_b {z-index:3; position:absolute;}
 .sec_whitebox_t {border-top:9vh solid #fafafa; top:0; left:0px; }
-
 .sec_whitebox_b {border-top:9vh solid transparent; bottom:0; left:0;}
 
+/* 스태틱인 이유는 absolute 로 위치가 정해지는것이 아니기 때문 */
+.tit_whitebox_a_common {position:relative; z-index:2;}
+.tit_whitebox_a_common .sec_whitebox_t {position:static;}
+#tit_outer > .tit_whitebox_aside1 {background-color:#343642;}
+#tit_outer > .tit_whitebox_aside2 {background-color:transparent;}
+#tit_outer > .tit_whitebox_aside2 .sec_whitebox_t {border-color:#343642;}
 
 
-#tit_outer > .tit_whitebox .sec_whitebox_t {position:static;}
-#tit_outer > .tit_whitebox {position:relative; z-index:2;}
-#tit_outer > .tit_whitebox:nth-of-type(1) {background-color:#343642;}
-#tit_outer > .tit_whitebox:nth-of-type(2) {background-color:transparent;}
-#tit_outer > .tit_whitebox:nth-of-type(2) .sec_whitebox_t {border-color:#343642;}
+
+/* index는 h3, sub은 h2 메뉴글씨 공통 */
+.main_sec a h3, #header_sec h2 {position:absolute; left:50%;top:50%; transform:translate(-50%, -50%); color:#fafafa; letter-spacing:10px; white-space:nowrap; font-size:20px;}
 
 
 

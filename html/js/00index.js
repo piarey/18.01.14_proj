@@ -102,8 +102,6 @@ $(window).on("load", function () {
                 $($wboxTop).css("border-right", 0);
                 $($wboxBottom).css("border-right", 0);
                 setTimeout(function () {
-                    //alert($thisH3);
-
                     switch ($thisH3) {
                         case "사용기술목록": window.location = "html/01sub00.html";
                             break;

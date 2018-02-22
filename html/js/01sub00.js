@@ -7,6 +7,7 @@ $(window).on("load", function () {
     var timer = null;
     var timer1 = null;
     var timer2 = null;
+    var timer3 = null;
     var $winWd = 0;
     var $winHt = 0;
     var $wboxTop = $(".sec_whitebox_t");
@@ -37,6 +38,7 @@ $(window).on("load", function () {
             }, sec);
         });
     };
+
 
     /* main 와이트박스 border값 조절 이벤트 */
     var whiteboxControlEvent = function () {
@@ -82,15 +84,79 @@ $(window).on("load", function () {
     };
     navMobileCancelEvent();
 
+    /* gnb 드래그 호버 이벤트 */
+    var gnbDragHoverEvent = function () {
+        var $navGnb = $(".nav_gnb"),
+            $thisElement = $(".nav_gnb_tooltip_outer");
+
+        $navGnb.draggable({
+            cursor: "all-scroll", containment: "html, body", stop: function (event, ui) {
+                winHtReControlEvent();
+                var navGnbId = document.getElementById("nav_gnb_id"),
+                    navGnbIdAttr = navGnbId.attributes[2].value;
+
+                var browserCheckEvent = function () {
+                    var agent = navigator.userAgent.toLowerCase(),
+                        navGnbIdAttrSplit = 0,
+                        thisEvent = function () {
+                            if (navGnbIdAttrSplit < 0) {
+                                $($navGnb).css("top", 0);
+                            } else if ((navGnbIdAttrSplit + 60) > $winHt) {
+                                $($navGnb).css("top", $winHt - 60);
+                            }
+                        }
+                    if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
+                        navGnbIdAttrSplit = Number(navGnbIdAttr.split(" ")[3].replace(/[^-\d\.]/g, ''));
+                        thisEvent();
+                    }
+                    else {
+                        navGnbIdAttrSplit = Number(navGnbIdAttr.split(" ")[5].replace(/[^-\d\.]/g, ''));
+                        thisEvent();
+                    }
+                };
+                browserCheckEvent();
+            }
+        });
+
+        /* 일반상태 - 스크롤에 따라 가능불가능 텍스트변경 이벤트 */
+        var thisEvent = function () {
+            winHtControlEvent();
+            winHtReControlEvent();
+
+            var $scrollValue = $(window).scrollTop();
+            if ($winHt > $scrollValue) {
+                document.getElementById("n_g_t_id").textContent = "이 곳은 클릭 드래그가 불가능합니다";
+            } else {
+                document.getElementById("n_g_t_id").textContent = "이 곳은 클릭 드래그가 가능합니다";
+            }
+        };
+        thisEvent();
+
+        /* 스크롤시 */
+        $(window).on("scroll", function () {
+            clearTimeout(timer3);
+            timer3 = setTimeout(function () {
+                thisEvent();
+            }, sec);
+        });
+
+        /* 호버이벤트 */
+        $navGnb.hover(function () {
+            $thisElement.css("opacity", 1);
+        }, function () {
+            $thisElement.css("opacity", 0);
+        });
+
+    }
 
     /* gnb 스크롤 + - 이벤트 */
     var gnbScrollEvent = function () {
         winHtControlEvent();
         winHtReControlEvent();
-        var $scrollValue = 0;
-        var lastScroll = 0;
-        var $thisElement = $("#tit_nav");
-        var $navGnb = $(".nav_gnb");
+        var $scrollValue = 0,
+            lastScroll = 0,
+            $thisElement = $("#tit_nav"),
+            $navGnb = $(".nav_gnb");
 
         /* 일반상태 */
         var thisEvent = function () {
@@ -125,35 +191,9 @@ $(window).on("load", function () {
                 lastScroll = $scrollValue;
             }, sec);
         });
-        
+
     };
-    
-    /* gnb 드래그 호버 이벤트 */
-    var gnbDragHoverEvent = function () {
-        var $navGnb = $(".nav_gnb");
-        var $thisElement = $(".nav_gnb_tooltip");
 
-        $navGnb.draggable({
-            cursor: "all-scroll", containment: "html, body", stop: function (event, ui) {
-                winHtReControlEvent();
-                var navGnbId = document.getElementById("nav_gnb_id");
-                var navGnbIdAttr = navGnbId.attributes[2].value;
-                var navGnbIdAttrSplit = Number(navGnbIdAttr.split(" ")[5].replace(/[^-\d\.]/g, ''));
-                if (navGnbIdAttrSplit < 0) {
-                    $($navGnb).css("top", 0);
-                } else if ((navGnbIdAttrSplit + 60) > $winHt) {
-                    $($navGnb).css("top", $winHt - 60);
-                }
-            }
-        });
-
-        $navGnb.hover(function () {
-            $thisElement.css("opacity", 1);
-        }, function () {
-            $thisElement.css("opacity", 0);
-        });
-
-    }
     gnbDragHoverEvent();
     /* draggable 이벤트보다 나중에 실행되어야 함 */
     gnbScrollEvent();
