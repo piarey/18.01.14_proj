@@ -4,9 +4,13 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="blueyoun" />
+    <meta name="author" content="bib" />
     <meta name="description" content=" html5/웹표준/웹접근성 지켜서 만든 포트폴리오 사이트(ie9 이상 지원)" />
     <meta name="keywords" content="html5, web standard, web accessibility, ie9" />
+    <meta property="og:title" content="bib's pray"/>
+    <meta property="og:url" content="http://piarey.dothome.co.kr/"/>
+    <meta property="og:image" content="http://piarey.dothome.co.kr/images/common/headersvg.svg"/>
+    <meta property="og:description" content="bib의 포트폴리오 사이트"/>
     <title>bib's pray</title>
     <link rel="stylesheet" href="css/99ie9support.css" />
     <link rel="stylesheet" href="css/99common00.css" />
@@ -21,7 +25,6 @@
 </head>
 
 <body>
-    <div style="position:fixed; top:100px; left:100px; z-index:999;" id="test">값 : </div>
     <div id="tit_outer">
         <header id="tit_header">
             <div class="header_bg_common header_bg1 cleartxt_yescont">의자에 쌓인 눈 배경이미지</div>
@@ -32,7 +35,7 @@
                     <span title="아른거리는 반딧불" id="header_bg2_txt" aria-label="아른거리는 반딧불-배경에 대한 설명입니다"></span>
                     <div id="header_svg_circle1"></div>
                     <div id="header_svg_circle2"></div>
-                    <object type="image/svg+xml" data="images/common/headersvg.svg" tabindex="-1"></object>
+                    <object type="image/svg+xml" data="images/common/headersvg.svg" tabindex="-1">해당 기능을 지원하지 않는 브라우저 입니다</object>
                 </div>   
             </div>
             <h1 class="cleartxt_nocont">bib 의 포트폴리오 메인 페이지</h1>
@@ -117,7 +120,7 @@
                         <dt>만든이</dt>
                         <dd>백인범</dd>
                         <dt>연락처</dt>
-                        <dd><input type="text" value="010 7774 8695" id="js_value_ph" readonly="readonly" /><button id="footer_btn_copy" type="button" title="연락처 복사하기"><span aria-hidden="true" aria-label="복사하기 표시입니다">&#9986;</span></button></dd>
+                        <dd><input type="text" value="010 7774 8695" id="js_value_ph" title="연락처-010 7774 8695" readonly="readonly" /><button id="footer_btn_copy" type="button" title="연락처 복사하기"><span aria-hidden="true" aria-label="복사하기 표시입니다">&#9986;</span></button></dd>
                         <dt>이메일</dt>
                         <dd>bekinbum @ naver.com</dd>                      
                     </dl>
