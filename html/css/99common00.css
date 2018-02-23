@@ -41,12 +41,6 @@ textarea {resize:none;}
     font: inherit;
     line-height: normal;
     overflow: visible;
-	-webkit-appearance: button;
-    -moz-appearance: button;
-    user-select: none; 
-    -webkit-user-select: none; 
-       -moz-user-select: none;
-        -ms-user-select: none;
 }
 /* placeholder 크로스브라우징 */
 input:focus::-webkit-input-placeholder {color: transparent;}  
