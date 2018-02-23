@@ -48,7 +48,7 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 #footer_sec {width:1200px; height:auto; margin:0 auto;}
 #footer_sec:after {content:""; display:block; clear:both;}
 
-#footer_sec h2 {margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #fafafa;} 
+#footer_sec .footer_tname {display:block; margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #fafafa; font-family:"Jeju Gothic"; font-size:24px; font-weight:600; letter-spacing:3px;} 
 
 #footer_sec dl:after {content:""; display:block; clear:both;}
 #footer_sec dt, #footer_sec dd {height:40px; line-height:40px;}
@@ -93,8 +93,8 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 }
 
 @media only screen and (max-width:768px) {
-    #footer_sec h2 {text-align:center;}
-    #footer_sec .footer_certify h2 {margin:30px 0 0 0;}
+    #footer_sec .footer_tname {text-align:center;}
+    #footer_sec .footer_certify .footer_tname {margin:30px 0 0 0;}
     #footer_sec dt {margin:0 0 0 0;}
     .footer_address {float:none;}
     .footer_certify {float:none;}
