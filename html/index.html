@@ -5,16 +5,16 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="blueyoun" />
-    <meta name="description" content=" html5/웹표준/웹접근성 지켜서 만든 포폴 사이트(ie9 이상 지원)" />
+    <meta name="description" content=" html5/웹표준/웹접근성 지켜서 만든 포트폴리오 사이트(ie9 이상 지원)" />
     <meta name="keywords" content="html5, web standard, web accessibility, ie9" />
-    <title>bib</title>
+    <title>bib's pray</title>
     <link rel="stylesheet" href="css/99ie9support.css" />
     <link rel="stylesheet" href="css/99common00.css" />
     <link rel="stylesheet" href="css/99common01.css" />
     <link rel="stylesheet" href="css/00index.css" />
-    <link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
-    <script src="js/jquery-3.2.1.min.js"></script>
-    <script src="js/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="js/99common00.js"></script>
     <script src="js/00index.js"></script>
     <script src="js/99ie9support.js"></script>
@@ -28,14 +28,14 @@
             <div class="header_bg_common header_bg2 cleartxt_yescont">아른거리는 반딧불 배경이미지</div>
             <div class="header_svg_outer">
                 <div class="header_svg_inner">
-                    <span title="의자에 쌓인 눈" id="header_bg1_txt"></span>
-                    <span title="아른거리는 반딧불" id="header_bg2_txt" ></span>
+                    <span title="의자에 쌓인 눈" id="header_bg1_txt" aria-label="의자에 쌓인 눈-배경에 대한 설명입니다"></span>
+                    <span title="아른거리는 반딧불" id="header_bg2_txt" aria-label="아른거리는 반딧불-배경에 대한 설명입니다"></span>
                     <div id="header_svg_circle1"></div>
                     <div id="header_svg_circle2"></div>
                     <object type="image/svg+xml" data="images/common/headersvg.svg" tabindex="-1"></object>
                 </div>   
             </div>
-            <h1 style="opacity:0">bib 의 포트폴리오 메인 페이지</h1>
+            <h1 class="cleartxt_nocont">bib 의 포트폴리오 메인 페이지</h1>
             <div class="sec_whitebox_b"></div>
         </header>
         <main role="main" id="tit_main">
@@ -111,24 +111,37 @@
         </div>
         <footer id="tit_footer">
             <div id="footer_sec">
-                <em>&copy; 2018 백인범 All pictures cannot be copied without permission.</em>
-                <address>
+                <address class="footer_address">
+                    <h2>Info</h2>
                     <dl>
                         <dt>만든이</dt>
                         <dd>백인범</dd>
-                        <dt>핸드폰 번호</dt>
-                        <dd>010 7774 8695</dd>
-                        <dt>주소</dt>
-                        <dd>경기도 군포시 금산로47, 107동 1501호</dd>
+                        <dt>연락처</dt>
+                        <dd><input type="text" value="010 7774 8695" id="js_value_ph" readonly="readonly" /><button id="footer_btn_copy" type="button" title="연락처 복사하기"><span aria-hidden="true" aria-label="복사하기 표시입니다">&#9986;</span></button></dd>
                         <dt>이메일</dt>
-                        <dd>
-                            <a href="#">bekinbum@naver.com</a>
-                        </dd>
+                        <dd>bekinbum @ naver.com</dd>                      
                     </dl>
                 </address>
+                <div class="footer_certify">
+                    <h2>Validation</h2>
+                    <dl>
+                        <dt>W3C 마크업 검증서비스</dt>
+                        <dd>
+                            <a href="https://validator.kldp.org/check?uri=referer" target="_blank" id="footer_validator_link" class="cleartxt_yescont" title="HTML5 validator" aria-label="HTML5 validator 사이트-새창으로 이동합니다.">HTML5 validator</a>
+                        </dd>
+                        <dt>HTML5 Outliner</dt>
+                        <dd>
+                            <a href="https://gsnedders.html5.org/outliner/process.py?url=http%3A%2F%2Fpiarey.dothome.co.kr%2F" target="_blank" class="cleartxt_yescont" title="HTML5 Outliner" aria-label="outliner 사이트-새창으로 이동합니다.">HTML5 Outliner</a>
+                        </dd>
+                        <dt>Google testmysite</dt>
+                        <dd>
+                            <a href="https://testmysite.withgoogle.com/intl/ko-kr/?gclid=EAIaIQobChMItLrxvomm2QIVSjeWCh0GywxREAEYASAAEgIYNPD_BwE" target="_blank" class="cleartxt_yescont" title="Google testmysite" aria-label="testmysite 사이트-새창으로 이동합니다.">Google testmysite</a>
+                        </dd>
+                    </dl>
+                </div>
+                <span class="footer_copyright"><em aria-hidden="true" aria-label="저작권표시입니다">&copy;</em> 2018 백인범 All pictures cannot be copied without permission.</span>
             </div>
         </footer>
     </div>
 </body>
-
 </html>

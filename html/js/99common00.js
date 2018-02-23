@@ -84,6 +84,49 @@ $(window).on("load", function () {
 
 
 
+    /* html5validator 사이트이동 이벤트 따로 뺌 */
+    var footerValidatorLinkEvent = function () {
+        var thisElement = document.getElementById("footer_validator_link");
+        thisElement.onclick = function () {
+            thisElement.href = thisElement.href.replace(/referer$/, encodeURIComponent(document.URL));
+        };
+    };
+    //footerValidatorLinkEvent();
+
+    /* */
+    var footerCopyEvent = function () {
+
+        document.getElementById("footer_btn_copy").onclick = function () {
+            var agent = navigator.userAgent.toLowerCase(),
+                phValue = document.getElementById("js_value_ph");
+            if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
+                window.clipboardData.setData("Text", "010 7774 8695");
+                alert("연락처가 복사되었습니다.");
+            }
+            else {
+                phValue.select();
+                document.execCommand("Copy");
+                alert("연락처가 복사되었습니다.");
+            }
+        }
+    };
+    footerCopyEvent();
+
+    /* 구글 웹폰트 */
+    var googleWebfontEvent = function () {
+        WebFont.load({
+            // For google fonts
+            google: {
+                families: ['Nanum Gothic', 'sans-serif']
+            },
+            // For early access or custom font
+            custom: {
+                families: ['Jeju Gothic'],
+                urls: ['http://fonts.googleapis.com/earlyaccess/jejugothic.css']
+            }
+        });
+    };
+    googleWebfontEvent();
 
 
 

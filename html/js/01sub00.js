@@ -142,9 +142,9 @@ $(window).on("load", function () {
 
         /* 호버이벤트 */
         $navGnb.hover(function () {
-            $thisElement.css("opacity", 1);
+            $thisElement.css("display", "block");
         }, function () {
-            $thisElement.css("opacity", 0);
+            $thisElement.css("display", "none");
         });
 
     }
