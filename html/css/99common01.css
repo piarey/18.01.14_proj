@@ -1,29 +1,29 @@
 
 /* #tit_nav 는 서브만 존재 */
 body, #tit_outer, #tit_nav, #tit_header, #tit_main, #tit_aside, #tit_footer {position:relative; width:100%;}
-body {background-color:#fafafa; }
+body {background-color:#f2f3fa; }
 /* overflow 속성을 줘야 margin 값도 인식하여 부모가 height 값을 자동으로 받나봄 */
 #tit_outer {overflow-x:hidden; max-width:2560px; height:auto; margin:0 auto;}
 
 .sec_whitebox_t, .sec_whitebox_b {z-index:3; position:absolute;}
-.sec_whitebox_t {border-top:9vh solid #fafafa; top:0; left:0px; }
+.sec_whitebox_t {border-top:9vh solid #f2f3fa; top:0; left:0px; }
 .sec_whitebox_b {border-top:9vh solid transparent; bottom:0; left:0;}
 
 /* 스태틱인 이유는 absolute 로 위치가 정해지는것이 아니기 때문 */
 .tit_whitebox_a_common {position:relative; z-index:2;}
 .tit_whitebox_a_common .sec_whitebox_t {position:static;}
-#tit_outer > .tit_whitebox_aside1 {background-color:#343642;}
+#tit_outer > .tit_whitebox_aside1 {background-color:#cc435a;}
 #tit_outer > .tit_whitebox_aside2 {background-color:transparent;}
-#tit_outer > .tit_whitebox_aside2 .sec_whitebox_t {border-color:#343642;}
+#tit_outer > .tit_whitebox_aside2 .sec_whitebox_t {border-color:#cc435a;}
 
 
 
 /* index는 h3, sub은 h2 메뉴글씨 공통 */
-.main_sec a h3, #header_sec h2 {position:absolute; left:50%;top:50%; transform:translate(-50%, -50%); color:#fafafa; letter-spacing:10px; white-space:nowrap; font-size:20px;}
+.main_sec a h3, #header_sec h2 {position:absolute; left:50%;top:50%; transform:translate(-50%, -50%); color:#f2f3fa; letter-spacing:10px; white-space:nowrap; font-size:20px;}
 
 
 
-#tit_aside {z-index:2; background-color:#343642;}
+#tit_aside {z-index:2; background-color:#cc435a;}
 /* #aside_sec {position:absolute; z-index:4; top:50%; left:50%; transform:translate(-50%);}  */
 #aside_sec {width:1200px; height:auto; margin:0 auto; } 
 /* #aside_sec {display:table-cell; vertical-align: middle;} */
@@ -44,11 +44,11 @@ ul#sec_iconbox li:nth-child(6) a {background-position:0px -200px;}
 ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 
 /* position 값은 js에서 조정 */
-#tit_footer {z-index:1; padding:100px 0 100px 0; height:auto; bottom:0;left:0; color:#fafafa; word-break:keep-all;}
+#tit_footer {z-index:1; padding:100px 0 70px 0; height:auto; bottom:0;left:0; color:#f2f3fa; word-break:keep-all;}
 #footer_sec {width:1200px; height:auto; margin:0 auto;}
 #footer_sec:after {content:""; display:block; clear:both;}
 
-#footer_sec .footer_tname {display:block; margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #fafafa; font-family:"Jeju Gothic"; font-size:24px; font-weight:600; letter-spacing:3px;} 
+#footer_sec .footer_tname {display:block; margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #f2f3fa; font-family:"Jeju Gothic"; font-size:24px; font-weight:600; letter-spacing:3px;} 
 
 #footer_sec dl:after {content:""; display:block; clear:both;}
 #footer_sec dt, #footer_sec dd {height:40px; line-height:40px;}
@@ -59,7 +59,7 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 .footer_address dd {float:left;}
 
 #js_value_ph {width:130px; background-color:transparent; border:0;}
-#footer_btn_copy {width:auto;}
+#footer_btn_copy {width:auto; cursor:copy;}
 
 
 
@@ -67,13 +67,15 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 .footer_certify dl dd a {display:block; width:80px; height:15px; margin:13px 0 0 0; background-image:url("../images/common/footer_certify.jpg");}
 .footer_certify dl dd:nth-of-type(2) a {background-position:0 -15px;}
 .footer_certify dl dd:nth-of-type(3) a {background-position:0 -30px;}
+.footer_certify dl dd:nth-of-type(4) a {background-position:0 -45px;}
+.footer_certify dl dd:nth-of-type(5) a {background-position:0 -60px;}
 
 .footer_certify dt {float:left; clear:both;}
 .footer_certify dd {float:left;}
 
 
 
-.footer_copyright {float:left; width:100%; margin:60px 0 0 0; clear:both; text-align:center; font-size:14px; font-weight:700;}
+.footer_copyright {float:left; width:100%; margin:100px 0 0 0; clear:both; text-align:center; font-size:12px;}
 
 /* 미디어쿼리 */
 @media only screen and (max-width:1280px) {
@@ -88,7 +90,7 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 }
 
 @media only screen and (max-width:960px) {
-    .sec_whitebox_t {border-top:6vh solid #fafafa;}
+    .sec_whitebox_t {border-top:6vh solid #f2f3fa;}
     .sec_whitebox_b {border-top:6vh solid transparent;}
 }
 
@@ -108,7 +110,7 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 }
 
 @media only screen and (max-width:480px) {
-    .sec_whitebox_t {border-top:4vh solid #fafafa;}
+    .sec_whitebox_t {border-top:4vh solid #f2f3fa;}
     .sec_whitebox_b {border-top:4vh solid transparent;}
     #tit_footer {padding:30px 30px 30px 30px; font-size:14px;}
 

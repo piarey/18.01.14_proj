@@ -46,7 +46,7 @@ $(window).on("load", function () {
         var thisEvent = function () {
             winWdControlEvent();
             $wboxTop.css("border-left", $winWd + "px solid transparent");
-            $wboxBottom.css("border-left", $winWd + "px solid #fafafa");
+            $wboxBottom.css("border-left", $winWd + "px solid #f2f3fa");
         }
         thisEvent();
 
@@ -165,7 +165,7 @@ $(window).on("load", function () {
                 $thisElement.css({ "position": "fixed", "background-color": "transparent" });
             }
             else {
-                $thisElement.css({ "position": "absolute", "background-color": "rgba(204,67,90,1)" });
+                $thisElement.css({ "position": "absolute", "background-color": "rgba(52,54,66,1)" });
                 /* draggable 이벤트보다 나중에 실행되어야 함 */
                 $navGnb.css({ "position": "static", "left": "none", "top": "none" });
             }
@@ -182,11 +182,11 @@ $(window).on("load", function () {
                     $navGnb.css("position", "relative");
                 }
                 else if ($scrollValue > $winHt && $scrollValue <= lastScroll) {
-                    $thisElement.css({ "position": "absolute", "background-color": "rgba(204,67,90,1)" });
+                    $thisElement.css({ "position": "absolute", "background-color": "rgba(52,54,66,1)" });
                 }
                 else {
                     $navGnb.css({ "position": "static", "left": "none", "top": "none" });
-                    $thisElement.css({ "position": "absolute", "background-color": "rgba(204,67,90,1)" });
+                    $thisElement.css({ "position": "absolute", "background-color": "rgba(52,54,66,1)" });
                 }
                 lastScroll = $scrollValue;
             }, sec);
@@ -197,6 +197,19 @@ $(window).on("load", function () {
     gnbDragHoverEvent();
     /* draggable 이벤트보다 나중에 실행되어야 함 */
     gnbScrollEvent();
+
+
+
+    /* 02sub00 이벤트*/
+    var sub02TableHelpEvnet = function () {
+        $(".tb1_help").hover(function () {
+            $(this).css("overflow", "visible");
+        }, function () {
+            $(this).css("overflow", "hidden");
+        });
+    };
+    sub02TableHelpEvnet();
+
 
     /* */
     $("#etc_fouc").stop().animate({ opacity: 1 }, 250);

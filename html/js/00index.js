@@ -37,7 +37,7 @@ $(window).on("load", function () {
         var thisEvent = function () {
             winWdControlEvent();
             $wboxTop.css("border-right", $winWd + "px solid transparent");
-            $wboxBottom.css("border-right", $winWd + "px solid #fafafa");
+            $wboxBottom.css("border-right", $winWd + "px solid #f2f3fa");
         }
         thisEvent();
 
@@ -95,7 +95,7 @@ $(window).on("load", function () {
         setTimeout(function () {
             $($wboxTop).css("border-left", 0 + "px solid transparent");
             $($wboxTop).stop().animate({ borderLeftWidth: $winWd }, speed300);
-            $($wboxBottom).css("border-left", 0 + "px solid #fafafa");
+            $($wboxBottom).css("border-left", 0 + "px solid #f2f3fa");
             $($wboxBottom).stop().animate({ borderLeftWidth: $winWd }, speed300);
             setTimeout(function () {
                 $("html").stop().animate({ opacity: 0 }, speed250);

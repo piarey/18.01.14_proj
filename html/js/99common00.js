@@ -56,7 +56,7 @@ $(window).on("load", function () {
             $htmlHtRe();
             if ($winScrollTop + $winHt > $htmlHt - ($footerHt + $footerHt / 3)) {
                 $footer.css("opacity", 1);
-                $titOuter.css("background-color", "#cc435a");
+                $titOuter.css("background-color", "#343642");
             } else {
                 $footer.css("opacity", 0);
                 $titOuter.css("background-color", "transparent");
