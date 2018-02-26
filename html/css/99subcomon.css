@@ -72,6 +72,12 @@ font-size:11px; color:#f2f3fa; border-radius:10px;}
 .sub02_tit_main .main_sec2 ul li time {font-weight:700;}
 .sub02_tit_main .main_sec2 ul li:last-child {margin:0;}
 
+
+/* 03sub00_tit_main */
+#sub03_sec2_cvs1 {width:100%; height:400px; background-color:#faa;}
+
+
+
 @media only screen and (max-width:1280px) {
     #nav_gnb_outer {width:100%;}
     .nav_gnb {padding:0 10px 0 0;}

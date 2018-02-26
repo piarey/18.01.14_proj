@@ -134,9 +134,7 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 .footer_certify dt {float:left; clear:both;}
 .footer_certify dd {float:left;}
 
-
-
-.footer_copyright {float:left; width:100%; margin:100px 0 0 0; clear:both; text-align:center; font-size:12px;}
+.footer_copyright {float:left; width:100%; margin:70px 0 0 0; clear:both; text-align:center; font-size:12px;}
 
 /* 미디어쿼리 */
 @media only screen and (max-width:1280px) {

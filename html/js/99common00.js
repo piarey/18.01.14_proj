@@ -98,8 +98,6 @@ $(document).ready(function () {
     };
     footerFxOpEVent();
 
-
-
     /* html5validator 사이트이동 이벤트 따로 뺌 */
     var footerValidatorLinkEvent = function () {
         var thisElement = document.getElementById("footer_validator_link");
