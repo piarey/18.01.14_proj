@@ -1,3 +1,40 @@
+$(document).ready(function () {
+
+    /* 네비모바일버전 오픈이벤트 */
+    var navMobileOpenEvent = function () {
+        var $thisElement = $("#tit_nav_mobile");
+        $(".nav_gnb_mobile_open").on("click", function () {
+            $thisElement.show().stop().animate({ opacity: 1 }, 300);
+        });
+
+    };
+    navMobileOpenEvent();
+
+    /* 네비모바일버전 닫기이벤트 */
+    var navMobileCancelEvent = function () {
+        var $thisElement = $("#tit_nav_mobile");
+        $(".nav_mobile_cancel").on("click", function () {
+            $thisElement.stop().animate({ opacity: 0 }, 300);
+            setTimeout(function () {
+                $thisElement.css("display", "none");
+            }, 200);
+        });
+    };
+    navMobileCancelEvent();
+
+    /* 02sub00 이벤트*/
+    var sub02TableHelpEvnet = function () {
+        $(".tb1_help").hover(function () {
+            $(this).css("overflow", "visible");
+        }, function () {
+            $(this).css("overflow", "hidden");
+        });
+    };
+    sub02TableHelpEvnet();
+
+});
+
+
 /* 이미지 */
 $(window).on("load", function () {
 
@@ -12,8 +49,6 @@ $(window).on("load", function () {
     var $winHt = 0;
     var $wboxTop = $(".sec_whitebox_t");
     var $wboxBottom = $(".sec_whitebox_b");
-    var speed200 = 200;
-    var speed300 = 300;
 
     /* window 너비 해상도에 따라 조절 이벤트 */
     var winWdControlEvent = function () {
@@ -59,42 +94,16 @@ $(window).on("load", function () {
     };
     whiteboxControlEvent();
 
-
-
-    /* 네비모바일버전 오픈이벤트 */
-    var navMobileOpenEvent = function () {
-        var $thisElement = $("#tit_nav_mobile");
-        $(".nav_gnb_mobile_open").on("click", function () {
-
-            $thisElement.show().stop().animate({ opacity: 1 }, speed300);
-        });
-
-    };
-    navMobileOpenEvent();
-
-    /* 네비모바일버전 닫기이벤트 */
-    var navMobileCancelEvent = function () {
-        var $thisElement = $("#tit_nav_mobile");
-        $(".nav_mobile_cancel").on("click", function () {
-            $thisElement.stop().animate({ opacity: 0 }, speed300);
-            setTimeout(function () {
-                $thisElement.css("display", "none");
-            }, speed200);
-        });
-    };
-    navMobileCancelEvent();
-
     /* gnb 드래그 호버 이벤트 */
     var gnbDragHoverEvent = function () {
-        var $navGnb = $(".nav_gnb"),
+        var $navGnb = $("#nav_gnb_outer"),
             $thisElement = $(".nav_gnb_tooltip_outer");
 
         $navGnb.draggable({
             cursor: "all-scroll", containment: "html, body", stop: function (event, ui) {
                 winHtReControlEvent();
-                var navGnbId = document.getElementById("nav_gnb_id"),
+                var navGnbId = document.getElementById("nav_gnb_outer"),
                     navGnbIdAttr = navGnbId.attributes[2].value;
-
                 var browserCheckEvent = function () {
                     var agent = navigator.userAgent.toLowerCase(),
                         navGnbIdAttrSplit = 0,
@@ -106,11 +115,11 @@ $(window).on("load", function () {
                             }
                         }
                     if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
-                        navGnbIdAttrSplit = Number(navGnbIdAttr.split(" ")[3].replace(/[^-\d\.]/g, ''));
+                        navGnbIdAttrSplit = Number(navGnbIdAttr.split(" ")[5].replace(/[^-\d\.]/g, ''));
                         thisEvent();
                     }
                     else {
-                        navGnbIdAttrSplit = Number(navGnbIdAttr.split(" ")[5].replace(/[^-\d\.]/g, ''));
+                        navGnbIdAttrSplit = Number(navGnbIdAttr.split(" ")[9].replace(/[^-\d\.]/g, ''));
                         thisEvent();
                     }
                 };
@@ -153,21 +162,22 @@ $(window).on("load", function () {
     var gnbScrollEvent = function () {
         winHtControlEvent();
         winHtReControlEvent();
-        var $scrollValue = 0,
-            lastScroll = 0,
-            $thisElement = $("#tit_nav"),
-            $navGnb = $(".nav_gnb");
+        var $scrollValue = 0
+            , lastScroll = 0
+            , $titNav = $("#tit_nav")
+            , $navGnb = $("#nav_gnb_outer");
 
         /* 일반상태 */
         var thisEvent = function () {
             $scrollValue = $(this).scrollTop();
             if ($scrollValue > $winHt) {
-                $thisElement.css({ "position": "fixed", "background-color": "transparent" });
+                $titNav.css({ "position": "fixed", "height": "0px" });
+                $navGnb.css({ "position": "relative", "transform": "translate(-50%)", "margin": "0" });
             }
             else {
-                $thisElement.css({ "position": "absolute", "background-color": "rgba(52,54,66,1)" });
+                $titNav.css({ "position": "absolute", "height": "61px" });
                 /* draggable 이벤트보다 나중에 실행되어야 함 */
-                $navGnb.css({ "position": "static", "left": "none", "top": "none" });
+                $navGnb.css({ "position": "static", "left": "none", "top": "none", "transform": "none", "margin": "6px auto 0 auto" });
             }
         };
         thisEvent();
@@ -178,15 +188,15 @@ $(window).on("load", function () {
             timer2 = setTimeout(function () {
                 $scrollValue = $(this).scrollTop();
                 if ($scrollValue > $winHt && $scrollValue > lastScroll) {
-                    $thisElement.css({ "position": "fixed", "background-color": "transparent" });
-                    $navGnb.css("position", "relative");
+                    $titNav.css({ "position": "fixed", "height": "0px" });
+                    $navGnb.css({ "position": "relative", "transform": "translate(-50%)", "margin": "0" });
                 }
                 else if ($scrollValue > $winHt && $scrollValue <= lastScroll) {
-                    $thisElement.css({ "position": "absolute", "background-color": "rgba(52,54,66,1)" });
+                    $titNav.css({ "position": "absolute", "height": "61px" });
                 }
                 else {
-                    $navGnb.css({ "position": "static", "left": "none", "top": "none" });
-                    $thisElement.css({ "position": "absolute", "background-color": "rgba(52,54,66,1)" });
+                    $navGnb.css({ "position": "static", "left": "none", "top": "none", "transform": "none", "margin": "6px auto 0 auto" });
+                    $titNav.css({ "position": "absolute", "height": "61px" });
                 }
                 lastScroll = $scrollValue;
             }, sec);
@@ -198,20 +208,15 @@ $(window).on("load", function () {
     /* draggable 이벤트보다 나중에 실행되어야 함 */
     gnbScrollEvent();
 
-
-
-    /* 02sub00 이벤트*/
-    var sub02TableHelpEvnet = function () {
-        $(".tb1_help").hover(function () {
-            $(this).css("overflow", "visible");
-        }, function () {
-            $(this).css("overflow", "hidden");
-        });
+    /* foucEvent */
+    var foucEvent = function () {
+        var agent = navigator.userAgent.toLowerCase();
+        if ((navigator.appName == 'Netscape' && navigator.userAgent.search('Trident') != -1) || (agent.indexOf("msie") != -1)) {
+            $("#etc_fouc").delay(200).stop().animate({ opacity: 1 }, 250);
+        }
+        else {
+            $("#etc_fouc").stop().animate({ opacity: 1 }, 250);
+        }
     };
-    sub02TableHelpEvnet();
-
-
-    /* */
-    $("#etc_fouc").stop().animate({ opacity: 1 }, 250);
-
+    foucEvent();
 });

@@ -1,4 +1,65 @@
+@charset "utf-8";
+/* FOUC 화면깜빡임 방지 */
+#etc_fouc {opacity:0;}
 
+/* 기본 css의 마진패딩 제거 */
+html, body, div, span 
+, header, nav, section, article, footer, aside
+, p, ul, ol, li, dl, dd, dt, h1, h2, h3, h4, h5, h6
+, form, input, fieldset, legend, textarea, select, button, label
+, figure, figcaption
+, table, caption, tbody, tfoot, thead, tr, th, td
+{margin:0; padding:0; box-sizing:border-box;}
+
+/* 사이트 기본 설정 */
+html {font-family:"Nanum Gothic"; letter-spacing:2px; font-weight:400; font-size:16px; color:#2e2e2e; word-break:keep-all;}
+a {text-decoration:none; color:inherit;}
+/*
+a:hover {text-decoration:underline;}*/
+ul, ol {list-style-type:none;}
+img, fieldset {border:0px;}
+/* tab 접근성때문에 흠... */
+/* input:focus, button:focus, textarea:focus {outline:none;}*/
+em, address {font-style:normal;}
+/* collapse 를 기본으로 두는게 맞긴한데 */
+table {border:0px; border-spacing:0px;}
+button > span {position:relative;}
+h1,h2,h3,h4,h5,h6 {font-family:"Jeju Gothic"; letter-spacing:3px;}
+fieldset, caption, legend {display:block; overflow:hidden; position:absolute; width:1px; height:1px; margin:-1px;}
+abbr {text-decoration:none;}
+
+input, select, textarea, button {color:inherit; font-size:inherit; font-family: inherit; border:1px solid #d6d6d6; }
+textarea {resize:none;}
+
+/* 크로스브라우징 용(ie10이상) */
+ button {  
+	width:100%;
+	background: none;
+    border: 0;
+    color: inherit;
+	cursor:pointer;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+}
+/* placeholder 크로스브라우징 */
+input:focus::-webkit-input-placeholder {color: transparent;}  
+input:focus::-moz-placeholder {color: transparent;}  
+
+/* 익스9 부터는 구지 안적어도 되지만 일단 적어놓음 */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}
+
+/* main엘리먼트는 ie11 이하 지원X */
+main {display:block;}
+
+/* 이하 자주쓰는 css */
+.cleartxt {display:block; text-indent:-9999px; width:0; height:0;}
+.cleartxt_nocont {display:block; overflow:hidden; position:absolute; width:1px; height:1px;}
+.cleartxt_yescont {text-indent:-5000px; overflow:hidden;}
+
+.central_sorting {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
+
+/**/
 /* #tit_nav 는 서브만 존재 */
 body, #tit_outer, #tit_nav, #tit_header, #tit_main, #tit_aside, #tit_footer {position:relative; width:100%;}
 body {background-color:#f2f3fa; }
@@ -44,7 +105,7 @@ ul#sec_iconbox li:nth-child(6) a {background-position:0px -200px;}
 ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 
 /* position 값은 js에서 조정 */
-#tit_footer {z-index:1; padding:100px 0 70px 0; height:auto; bottom:0;left:0; color:#f2f3fa; word-break:keep-all;}
+#tit_footer {z-index:1; padding:100px 0 70px 0; height:auto; bottom:0;left:0; color:#f2f3fa;}
 #footer_sec {width:1200px; height:auto; margin:0 auto;}
 #footer_sec:after {content:""; display:block; clear:both;}
 
@@ -96,7 +157,7 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 
 @media only screen and (max-width:768px) {
     #footer_sec .footer_tname {text-align:center;}
-    #footer_sec .footer_certify .footer_tname {margin:30px 0 0 0;}
+    #footer_sec .footer_certify .footer_tname {margin:50px 0 0 0;}
     #footer_sec dt {margin:0 0 0 0;}
     .footer_address {float:none;}
     .footer_certify {float:none;}
@@ -112,7 +173,7 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 @media only screen and (max-width:480px) {
     .sec_whitebox_t {border-top:4vh solid #f2f3fa;}
     .sec_whitebox_b {border-top:4vh solid transparent;}
-    #tit_footer {padding:30px 30px 30px 30px; font-size:14px;}
+    #tit_footer {padding:50px 30px 50px 30px; font-size:14px;}
 
 }
 
