@@ -32,6 +32,137 @@ $(document).ready(function () {
     };
     sub02TableHelpEvnet();
 
+    var headerSecH2 = document.getElementById("header_sec_h2")
+        , headerSecH2cont = headerSecH2.innerHTML
+        , menuName = ["사용기술목록", "자기소개", "보유기술", "포트폴리오", "개인공부정리"];
+
+    switch (headerSecH2cont) {
+        case menuName[2]:
+            var sub03Sec2Cvs1Event = function () {
+                var thisElement = document.getElementById("sub03_sec1_cvs1");
+                var cvsWidth = thisElement.width;
+                var cvsHeight = thisElement.height;
+                var i = 0;
+                var init = 1;
+                var grpValue = [-260, -98, -150, -98, -125, -270, -80];
+
+                /* ctx 는 각각 사용해야 함. */
+                var ctx = thisElement.getContext("2d");
+
+                ctx.beginPath();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "#343642";
+                ctx.moveTo(30, 1); ctx.lineTo(50, 1); ctx.stroke();
+                ctx.moveTo(30, cvsWidth / 3); ctx.lineTo(50, cvsWidth / 3); ctx.stroke();
+                ctx.moveTo(30, cvsWidth / 6); ctx.lineTo(50, cvsWidth / 6); ctx.stroke();
+                ctx.moveTo(30, 299); ctx.lineTo(50, 299); ctx.stroke();
+                ctx.moveTo(50, 0); ctx.lineTo(50, 300); ctx.stroke();
+                ctx.moveTo(50, 299); ctx.lineTo(600, 299); ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.strokeStyle = "#dadbe3";
+                ctx.lineWidth = 2;
+
+                for (i = 0; i < 13; i++) {
+                    ctx.moveTo(51, init + (i * 25)); ctx.lineTo(600, init + (i * 25)); ctx.stroke();
+                };
+                ctx.closePath();
+
+                ctx.fillStyle = "#00f";
+                /* x시작, y시작, x시작기준으로 x끝, y시작 기준으로 y끝 */
+                /*
+                                for (i = 0; i < 8; i++) {
+                                    ctx.fillRect(78 * (i + 1), 298, 30, grpValue[i]);
+                                };*/
+
+                i = 0;
+                var d = 0;
+                var z = null;
+                var ff = function () {
+                    if (i == 0 && d > grpValue[i]) {
+                        ctx.fillRect(78 * (i + 1), 298, 30, d);
+                        d = d - 8;
+                    } else if (i == 1 && d > grpValue[i]) {
+                        ctx.fillRect(78 * (i + 1), 298, 30, d);
+                        d = d - 8;
+                    } else if (i == 2 && d > grpValue[i]) {
+                        ctx.fillRect(78 * (i + 1), 298, 30, d);
+                        d = d - 8;
+                    } else if (i == 3 && d > grpValue[i]) {
+                        ctx.fillRect(78 * (i + 1), 298, 30, d);
+                        d = d - 8;
+                    } else if (i == 4 && d > grpValue[i]) {
+                        ctx.fillRect(78 * (i + 1), 298, 30, d);
+                        d = d - 8;
+                    } else if (i == 5 && d > grpValue[i]) {
+                        ctx.fillRect(78 * (i + 1), 298, 30, d);
+                        d = d - 8;
+                    } else if (i == 6 && d > grpValue[i]) {
+                        ctx.fillRect(78 * (i + 1), 298, 30, d);
+                        d = d - 8;
+                    } else if (i == 7) {
+                        clearInterval(z);
+                    }
+                    else {
+                        i++;
+                        d = 0;
+                    }
+                }
+
+                thisElement.onmouseover = function () {
+                    z = setInterval(ff, 7);
+                };
+
+            };
+            sub03Sec2Cvs1Event();
+
+            var sub03Sec2Cvs2Event = function () {
+                var thisElement = document.getElementById("sub03_sec1_cvs2");
+                var init1 = 1;
+                var grpValue = [-125, -150, -98, -10, -5, -7, -1, -1];
+
+                var ctx = thisElement.getContext("2d");
+
+                ctx.beginPath();
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "#343642";
+                ctx.moveTo(0, 299); ctx.lineTo(600, 299); ctx.stroke();
+
+                ctx.beginPath();
+                ctx.strokeStyle = "#dadbe3";
+                ctx.lineWidth = 2;
+                for (var i = 0; i < 13; i++) {
+                    ctx.moveTo(0, init1 + (i * 25)); ctx.lineTo(600, init1 + (i * 25)); ctx.stroke();
+                }
+                ctx.closePath();
+
+
+                for (i = 0; i < 9; i++) {
+                    ctx.fillRect(75 * (i + 1) - 50, 298, 30, grpValue[i]);
+                }
+
+            }
+            sub03Sec2Cvs2Event();
+
+            var sub03Sec2Cvs3Event = function () {
+                var thisElement = document.getElementById("sub03_sec1_cvs2");
+                ctx = thisElement.getContext("2d");
+
+
+            }
+            var sub03Sec2Cvs3Event = function () {
+                var thisElement = document.getElementById("sub03_sec1_cvs2");
+                ctx = thisElement.getContext("2d");
+
+
+
+
+            }
+            break;
+
+    }
+
 });
 
 

@@ -49,18 +49,17 @@ $(document).ready(function () {
 
 
     /* header 동그라미 움직이는 효과 */
-    function headerCircleMoveEvent() {
+    var headerCircleMoveEvent = function () {
         setTimeout(function () {
-            var x = Math.floor(Math.random() * 150);
-            var y = Math.floor(Math.random() * 150);
-            var aa = $("#header_svg_circle1");
-            var bb = $("#header_svg_circle2");
-            aa.animate({ top: x, left: y });
-            bb.animate({ bottom: x, right: y });
+            var ranValue1 = Math.floor(Math.random() * 150);
+            var ranValue2 = Math.floor(Math.random() * 150);
+            var thisElement1 = $("#header_svg_circle1");
+            var thisElement2 = $("#header_svg_circle2");
+            thisElement1.animate({ top: ranValue1, left: ranValue2 });
+            thisElement2.animate({ bottom: ranValue1, right: ranValue2 });
             headerCircleMoveEvent();
         }, 1000);
     };
-
     headerCircleMoveEvent();
 
 });
