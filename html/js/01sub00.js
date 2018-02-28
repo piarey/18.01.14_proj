@@ -32,6 +32,7 @@ $(document).ready(function () {
     };
     sub02TableHelpEvnet();
 
+    /* 각 페이지별로 분리 안시키고 하나에 몰아서 해봄 */
     var headerSecH2 = document.getElementById("header_sec_h2")
         , headerSecH2cont = headerSecH2.innerHTML
         , menuName = ["사용기술목록", "자기소개", "보유기술", "포트폴리오", "개인공부정리"];
@@ -45,16 +46,26 @@ $(document).ready(function () {
                 var i = 0;
                 var init = 1;
                 var grpValue = [-260, -98, -150, -98, -125, -270, -80];
+                var i2 = 0;
+                var ySpeed = 0;
+                var timer = null;
 
                 /* ctx 는 각각 사용해야 함. */
                 var ctx = thisElement.getContext("2d");
+
+                ctx.fillStyle = "#e1e4f2";
+                ctx.fillRect(50, 0, 600, 100);
+                ctx.fillStyle = "#e2f2e1";
+                ctx.fillRect(50, 101, 600, 100);
+                ctx.fillStyle = "#f2ebe1";
+                ctx.fillRect(50, 201, 600, 100);
 
                 ctx.beginPath();
                 ctx.lineWidth = 2;
                 ctx.strokeStyle = "#343642";
                 ctx.moveTo(30, 1); ctx.lineTo(50, 1); ctx.stroke();
-                ctx.moveTo(30, cvsWidth / 3); ctx.lineTo(50, cvsWidth / 3); ctx.stroke();
-                ctx.moveTo(30, cvsWidth / 6); ctx.lineTo(50, cvsWidth / 6); ctx.stroke();
+                ctx.moveTo(30, cvsWidth / 3 + 1); ctx.lineTo(50, cvsWidth / 3 + 1); ctx.stroke();
+                ctx.moveTo(30, cvsWidth / 6 + 1); ctx.lineTo(50, cvsWidth / 6 + 1); ctx.stroke();
                 ctx.moveTo(30, 299); ctx.lineTo(50, 299); ctx.stroke();
                 ctx.moveTo(50, 0); ctx.lineTo(50, 300); ctx.stroke();
                 ctx.moveTo(50, 299); ctx.lineTo(600, 299); ctx.stroke();
@@ -63,66 +74,79 @@ $(document).ready(function () {
                 ctx.beginPath();
                 ctx.strokeStyle = "#dadbe3";
                 ctx.lineWidth = 2;
-
                 for (i = 0; i < 13; i++) {
                     ctx.moveTo(51, init + (i * 25)); ctx.lineTo(600, init + (i * 25)); ctx.stroke();
                 };
                 ctx.closePath();
 
-                ctx.fillStyle = "#00f";
+                ctx.beginPath();
+                ctx.strokeStyle = "#b8b8bf";
+                ctx.moveTo(51, init + (4 * 25)); ctx.lineTo(600, init + (4 * 25)); ctx.stroke();
+                ctx.moveTo(51, init + (8 * 25)); ctx.lineTo(600, init + (8 * 25)); ctx.stroke();
+                ctx.closePath();
+
                 /* x시작, y시작, x시작기준으로 x끝, y시작 기준으로 y끝 */
                 /*
                                 for (i = 0; i < 8; i++) {
                                     ctx.fillRect(78 * (i + 1), 298, 30, grpValue[i]);
                                 };*/
-
-                i = 0;
-                var d = 0;
-                var z = null;
-                var ff = function () {
-                    if (i == 0 && d > grpValue[i]) {
-                        ctx.fillRect(78 * (i + 1), 298, 30, d);
-                        d = d - 8;
-                    } else if (i == 1 && d > grpValue[i]) {
-                        ctx.fillRect(78 * (i + 1), 298, 30, d);
-                        d = d - 8;
-                    } else if (i == 2 && d > grpValue[i]) {
-                        ctx.fillRect(78 * (i + 1), 298, 30, d);
-                        d = d - 8;
-                    } else if (i == 3 && d > grpValue[i]) {
-                        ctx.fillRect(78 * (i + 1), 298, 30, d);
-                        d = d - 8;
-                    } else if (i == 4 && d > grpValue[i]) {
-                        ctx.fillRect(78 * (i + 1), 298, 30, d);
-                        d = d - 8;
-                    } else if (i == 5 && d > grpValue[i]) {
-                        ctx.fillRect(78 * (i + 1), 298, 30, d);
-                        d = d - 8;
-                    } else if (i == 6 && d > grpValue[i]) {
-                        ctx.fillRect(78 * (i + 1), 298, 30, d);
-                        d = d - 8;
-                    } else if (i == 7) {
-                        clearInterval(z);
+                
+                //ctx.fillStyle = "#cc435a";
+                ctx.fillStyle = "#" + Math.round(Math.random()*0xffffff).toString(16);
+                var cvsAnimate1 = function () {
+                    if (i2 == 0 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(78 * (i2 + 1), 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 1 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(78 * (i2 + 1), 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 2 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(78 * (i2 + 1), 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 3 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(78 * (i2 + 1), 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 4 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(78 * (i2 + 1), 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 5 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(78 * (i2 + 1), 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 6 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(78 * (i2 + 1), 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 7) {
+                        clearInterval(timer);
+                        return false;
                     }
                     else {
-                        i++;
-                        d = 0;
+                        ctx.fillStyle = "#" + Math.round(Math.random()*0xffffff).toString(16);
+                        i2++;
+                        ySpeed = 0;
                     }
                 }
-
-                thisElement.onmouseover = function () {
-                    z = setInterval(ff, 7);
-                };
-
+                $("#sub03_sec1_cvs1").one("mouseover", function () {
+                    timer = setInterval(cvsAnimate1, 10);
+                });
             };
             sub03Sec2Cvs1Event();
 
             var sub03Sec2Cvs2Event = function () {
                 var thisElement = document.getElementById("sub03_sec1_cvs2");
                 var init1 = 1;
-                var grpValue = [-125, -150, -98, -10, -5, -7, -1, -1];
+                var grpValue = [-125, -150, -98, -10, -5, -7, -2, -2];
+                var i2 = 0;
+                var ySpeed = 0;
+                var timer = null;
 
                 var ctx = thisElement.getContext("2d");
+
+                ctx.fillStyle = "#e1e4f2";
+                ctx.fillRect(0, 0, 600, 100);
+                ctx.fillStyle = "#e2f2e1";
+                ctx.fillRect(0, 101, 600, 100);
+                ctx.fillStyle = "#f2ebe1";
+                ctx.fillRect(0, 201, 600, 100);
 
                 ctx.beginPath();
                 ctx.lineWidth = 2;
@@ -137,10 +161,55 @@ $(document).ready(function () {
                 }
                 ctx.closePath();
 
+                ctx.beginPath();
+                ctx.strokeStyle = "#b8b8bf";
+                ctx.moveTo(0, init1 + (4 * 25)); ctx.lineTo(600, init1 + (4 * 25)); ctx.stroke();
+                ctx.moveTo(0, init1 + (8 * 25)); ctx.lineTo(600, init1 + (8 * 25)); ctx.stroke();
+                ctx.closePath();
 
-                for (i = 0; i < 9; i++) {
-                    ctx.fillRect(75 * (i + 1) - 50, 298, 30, grpValue[i]);
+                /*
+                                for (i = 0; i < 9; i++) {
+                                    ctx.fillRect(75 * (i + 1) - 50, 298, 30, grpValue[i]);
+                                }*/
+                ctx.fillStyle = "#" + Math.round(Math.random()*0xffffff).toString(16);
+                var cvsAnimate1 = function () {
+                    if (i2 == 0 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 1 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 2 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 3 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
+                        ySpeed = ySpeed - 8;
+                    } else if (i2 == 4 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
+                        ySpeed = ySpeed - 1;
+                    } else if (i2 == 5 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
+                        ySpeed = ySpeed - 1;
+                    } else if (i2 == 6 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
+                        ySpeed = ySpeed - 1;
+                    } else if (i2 == 7 && ySpeed > grpValue[i2]) {
+                        ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
+                        ySpeed = ySpeed - 1;
+                    } else if (i2 == 8) {
+                        clearInterval(timer);
+                        return false;
+                    }
+                    else {
+                        ctx.fillStyle = "#" + Math.round(Math.random()*0xffffff).toString(16);
+                        i2++;
+                        ySpeed = 0;
+                    }
                 }
+                $("#sub03_sec1_cvs2").one("mouseover", function () {
+                    timer = setInterval(cvsAnimate1, 12);
+                });
 
             }
             sub03Sec2Cvs2Event();
