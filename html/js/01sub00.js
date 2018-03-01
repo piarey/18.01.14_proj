@@ -39,50 +39,53 @@ $(document).ready(function () {
 
     switch (headerSecH2cont) {
         case menuName[2]:
-            var sub03Sec2Cvs1Event = function () {
-                var thisElement = document.getElementById("sub03_sec1_cvs1");
-                var cvsWidth = thisElement.width;
-                var cvsHeight = thisElement.height;
-                var i = 0;
-                var init = 1;
-                var grpValue = [-260, -98, -150, -98, -125, -270, -80];
-                var i2 = 0;
-                var ySpeed = 0;
-                var timer = null;
+            var sub03Sec1Cvs1Event = function () {
+                var thisElement = document.getElementById("sub03_sec1_cvs1")
+                    , cvsWidth = thisElement.width
+                    , cvsHeight = thisElement.height
+                    , i = 0
+                    , init = 1
+                    , grpValue = [-260, -98, -150, -98, -125, -270, -80]
+                    , i2 = 0
+                    , ySpeed = 0
+                    , timer = null;
 
                 /* ctx 는 각각 사용해야 함. */
                 var ctx = thisElement.getContext("2d");
 
-                ctx.fillStyle = "#e1e4f2";
+                ctx.fillStyle = "#ebedf7";
                 ctx.fillRect(50, 0, 600, 100);
-                ctx.fillStyle = "#e2f2e1";
+                ctx.fillStyle = "#ebf7ee";
                 ctx.fillRect(50, 101, 600, 100);
-                ctx.fillStyle = "#f2ebe1";
+                ctx.fillStyle = "#f7f0eb";
                 ctx.fillRect(50, 201, 600, 100);
 
                 ctx.beginPath();
                 ctx.lineWidth = 2;
                 ctx.strokeStyle = "#343642";
-                ctx.moveTo(30, 1); ctx.lineTo(50, 1); ctx.stroke();
-                ctx.moveTo(30, cvsWidth / 3 + 1); ctx.lineTo(50, cvsWidth / 3 + 1); ctx.stroke();
-                ctx.moveTo(30, cvsWidth / 6 + 1); ctx.lineTo(50, cvsWidth / 6 + 1); ctx.stroke();
-                ctx.moveTo(30, 299); ctx.lineTo(50, 299); ctx.stroke();
-                ctx.moveTo(50, 0); ctx.lineTo(50, 300); ctx.stroke();
-                ctx.moveTo(50, 299); ctx.lineTo(600, 299); ctx.stroke();
+                ctx.moveTo(30, 1); ctx.lineTo(50, 1);
+                ctx.moveTo(30, cvsWidth / 3 + 1); ctx.lineTo(50, cvsWidth / 3 + 1);
+                ctx.moveTo(30, cvsWidth / 6 + 1); ctx.lineTo(50, cvsWidth / 6 + 1);
+                ctx.moveTo(30, 299); ctx.lineTo(50, 299);
+                ctx.moveTo(50, 0); ctx.lineTo(50, 300);
+                ctx.moveTo(50, 299); ctx.lineTo(600, 299);
+                ctx.stroke();
                 ctx.closePath();
 
                 ctx.beginPath();
                 ctx.strokeStyle = "#dadbe3";
                 ctx.lineWidth = 2;
                 for (i = 0; i < 13; i++) {
-                    ctx.moveTo(51, init + (i * 25)); ctx.lineTo(600, init + (i * 25)); ctx.stroke();
+                    ctx.moveTo(51, init + (i * 25)); ctx.lineTo(600, init + (i * 25));
                 };
+                ctx.stroke();
                 ctx.closePath();
 
                 ctx.beginPath();
+                ctx.moveTo(51, init + (4 * 25)); ctx.lineTo(600, init + (4 * 25));
+                ctx.moveTo(51, init + (8 * 25)); ctx.lineTo(600, init + (8 * 25));
                 ctx.strokeStyle = "#b8b8bf";
-                ctx.moveTo(51, init + (4 * 25)); ctx.lineTo(600, init + (4 * 25)); ctx.stroke();
-                ctx.moveTo(51, init + (8 * 25)); ctx.lineTo(600, init + (8 * 25)); ctx.stroke();
+                ctx.stroke();
                 ctx.closePath();
 
                 /* x시작, y시작, x시작기준으로 x끝, y시작 기준으로 y끝 */
@@ -90,9 +93,9 @@ $(document).ready(function () {
                                 for (i = 0; i < 8; i++) {
                                     ctx.fillRect(78 * (i + 1), 298, 30, grpValue[i]);
                                 };*/
-                
+
                 //ctx.fillStyle = "#cc435a";
-                ctx.fillStyle = "#" + Math.round(Math.random()*0xffffff).toString(16);
+                ctx.fillStyle = "#" + Math.round(Math.random() * 0xffffff).toString(16);
                 var cvsAnimate1 = function () {
                     if (i2 == 0 && ySpeed > grpValue[i2]) {
                         ctx.fillRect(78 * (i2 + 1), 298, 30, ySpeed);
@@ -120,32 +123,31 @@ $(document).ready(function () {
                         return false;
                     }
                     else {
-                        ctx.fillStyle = "#" + Math.round(Math.random()*0xffffff).toString(16);
+                        ctx.fillStyle = "#" + Math.round(Math.random() * 0xffffff).toString(16);
                         i2++;
                         ySpeed = 0;
-                    }
-                }
+                    };
+                };
                 $("#sub03_sec1_cvs1").one("mouseover", function () {
                     timer = setInterval(cvsAnimate1, 10);
                 });
             };
-            sub03Sec2Cvs1Event();
+            sub03Sec1Cvs1Event();
 
-            var sub03Sec2Cvs2Event = function () {
-                var thisElement = document.getElementById("sub03_sec1_cvs2");
-                var init1 = 1;
-                var grpValue = [-125, -150, -98, -10, -5, -7, -2, -2];
-                var i2 = 0;
-                var ySpeed = 0;
-                var timer = null;
+            var sub03Sec1Cvs2Event = function () {
+                var thisElement = document.getElementById("sub03_sec1_cvs2")
+                    , init1 = 1
+                    , grpValue = [-125, -150, -98, -10, -7, -5, -2, -2]
+                    , i2 = 0
+                    , ySpeed = 0
+                    , timer = null
+                    , ctx = thisElement.getContext("2d");
 
-                var ctx = thisElement.getContext("2d");
-
-                ctx.fillStyle = "#e1e4f2";
+                ctx.fillStyle = "#ebedf7";
                 ctx.fillRect(0, 0, 600, 100);
-                ctx.fillStyle = "#e2f2e1";
+                ctx.fillStyle = "#ebf7ee";
                 ctx.fillRect(0, 101, 600, 100);
-                ctx.fillStyle = "#f2ebe1";
+                ctx.fillStyle = "#f7f0eb";
                 ctx.fillRect(0, 201, 600, 100);
 
                 ctx.beginPath();
@@ -157,8 +159,9 @@ $(document).ready(function () {
                 ctx.strokeStyle = "#dadbe3";
                 ctx.lineWidth = 2;
                 for (var i = 0; i < 13; i++) {
-                    ctx.moveTo(0, init1 + (i * 25)); ctx.lineTo(600, init1 + (i * 25)); ctx.stroke();
-                }
+                    ctx.moveTo(0, init1 + (i * 25)); ctx.lineTo(600, init1 + (i * 25));
+                };
+                ctx.stroke();
                 ctx.closePath();
 
                 ctx.beginPath();
@@ -171,7 +174,7 @@ $(document).ready(function () {
                                 for (i = 0; i < 9; i++) {
                                     ctx.fillRect(75 * (i + 1) - 50, 298, 30, grpValue[i]);
                                 }*/
-                ctx.fillStyle = "#" + Math.round(Math.random()*0xffffff).toString(16);
+                ctx.fillStyle = "#" + Math.round(Math.random() * 0xffffff).toString(16);
                 var cvsAnimate1 = function () {
                     if (i2 == 0 && ySpeed > grpValue[i2]) {
                         ctx.fillRect(75 * (i2 + 1) - 50, 298, 30, ySpeed);
@@ -202,17 +205,151 @@ $(document).ready(function () {
                         return false;
                     }
                     else {
-                        ctx.fillStyle = "#" + Math.round(Math.random()*0xffffff).toString(16);
+                        ctx.fillStyle = "#" + Math.round(Math.random() * 0xffffff).toString(16);
                         i2++;
                         ySpeed = 0;
-                    }
-                }
+                    };
+                };
                 $("#sub03_sec1_cvs2").one("mouseover", function () {
                     timer = setInterval(cvsAnimate1, 12);
                 });
 
-            }
-            sub03Sec2Cvs2Event();
+            };
+            sub03Sec1Cvs2Event();
+
+            var sub03Sec1Cvs3Event = function () {
+                var thisElement = document.getElementById("sub03_sec1_cvs3")
+                    , cvsWidth = thisElement.width
+                    , cvsHeight = thisElement.height
+                    , i = 0
+                    , ctx = thisElement.getContext("2d");
+
+                /* moveTo가 시작점, 그 시작점을 기준으로 계속 lineTo가 유지 됨 */
+                ctx.beginPath();
+                ctx.moveTo(174, 38);
+                ctx.lineTo(427, 38);
+                ctx.lineTo(585, 237);
+                ctx.lineTo(530, 482);
+                ctx.lineTo(300, 592);
+                ctx.lineTo(73, 482);
+                ctx.lineTo(18, 237);
+                ctx.lineTo(174, 38);
+                ctx.fillStyle = "rgba(155,163,199,0.3)";
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                for (i = 3; i > 0; i--) {
+                    console.log(i);
+                    ctx.arc(cvsWidth / 2, cvsHeight / 2, i * 90, 0, 2 * Math.PI);
+                };
+                ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
+                ctx.lineWidth = 1;
+                ctx.strokeStyle = "#343642";
+                ctx.stroke();
+                ctx.fillStyle = "rgba(155,163,199,0.2)";
+                ctx.fill();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(183, 57);
+                ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
+                ctx.moveTo(417, 57);
+                ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
+                ctx.moveTo(564, 241);
+                ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
+                ctx.moveTo(512, 468);
+                ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
+                ctx.moveTo(300, 570);
+                ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
+                ctx.moveTo(89, 468);
+                ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
+                ctx.moveTo(37, 241);
+                ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "#b8b8bf";
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(249, 196);
+                ctx.lineTo(343, 210);
+                ctx.lineTo(388, 280);
+                ctx.lineTo(371, 356);
+                ctx.lineTo(cvsWidth / 2, 398);
+                ctx.lineTo(286, 313);
+                ctx.lineTo(291, 298);
+                ctx.lineTo(249, 196);
+                ctx.fillStyle = "rgba(52,54,66,0.6)";
+                ctx.fill();
+                ctx.closePath();
+
+            };
+            sub03Sec1Cvs3Event();
+
+            var sub03Sec1Cvs4Event = function () {
+                var thisElement = document.getElementById("sub03_sec1_cvs4");
+                var cvsHeight = thisElement.height;
+                var grpValue = [];
+                var i=0;
+
+                var ctx = thisElement.getContext("2d");
+
+                ctx.fillStyle = "#ebedf7";
+                ctx.fillRect(0, 0, 183, 300);
+                ctx.fillStyle = "#ebf7ee";
+                ctx.fillRect(184, 0, 183, 300);
+                ctx.fillStyle = "#f7f0eb";
+                ctx.fillRect(368, 0, 183, 300);
+
+                ctx.beginPath();
+                ctx.moveTo(580, 1);
+                ctx.lineTo(550, 1);
+                ctx.lineTo(550, 299);
+                ctx.lineTo(580, 299);
+                ctx.moveTo(580, cvsHeight / 3 - 1); ctx.lineTo(550, cvsHeight / 3 - 1);
+                ctx.moveTo(580, cvsHeight * 2 / 3 + 1); ctx.lineTo(550, cvsHeight * 2 / 3 + 1);
+                ctx.lineWidth = 2;
+                ctx.strokeStyle = "#343642";
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                
+                for(i=0; i< 12; i++){
+                    ctx.moveTo(1+(i*45.7), 0); ctx.lineTo(1+(i*45.7), 300);
+                };
+                ctx.strokeStyle = "#dadbe3";
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.moveTo(1, 0); ctx.lineTo(1, 300);
+                ctx.moveTo(183, 0); ctx.lineTo(183, 300);
+                ctx.moveTo(367, 0); ctx.lineTo(367, 300);
+                ctx.strokeStyle = "#b8b8bf";
+                ctx.stroke();
+                ctx.closePath();
+
+                ctx.beginPath();
+                ctx.fillStyle = "#2f257a";
+                ctx.fillRect(549, 25, -250, 35);
+                ctx.fillStyle = "#7ebbf9";
+                ctx.fillRect(549, 35, -240, 35);
+                ctx.fillStyle = "#614426";
+                ctx.fillRect(549, 125, -182, 35);
+                ctx.fillStyle = "#ffa725";
+                ctx.fillRect(549, 135, -172, 35);
+                ctx.fillStyle = "#413000";
+                ctx.fillRect(549, 225, -200, 35);
+                ctx.fillStyle = "#f05133";
+                ctx.fillRect(549, 235, -190, 35);
+                ctx.closePath();
+
+
+
+            };
+            sub03Sec1Cvs4Event();
 
             var sub03Sec2Cvs3Event = function () {
                 var thisElement = document.getElementById("sub03_sec1_cvs2");
