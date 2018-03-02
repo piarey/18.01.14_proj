@@ -22,15 +22,15 @@ $(document).ready(function () {
     };
     navMobileCancelEvent();
 
-    /* 02sub00 이벤트*/
-    var sub02TableHelpEvnet = function () {
+    /* tit_main common */
+    var titMainHelpEvnet = function () {
         $(".tb1_help").hover(function () {
-            $(this).css("overflow", "visible");
+            $(this).css({ "overflow": "visible", "z-index": "2" });
         }, function () {
-            $(this).css("overflow", "hidden");
+            $(this).css({ "overflow": "hidden", "z-index": "1" });
         });
     };
-    sub02TableHelpEvnet();
+    titMainHelpEvnet();
 
     /* 각 페이지별로 분리 안시키고 하나에 몰아서 해봄 */
     var headerSecH2 = document.getElementById("header_sec_h2")
@@ -240,7 +240,6 @@ $(document).ready(function () {
 
                 ctx.beginPath();
                 for (i = 3; i > 0; i--) {
-                    console.log(i);
                     ctx.arc(cvsWidth / 2, cvsHeight / 2, i * 90, 0, 2 * Math.PI);
                 };
                 ctx.lineTo(cvsWidth / 2, cvsHeight / 2);
@@ -291,7 +290,7 @@ $(document).ready(function () {
                 var thisElement = document.getElementById("sub03_sec1_cvs4");
                 var cvsHeight = thisElement.height;
                 var grpValue = [];
-                var i=0;
+                var i = 0;
 
                 var ctx = thisElement.getContext("2d");
 
@@ -315,9 +314,9 @@ $(document).ready(function () {
                 ctx.closePath();
 
                 ctx.beginPath();
-                
-                for(i=0; i< 12; i++){
-                    ctx.moveTo(1+(i*45.7), 0); ctx.lineTo(1+(i*45.7), 300);
+
+                for (i = 0; i < 12; i++) {
+                    ctx.moveTo(1 + (i * 45.7), 0); ctx.lineTo(1 + (i * 45.7), 300);
                 };
                 ctx.strokeStyle = "#dadbe3";
                 ctx.stroke();
@@ -341,9 +340,9 @@ $(document).ready(function () {
                 ctx.fillStyle = "#ffa725";
                 ctx.fillRect(549, 135, -172, 35);
                 ctx.fillStyle = "#413000";
-                ctx.fillRect(549, 225, -200, 35);
+                ctx.fillRect(549, 225, -210, 35);
                 ctx.fillStyle = "#f05133";
-                ctx.fillRect(549, 235, -190, 35);
+                ctx.fillRect(549, 235, -200, 35);
                 ctx.closePath();
 
 
@@ -351,20 +350,6 @@ $(document).ready(function () {
             };
             sub03Sec1Cvs4Event();
 
-            var sub03Sec2Cvs3Event = function () {
-                var thisElement = document.getElementById("sub03_sec1_cvs2");
-                ctx = thisElement.getContext("2d");
-
-
-            }
-            var sub03Sec2Cvs3Event = function () {
-                var thisElement = document.getElementById("sub03_sec1_cvs2");
-                ctx = thisElement.getContext("2d");
-
-
-
-
-            }
             break;
 
     }
