@@ -1,0 +1,46 @@
+@charset "utf-8";
+/* CSS Document */
+textarea {height:210px;}
+
+#middle_sect {
+	margin:50px auto 0 auto;
+	width:1200px; }
+	
+#middle_sect #modify_all {
+	height:507px; /*507 이 딱 맞음*/
+	margin-bottom:100px;}
+	
+#middle_sect table {
+	width:1000px; margin:0 auto;
+	text-align:center;
+	border-collapse:collapse;}
+	
+#middle_sect #modify_all tr th {
+	background-color:#bfaeac; color:#fff;
+	border-bottom:1px solid #fff;
+	box-sizing:border-box;}
+	
+#middle_sect #modify_all tr td:first-child {
+	border:0;}
+	
+#middle_sect #modify_all tr td{
+	border-top:1px solid #bfaeac;
+	box-sizing:border-box;
+	padding:20px 0 20px 0;}
+	
+#middle_sect #modify_all tr:nth-child(n+4) td {
+	border-top:1px solid #bfaeac;
+	box-sizing:border-box;}
+	
+#middle_sect #modify_all tr td:nth-child(n+2):hover {	
+	background-color:#f2ebea;}
+	/*버튼*/
+#but1 {
+	width:320px;
+	margin:20px auto 0 auto;}
+	
+#btnJoin, #btnCancle {font-weight:bold;
+	background-color:#bfaeac; color:#fff; border:none; width:140px; height:35px;  cursor:pointer;}
+
+#btnJoin:hover, #btnCancle:hover {background-color:#e5d1cf;}
+	

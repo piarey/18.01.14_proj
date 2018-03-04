@@ -1,0 +1,257 @@
+@charset "utf-8";
+/* 18.03.03 에 추가한것 */
+.init_tip1 {position:absolute; padding:10px; border:5px solid #f00; color:#f00; font-weight:800; top:-112px; left:-102px; box-sizing:border-box;}
+
+/* CSS Document */
+img{
+	border:0px;
+}
+
+body{
+	margin:0px auto;
+	font-family:"돋움체";
+	font-size:12px;
+}
+#wrap {
+	position: relative;
+	margin: 50px auto 0px auto;
+	background-color: #FFF;
+	height: 955px;
+	width: 100%;
+	overflow:hidden;
+}
+#main_nav {
+	margin: -50px auto;
+	position: fixed;
+	z-index: 99;
+	height: 50px;
+	width: 100%;
+	background-color: #1d2064;
+}
+#apDiv5 {
+	margin:0px auto;
+	position: relative;
+	width: 1000px;
+	height: 50px;
+	z-index: 5;
+	left: 0px;
+	top: 0px;
+}
+#keyimg1 {
+	margin: 0px auto;
+	height: 400px;
+	width: 100%;
+	background-image: url(images/keyimg1.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#logo {
+	margin: 0px auto;
+	height: 55px;
+	width: 110px;
+}
+#sub_nav {
+	margin: 0px auto;
+	height: 20px;
+	width: 900px;
+}
+#apDiv6 {
+	position: relative;
+	width: 900px;
+	height: 20px;
+	z-index: 6;
+}
+#apDiv1 {
+	position: relative;
+	width: 115px;
+	height: 65px;
+	z-index: 2;
+	margin-left: -45px;
+}
+#apDiv2 {
+	position: relative;
+	width: 140px;
+	height: 150px;
+	z-index: 3;
+	background-color: #a0d3f1;
+	top: 40px;
+	left: -285px;
+	padding:5px 15px 15px 15px;
+}
+#logo p{
+	font-family: "나눔고딕", "Nanum Gothic", "돋움체";
+	font-size: 14px;
+	font-weight: bold;
+}
+#logo img{
+	margin-left: 45px;
+}
+#apDiv3 {
+	position: relative;
+	width: 310px;
+	height: 150px;
+	z-index: 4;
+	background-color: #b1e664;
+	padding: 5px 15px 15px 15px;
+	left: 55px; 
+	top: -130px;
+}
+#apDiv3 .apDiv3_1{
+	width: 155px;
+	height:150px;
+	float: left;
+}
+#apDiv3 .apDiv3_2{
+	width: 155px;
+	height:150px;
+	
+	float: left;
+}
+#apDiv3 .apDiv3_2 img{
+	margin-left: 0px;
+}
+#apDiv4 {
+	position: relative;
+	width: 140px;
+	height: 150px;
+	z-index: 3;
+	padding: 5px 15px 15px 15px;
+	left: -115px;
+	top: -130px;
+	background-image: url(images/apdiv1.png);
+}
+#apDiv7 {
+	position: relative;
+	width: 140px;
+	height: 150px;
+	z-index: 3;
+	padding: 5px 15px 15px 15px;
+	left: 55px;
+	top: -130px;
+	background-color: #f5cb78;
+}
+#apDiv7 .apDiv7_1 {
+	width:140px;
+	height:60px;
+}
+#apDiv7 .apDiv7_2{
+	width: 72px;
+	height: 90px;
+	float: left;
+}
+#apDiv7 .apDiv7_2 img{
+	margin-left: 0px;
+}
+#apDiv7 .apDiv7_3{
+	width: 68px;
+	height: 90px;
+	float: left;
+}
+#apDiv7 .apDiv7_3 img{
+	margin:10px 0px 0px 10px;
+}
+#apDiv8 {
+	position: relative;
+	width: 140px;
+	height: 320px;
+	z-index: 3;
+	padding: 5px 15px 15px 15px;
+	left: 225px;
+	top: -300px;
+	background-color: #edf5aa;
+}
+#apDiv8 ul {
+	list-style-type: none;
+	margin:0px;
+	padding: 0px 0px 0px 0px;
+}
+#apDiv8 ul li {
+	padding: 10px;	
+}
+#apDiv8 ul li a{
+	color: #999;
+}
+#apDiv8 ul li a:hover{
+	font-size: 14px;
+	color: #0b739f;
+	font-weight: bold;
+}
+
+#apDiv9 {
+	position: relative;
+	width: 340px;
+	height: 170px;
+	z-index: 3;
+	padding: 0px;
+	left: -115px;
+	top: -470px;
+	background-color: #666666;
+}
+#apDiv10 {
+	position: relative;
+	width: 140px;
+	height: 150px;
+	z-index: 3;
+	padding: 5px 15px 15px 15px;
+	left: -285px;
+	top: -640px;
+	background-image: url(images/apdiv2.png);
+}
+#apDiv11 {
+	position: relative;
+	width: 300px;
+	height: 50px;
+	z-index: 3;
+	padding: 0px 0px 0px 40px;
+	left: -115px;
+	top: -640px; /*-640 이였음*/
+	background-image: url(images/etc1_10.png);
+	background-repeat: no-repeat;
+	background-position: center bottom;
+}
+#apDiv11 img{
+	margin: 25px 0px 0px 30px;
+}
+
+#keyimg2 {
+	margin: 5px auto 0px auto;
+	height: 400px;
+	width: 100%;
+	background-image: url(images/keyimg2.png);
+	background-repeat: no-repeat;
+	background-position: center center;
+}
+#footer {
+	margin: 5px auto 0px auto;
+	height: 70px;
+	width: 100%;
+	background-color: #1d2064;
+}
+
+#apDiv12 {
+	position: relative;
+	width: 1000px;
+	height: 70px;
+	z-index: 4;
+	padding: 0px;
+	left: -445px;
+	top: -590px;
+}
+#apDiv12 span{
+	color: #FFF;
+}
+#apDiv12 .apDiv12_1{
+	float: left;
+	height: 70px;
+	width: 500px;
+}
+#apDiv12 .apDiv12_1 li{
+	margin:3px 0px 0px 0px;
+}
+#apDiv12 .apDiv12_2{
+	margin:30px 30px 0px 0px;
+	float: right;
+	height: 40px;
+	width: 470px;
+	text-align: right;
+}

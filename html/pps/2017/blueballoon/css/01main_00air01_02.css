@@ -1,0 +1,11 @@
+@charset "utf-8";
+/* CSS Document */
+
+#middle_bookcheck_header {
+	width:1200px;}
+
+#middle_bookcheck_body {
+}	
+
+#middle_bookcheck_body p:nth-child(2) {
+	color:#f00;}

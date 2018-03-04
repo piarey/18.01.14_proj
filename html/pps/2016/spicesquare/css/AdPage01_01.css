@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* CSS Document */
+	
+/*테이블*/
+
+#container nav {
+	width:100%; height:55px; 
+	text-align:center; line-height:55px;
+	background-color:#4d0a01;}
+
+
+/*	이 페이지는 한 화면에 가변그리드로X height값은 안줌*/
+#cont_intro {
+	width:100%;}
+
+#cont_intro legend {
+	display:none;}
+	
+#cont_intro table {
+	width:100%;
+	border-collapse: collapse;}	
+	
+#cont_intro table thead {
+	height:20px;}
+	
+#cont_intro table thead th {
+	text-align:center;
+	padding:10px; 
+	border:1px solid #bfaeac; 
+	border-left:0;}
+
+#cont_intro table thead th:last-child {
+	border:0;}
+
+#cont_intro table tr {
+	border:1px solid #bfaeac;
+	border-left:0;
+	border-right:0;}
+
+#cont_intro table tr td {
+	padding:10px;
+	border:1px solid #bfaeac;
+	text-align:center;}
+	
+#cont_intro table tr:hover {
+	background-color:#bfaeac;}
+	
+#cont_intro table tr .accent a {
+	color:#ff4c2e; font-weight:bold;}
+	
+/******************************/	
+/* 고정배너 */
+#fixedbox:hover {
+	width:75px; opacity:1;}
+	
+#fixedbox:hover a {display:block;}
+
+#fixedbox {
+	opacity:0.8;
+	text-align:center; line-height:25px;
+	font-weight:bold;
+	z-index:999; 
+	position:fixed; 
+	top:100px; right:0;
+	width:10px; height:50px;
+	background-color:#fbd864;}
+	
+#fixedbox a {
+	display:none;}	
+	
+/**/
+#fixedbox2:hover {
+	width:75px; opacity:1;}
+	
+#fixedbox2:hover a {display:block;}
+
+#fixedbox2 {
+	opacity:0.8;
+	text-align:center; line-height:25px;
+	font-weight:bold;
+	z-index:999; 
+	position:fixed; 
+	top:200px; right:0;
+	width:10px; height:50px;
+	background-color:#fbd864;}
+	
+#fixedbox2 a {
+	display:none;}
+/**/
+
+/********/
+#fixedbox3:hover {
+	width:75px; opacity:1;}
+	
+#fixedbox3:hover a {display:block;}
+
+#fixedbox3 {
+	opacity:0.8;
+	text-align:center; line-height:25px;
+	font-weight:bold;
+	z-index:999; 
+	position:fixed; 
+	top:300px; right:0;
+	width:10px; height:50px;
+	background-color:#fbd864;}
+	
+#fixedbox3 a {
+	display:none;}

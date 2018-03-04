@@ -1,0 +1,43 @@
+@charset "utf-8";
+/* CSS Document */
+
+textarea {height:210px;}
+
+#middle_sect {
+	margin:100px auto 100px auto;
+	width:1200px; }
+	
+#middle_sect table {
+	width:1000px;
+	margin:0 auto 0 auto;
+	text-align:center;
+	border-collapse:collapse;}
+	
+#middle_sect #write_all {
+	height:590px;}
+	
+#middle_sect #write_all tr th {
+	background-color:#bfaeac; color:#fff;
+	border-bottom:1px solid #fff;
+	box-sizing:border-box;}
+	
+#middle_sect #write_all tr td:nth-child(2) {
+	border-top:1px solid #bfaeac;
+	box-sizing:border-box;
+	padding:20px 0 20px 0;}
+	
+#middle_sect #write_all tr td:nth-child(2):hover {
+	background-color:#f2ebea}
+	
+#middle_sect tr .error2 {
+	border-bottom:1px solid #bfaeac;
+	box-sizing:border-box;}
+	
+#but1 {
+	width:320px;
+	margin:40px auto 0 auto;}
+	
+#btnJoin, #btnCancle {font-weight:bold;
+	background-color:#bfaeac; color:#fff; border:none; width:140px; height:35px;  cursor:pointer;}
+
+#btnJoin:hover, #btnCancle:hover {background-color:#e5d1cf;}

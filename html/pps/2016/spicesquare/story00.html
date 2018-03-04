@@ -1,0 +1,150 @@
+<html>
+<head>
+<meta charset="utf-8">
+<title>레이아웃1</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/header_menu_footer.css" rel="stylesheet" type="text/css">
+<link href="css/title_url.css" rel="stylesheet" type="text/css">
+<link href="css/main_story.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="http://www.tbctour.com/script/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">  
+$(document).ready(function() {
+$('#top_sect').scrollToFixed();
+var test = $('#top_sect');
+        test.scrollToFixed({
+            marginTop: $('#top_sect').outerHeight(true) + 10,
+            limit: function() {
+                var limit = 0;
+                    limit = $(this).offset().top - $(this).outerHeight(true) - 10;
+                    return limit;
+                },
+                zIndex: 999
+        });
+    });
+</script>
+</head>
+<body>
+
+
+
+<div id="container">
+
+
+<header>
+
+<nav>
+<ul id="sub1_menu">
+<li><a href="login.jsp">로그인</a></li><li><a href="join01.jsp">회원가입</a></li>
+<li><a href="#">마이페이지</a>
+</li>
+<li><a href="#">장바구니</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<div id="top_bg">
+
+<section id="top_sect_logo">
+<article id="logo"><a href="index.html">
+<img src="images/index/logo.png" width="200" height="160" alt="로고" title="로고"></a>
+</article>
+</section>
+
+<section id="top_sect">
+<nav>
+<ul id="main_menu">
+<div class="error1">
+<li><a href="story00.html">향신료 이야기</a></li>
+	<ul class="m1">
+    	<li><a href="story00.html">소개</a></li><li><a href="story01.html">역사</a></li>
+    </ul>
+</div>
+<div class="error1">
+<li><a href="#">스토어</a></li>
+	<ul class="m2">
+    	<li><a href="store.jsp?ctg=Korea">한국</a></li><li><a href="store.jsp?ctg=China">중국</a></li><li><a href="store.jsp?ctg=Tai">태국</a></li><li><a href="store.jsp?ctg=India">인도</a></li><li><a href="store.jsp?ctg=USA">미국</a></li><li><a href="store.jsp?ctg=Italy">이탈리아</a></li>
+    </ul>
+</div>
+<li><a href="travel00.html">향신료 여행</a>
+	<ul class="m3">
+    	<li><a href="travel00.html">영상</a></li><li><a href="travel01.html">도서</a></li>
+    </ul>
+</li>
+<li><a href="board_list.jsp">이벤트</a>
+</li>
+</ul>
+</nav>
+</section>
+
+</div>
+
+
+<section id="title_box">
+
+<h2>홈&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;향신료 이야기<!--
+-->&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;소개</h2>
+
+<article id="title_url">
+<h1>SPICE INTRO</h1>
+</article>
+
+</section>
+
+
+<section id="middle_sect">
+<img src="images/story/show1.jpg" alt="한국소개" width="1200" height="400" usemap="#Map">
+<map name="Map"><area shape="rect" coords="1005,349,1153,396" href="storeDetail.jsp?prdNo=k001_5"></map><!--
+--><img src="images/story/show2.jpg"  alt="중국 소개" width="1200" height="400" usemap="#Map2">
+<map name="Map2"><area shape="rect" coords="44,343,191,391" href="storeDetail.jsp?prdNo=c001_12"></map><!--
+--><img src="images/story/show3.jpg" alt="태국 소개" width="1200" height="400" usemap="#Map3">
+<map name="Map3"><area shape="rect" coords="1008,349,1156,397" href="storeDetail.jsp?prdNo=t002_2"></map><!--
+--><img src="images/story/show4.jpg" alt="인도 소개" width="1200" height="400" usemap="#Map4">
+<map name="Map4"><area shape="rect" coords="43,346,192,394" href="storeDetail.jsp?prdNo=in001_6"></map><!--
+--><img src="images/story/show5.jpg" alt="미국 소개" width="1200" height="400" usemap="#Map5">
+<map name="Map5"><area shape="rect" coords="1005,349,1153,396" href="storeDetail.jsp?prdNo=v002_8"></map><!--
+--><img src="images/story/show6.jpg" alt="이탈리아 소개" width="1200" height="400" usemap="#Map6">
+<map name="Map6"><area shape="rect" coords="42,345,190,390" href="storeDetail.jsp?prdNo=i003_1"></map>
+</section>
+
+
+<aside>
+<article id="bottom_bg">
+</article>
+</aside>
+
+
+<section id="bottom_menu">
+<nav id="sub2_menu">
+<ul>
+<li><a href="sub2_00.html">회사소개</a></li><!--
+--><li><a href="sub2_01.jsp">이용약관</a></li><!--
+--><li><a href="sub2_02.jsp">고객센터</a></li><!--
+--><li><a href="sub2_03.jsp">개인정보취급방침</a></li><!--
+--><li><a href="sub2_04.jsp">사이트맵</a></li><!--
+--><li><a href="mnglogin.jsp">관리자로그인</a></li>
+</ul>
+</nav>
+</section>
+
+
+<footer>
+<div id="copyright">
+(주)스파이스퀘어 |  대표자 : 김상엽 <br>
+사업자 등록번호 : 220-86-36066 [사업자번호조회] | 통신판매업신고번호 : 2011-충북천안-02674 <br>
+충청남도 천안시 서북구 성환읍 대학로 91 | 개인정보관리 책임자 : 김상엽 E-mail. sykim10070@naver.com <br>
+고객센터 : (82)02-555-5919 | Fax. 팩스번호 : (82)02-569-5115
+<h2>COPYTRIGHT 2016@spicequare.co.kr ALL RIGHTS RESERVED</h2>
+</div>
+</footer>
+
+
+</div>
+
+
+
+</body>
+</html>

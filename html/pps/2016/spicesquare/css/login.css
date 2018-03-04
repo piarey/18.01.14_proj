@@ -1,0 +1,68 @@
+
+
+/* 로그인부분 */
+
+#cont_login {
+	margin:0 auto;
+	width:1200px;
+	height:455px;
+	border-bottom:1px solid #bfaeac;}
+	
+#cont_login input {margin:15px 5px 2px 2px;}
+
+#loginForm fieldset{border:8px solid #bfaeac; width:330px; height:200px; margin:100px auto 0 auto; padding:70px; color:#666;}
+
+#loginForm fieldset legend{display:none;}
+
+#login{float:left;}
+/*#login label{width:60px; display:block; float:left;}*/
+
+#login label{width:60px; display:inline-block; font-weight:bold; line-height:30px;}
+
+#uid, #pwd{border:1px solid #bfaeac; width:150px; height:25px; margin-bottom:15px;}
+
+#btnLogin{border:1px solid #bfaeac; background-color:#fff; font-weight:bold; color:#666; width:100px; height:70px; float:left; margin-left:10px; cursor:pointer;}
+
+#btnLogin:hover{border-color:#e5d1cf; color:#4d0a01;}
+
+p#chk{clear:both; padding:10px 0; margin-left:55px;}
+
+p#chk input{vertical-align:-2px;}
+
+p#btn{margin-left:20px;}
+
+#btnJoin, #btnSearch{
+	margin-top:20px;
+	background-color:#bfaeac; border:none; color:#fff; font-weight:bold; width:140px; height:35px;  cursor:pointer;}
+
+#btnJoin:hover, #btnSearch:hover{background-color:#e5d1cf;}
+
+
+
+/* admin login */
+
+#ad_loginForm {
+	margin:0 auto;
+	width:1200px;
+	height:350px;}
+
+#ad_loginForm fieldset{border:8px solid #bfaeac; width:330px; height:100px; margin:100px auto 0 auto; padding:70px; color:#666;}
+
+#ad_loginForm fieldset legend{display:none;}
+
+#cont_login2 {
+	margin:0 auto;
+	width:1200px; 
+	height:350px;
+	border-bottom:1px solid #bfaeac;}
+	
+#cont_login2 input {margin:15px 5px 2px 2px;}
+
+
+
+/* ERROR 페이지 */
+#middle_error {
+	margin:0 auto;
+	width:1200px; height:1400px;
+	background-color:#ff0;
+}

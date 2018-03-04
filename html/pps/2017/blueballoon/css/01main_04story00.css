@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+#middle_story_wrap {
+	width:1200px;
+	padding:30px 0 70px 0;}
+	
+#middle_story_header #middle_story_header_cont {
+	width:1200px; height:50px; background-color:#fff;
+	margin-bottom:20px;}
+	
+#middle_story_header #middle_story_header_cont ul {
+	}
+	
+#middle_story_header #middle_story_header_cont ul li {
+	width:150px; height:50px; 
+	float:left; cursor:pointer; display:block; 
+	text-align:center; line-height:50px;
+	border-left:1px solid #ddd;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;}
+	
+#middle_story_header #middle_story_header_cont ul li:last-child {
+	border-right:1px solid #ddd;}
+	
+#middle_story_body {
+}

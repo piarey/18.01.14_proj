@@ -1,0 +1,70 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 전체 레이아웃*/
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+@import url(http://fonts.googleapis.com/earlyaccess/jejugothic.css);
+
+*{	
+	margin:0; padding:0; 
+	font-family: 'NanumGothic'; color:#000; letter-spacing:1px; font-size:12px;
+	word-break:keep-all;
+	box-sizing:border-box; }
+
+/* 한 묶음 */
+/*body, html {height:100%;} ????? 이걸 써야되는데 안써도 height값이 %로 되네?*/
+
+html, body {background:transparent;}
+fieldset, form  {border:0;}
+/**/
+
+legend {display:none;}
+
+ul, ol {list-style:none;}
+
+img {border:0px; vertical-align:top;}
+
+a {text-decoration:none;}
+	
+textarea {
+	border:1px solid #000;
+	margin:5px 0px 5px 0px;
+	margin:0; padding:0;
+	text-align:left;
+	resize:none;}
+
+input[type="radio"], input[type="checkbox"] {
+	margin-top:-1px;
+	vertical-align:middle;}
+	
+input[type="button"], input[type="reset"], input[type="submit"] {
+	text-align:center;
+	cursor:pointer;}	
+	
+input[type="text"], input[type="password"], input[type="search"], select {
+	border:1px solid #aaa;
+	height:30px;
+	text-align:left;}
+	
+select, button, input[type="button"], input[type="reset"], input[type="submit"], input[type="radio"], input[type="checkbox"] {
+	cursor:pointer;}
+	
+label {
+	display:inline-block;
+	cursor:pointer;}
+	
+table {
+	border-spacing:0;} /*cellpadding="0" cellspacing="0"*/
+
+span {display:inline-block;}
+
+.common_ico {position:absolute; width:20px; height:10px;}
+
+h2 {font-family:'Jeju Gothic', sans-serif; font-size:22px; widht:160px; height:25px; line-height:25px; margin-bottom:20px; font-weight:normal; letter-spacing:2px;
+	border-left:4px solid #4776d5;padding-left:10px;}
+
+.common_loc_cursor {cursor:default;}
+
+
+	
+	

@@ -1,0 +1,274 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>레이아웃1</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/index.css?a=" rel="stylesheet" type="text/css">
+<link href="css/header_menu_footer.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript" src="js/jquery.flexslider-min.js"></script>
+
+<script type="text/javascript" charset="utf-8">
+var $ = jQuery.noConflict();
+  $(window).load(function() {
+    $('.flexslider').flexslider({
+          animation: "slide"
+    });
+  });
+</script>
+<script type="text/javascript">
+function toggle(open){
+if(open){
+document.getElementById('toggle_all').style.display='none';
+document.getElementById('toggled').style.display='block';
+}else{
+document.getElementById('toggle_all').style.display='block';
+document.getElementById('toggled').style.display='none';
+}
+}
+</script>
+<script src="http://www.tbctour.com/script/jquery-scrolltofixed.js" type="text/javascript"></script> 
+<script type="text/javascript" charset="utf-8">  
+$(document).ready(function() {
+$('#top_sect').scrollToFixed();
+var test = $('#top_sect');
+        test.scrollToFixed({
+            marginTop: $('#top_sect').outerHeight(true) + 10,
+            limit: function() {
+                var limit = 0;
+                    limit = $(this).outerHeight(true) - 10;
+                    return limit;
+                },
+                zIndex: 999
+        });
+    });
+</script>
+</head>
+<body>
+<div id="toggle_all" onclick="toggle(true);">
+<div id="toggle_img">
+<a href ="board_view.jsp?idx=3"><img src="images/top_vanner/vanner_event.jpg"></a><!--
+--><img src="images/top_vanner/close.png" onclick="toggle()" class="tog_close">
+</div>
+</div>
+<div id="toggled" style="display:none;"></div>
+
+
+<div id="container">
+
+
+<header>
+
+<nav>
+<ul id="sub1_menu">
+<li><a href="login.jsp">로그인</a></li><li><a href="join01.jsp">회원가입</a></li>
+<li><a href="login.jsp">마이페이지</a>
+</li>
+<li><a href="login.jsp">장바구니</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<div id="top_bg">
+
+<section id="top_sect_logo">
+<article id="logo"><a href="index.html">
+<img src="images/index/logo.png" width="200" height="160" alt="로고" title="로고"></a>
+</article>
+</section>
+
+<section id="top_sect">
+<nav>
+<ul id="main_menu">
+<div class="error1">
+<li><a href="story00.html">향신료 이야기</a></li>
+	<ul class="m1">
+    	<li><a href="story00.html">소개</a></li><li><a href="story01.html">역사</a></li>
+    </ul>
+</div>
+<div class="error1">
+<li><a href="#">스토어</a></li>
+	<ul class="m2">
+    	<li><a href="store.jsp?ctg=Korea">한국</a></li><li><a href="store.jsp?ctg=China">중국</a></li><li><a href="store.jsp?ctg=Tai">태국</a></li><li><a href="store.jsp?ctg=India">인도</a></li><li><a href="store.jsp?ctg=USA">미국</a></li><li><a href="store.jsp?ctg=Italy">이탈리아</a></li>
+    </ul>
+</div>
+<li><a href="travel00.html">향신료 여행</a>
+	<ul class="m3">
+    	<li><a href="travel00.html">영상</a></li><li><a href="travel01.html">도서</a></li>
+    </ul>
+</li>
+<li><a href="board_list.jsp">이벤트</a>
+</li>
+</ul>
+</nav>
+</section>
+</div>
+
+<!-- **********************  이상 복붙구역-->
+
+<div class="slider">
+<div class="flexslider">
+<ul class="slides">
+<li><a href="story00.jsp"><img src="images/index_slider/slider-image1.jpg" alt="" title=""></a></li>
+<li><a href="board_view.jsp?idx=1"><img src="images/index_slider/slider-image2.jpg" alt="" title=""></a></li>
+<li><a href="board_view.jsp?idx=2"><img src="images/index_slider/slider-image3.jpg" alt="" title=""></a></li>
+</ul>
+</div>
+</div>
+    
+	 
+
+<section id="middle_sect">
+<article id="weekch">
+<h1>RECOMMEND CHOICE 5</h1>
+		<figure>
+		<a href="storeDetail.jsp?prdNo=i004_2"><img src="images/main_store/i004_2.jpg"></a>
+		<figcaption>
+		<ul>
+		<li><a href="storeDetail.jsp?prdNo=i004_2.jpg">넛맥</a></li>
+		<li>6000 원</li>
+		</ul>
+		</figcaption>
+		</figure>
+		<figure>
+		<a href="storeDetail.jsp?prdNo=t001_4"><img src="images/main_store/t001_4.jpg"></a>
+		<figcaption>
+		<ul>
+		<li><a href="storeDetail.jsp?prdNo=t001_4">갈랑갈</a></li>
+		<li>5000 원</li>
+		</ul>
+		</figcaption>
+		</figure>
+		<figure>
+		<a href="storeDetail.jsp?prdNo=u001_3"><img src="images/main_store/u001_3.jpg"></a>
+		<figcaption>
+		<ul>
+		<li><a href="#">샐러리씨</a></li>
+		<li>3000 원</li>
+		</ul>
+		</figcaption>
+		</figure>
+		<figure>
+		<a href="storeDetail.jsp?prdNo=u003_5"><img src="images/main_store/u003_5.jpg"></a>
+		<figcaption>
+		<ul>
+		<li><a href="storeDetail.jsp?prdNo=u003_5">올스파이스</a></li>
+		<li>6000 원</li>
+		</ul>
+		</figcaption>
+		</figure>
+		<figure>
+		<a href="storeDetail.jsp?prdNo=v003_2"><img src="images/main_store/v003_2.jpg"></a>
+		<figcaption>
+		<ul>
+		<li><a href="storeDetail.jsp?prdNo=v003_2">겨자</a></li>
+		<li>2000 원</li>
+		</ul>
+		</figcaption>
+		</figure>
+		</article>
+
+		</article>
+
+</article>
+<article id="three_img">
+<a href="travel00.jsp"><img src="images/index/food_recipe0.jpg"></a><!--
+--><a href="travel01.jsp"><img src="images/index/main_book0.jpg"></a><!--
+--><a href="story01.jsp"><img src="images/index/main_video1.jpg"></a>
+</article>
+
+<article id="bestpd"> 
+<h1>BEST PRODUCT 5</h1>
+
+	<figure class="animg1">
+	<a href="storeDetail.jsp?prdNo=<%=bestNo%>"><img src="images/main_store/c001_6.jpg"></a>
+	<figcaption>
+	<ul>
+	<li><a href="storeDetail.jsp?prdNo=<%=bestNo%>"><%=bestName%></a></li>
+	<li><%=bestPrice%> 원</li>
+	</ul>
+	</figcaption>
+	</figure>
+	<figure class="animg1">
+	<a href="storeDetail.jsp?prdNo=<%=bestNo%>"><img src="images/main_store/c001_12.jpg"></a>
+	<figcaption>
+	<ul>
+	<li><a href="storeDetail.jsp?prdNo=<%=bestNo%>"><%=bestName%></a></li>
+	<li><%=bestPrice%> 원</li>
+	</ul>
+	</figcaption>
+	</figure>
+	<figure class="animg1">
+	<a href="storeDetail.jsp?prdNo=<%=bestNo%>"><img src="images/main_store/c002_6.jpg"></a>
+	<figcaption>
+	<ul>
+	<li><a href="storeDetail.jsp?prdNo=<%=bestNo%>"><%=bestName%></a></li>
+	<li><%=bestPrice%> 원</li>
+	</ul>
+	</figcaption>
+	</figure>
+	<figure class="animg1">
+	<a href="storeDetail.jsp?prdNo=<%=bestNo%>"><img src="images/main_store/c002_7.jpg"></a>
+	<figcaption>
+	<ul>
+	<li><a href="storeDetail.jsp?prdNo=<%=bestNo%>"><%=bestName%></a></li>
+	<li><%=bestPrice%> 원</li>
+	</ul>
+	</figcaption>
+	</figure>
+	<figure class="animg1">
+	<a href="storeDetail.jsp?prdNo=<%=bestNo%>"><img src="images/main_store/c003_1.jpg"></a>
+	<figcaption>
+	<ul>
+	<li><a href="storeDetail.jsp?prdNo=<%=bestNo%>"><%=bestName%></a></li>
+	<li><%=bestPrice%> 원</li>
+	</ul>
+	</figcaption>
+	</figure>
+
+</article>
+</section>
+ 
+<!-- **********************  이하 복붙구역-->
+
+<aside>
+<article id="bottom_bg">
+</article>
+</aside>   
+    
+    
+<section id="bottom_menu">
+<nav id="sub2_menu">
+<ul>
+<li><a href="sub2_00.html">회사소개</a></li><!--
+--><li><a href="sub2_01.jsp">이용약관</a></li><!--
+--><li><a href="sub2_02.jsp">고객센터</a></li><!--
+--><li><a href="sub2_03.jsp">개인정보취급방침</a></li><!--
+--><li><a href="sub2_04.jsp">사이트맵</a></li><!--
+--><li><a href="mnglogin.jsp">관리자로그인</a></li>
+</ul>
+</nav>
+</section>
+
+
+<footer>
+<div id="copyright">
+(주)스파이스퀘어 |  대표자 : 김상엽 <br>
+사업자 등록번호 : 220-86-36066 [사업자번호조회] | 통신판매업신고번호 : 2011-충북천안-02674 <br>
+충청남도 천안시 서북구 성환읍 대학로 91 | 개인정보관리 책임자 : 김상엽 E-mail. sykim10070@naver.com <br>
+고객센터 : (82)02-555-5919 | Fax. 팩스번호 : (82)02-569-5115
+<h2>COPYTRIGHT 2016@spicequare.co.kr ALL RIGHTS RESERVED</h2>
+</div>
+</footer>
+
+
+</div>
+
+
+
+</body>
+</html>

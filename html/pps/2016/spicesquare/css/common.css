@@ -1,0 +1,72 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 전체 레이아웃*/
+
+*{	
+	margin:0; padding:0; 
+	font-family:'NanumGothic'; font-size:12px; color:#4d0a01; letter-spacing:1px;
+	word-break:keep-all;}
+
+/* 한 묶음 */
+body, html {height:100%;}
+fieldset, form  {border:0; width:100%; height:100%;}
+/**/
+
+legend {display:none;}
+
+textarea {resize:none;}
+
+#container{
+	background-color:#fff;
+	width:100%; height:100%;}
+
+ul, ol {list-style:none;}
+
+img {border:0px;}
+
+a {text-decoration:none;}
+
+/* 영문제목용 */
+h1 { font-size:30px; font-weight:bold;
+	font-family: 'Anton', sans-serif;
+	letter-spacing:3px; 
+	/*text-shadow:2px 2px 5px #425221;*/}
+
+/* 유알엘 용 */
+h2 {opacity:0.8;}
+
+/* 강조색 용 */	
+h3 {
+	margin-left:11px;
+	display:inline-block;
+	color:#ff4c2e;
+	font-size:10px;}
+	
+/*	관리자제목용 */
+h4 {font-size:25px; font-weight:bold;
+	color:#fff;}
+
+span {font-weight:bold;}
+
+input,select,option {
+	border:1px solid #bfaeac;
+	margin:0 5px 0 5px;
+	height:25px;
+	text-align:left;}
+	
+textarea {
+	border:1px solid #bfaeac;
+	margin:5px 0px 5px 0px;
+	margin:0; padding:0;
+	text-align:left;}
+
+input[type="radio"], input[type="checkbox"] {
+	margin-top:-1px;
+	vertical-align:middle;}
+	
+input[type="button"], input[type="reset"], input[type="submit"] {
+	text-align:center;}	
+	
+
+	

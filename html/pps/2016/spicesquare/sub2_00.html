@@ -1,0 +1,227 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>레이아웃1</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/header_menu_footer.css" rel="stylesheet" type="text/css">
+<link href="css/title_url.css" rel="stylesheet" type="text/css">
+<link href="css/join00.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="http://www.tbctour.com/script/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">  
+$(document).ready(function() {
+$('#top_sect').scrollToFixed();
+var test = $('#top_sect');
+        test.scrollToFixed({
+            marginTop: $('#top_sect').outerHeight(true) + 10,
+            limit: function() {
+                var limit = 0;
+                    limit = $(this).outerHeight(true) - 10;
+                    return limit;
+                },
+                zIndex: 999
+        });
+    });
+</script>
+</head>
+<body>
+
+
+
+<div id="container">
+
+
+<header>
+
+<nav>
+<ul id="sub1_menu">
+<li><a href="login.jsp">로그인</a></li><li><a href="join01.jsp">회원가입</a></li>
+<li><a href="login.jsp">마이페이지</a>
+</li>
+<li><a href="login.jsp">장바구니</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<div id="top_bg">
+
+<section id="top_sect_logo">
+<article id="logo"><a href="index.html">
+<img src="images/index/logo.png" width="200" height="160" alt="로고" title="로고"></a>
+</article>
+</section>
+
+<section id="top_sect">
+<nav>
+<ul id="main_menu">
+<div class="error1">
+<li><a href="story00.html">향신료 이야기</a></li>
+	<ul class="m1">
+    	<li><a href="story00.html">소개</a></li><li><a href="story01.html">역사</a></li>
+    </ul>
+</div>
+<div class="error1">
+<li><a href="#">스토어</a></li>
+	<ul class="m2">
+    	<li><a href="store.jsp?ctg=Korea">한국</a></li><li><a href="store.jsp?ctg=China">중국</a></li><li><a href="store.jsp?ctg=Tai">태국</a></li><li><a href="store.jsp?ctg=India">인도</a></li><li><a href="store.jsp?ctg=USA">미국</a></li><li><a href="store.jsp?ctg=Italy">이탈리아</a></li>
+    </ul>
+</div>
+<li><a href="travel00.html">향신료 여행</a>
+	<ul class="m3">
+    	<li><a href="travel00.html">영상</a></li><li><a href="travel01.html">도서</a></li>
+    </ul>
+</li>
+<li><a href="board_list.jsp">이벤트</a>
+</li>
+</ul>
+</nav>
+</section>
+
+</div>
+
+
+<section id="title_box">
+
+<h2>홈&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;회사소개</h2>
+
+<article id="title_url">
+<h1>CP INTRO</h1>
+</article>
+
+</section>
+
+
+<section id="middle_sect">
+
+<article id="cont_rule">
+
+<div class="all_title1">
+SPICESQUARE
+</div>
+
+<div class="all_title2">
+스파이스퀘어
+</div>
+
+<article class="cpimg">
+<img src="images/cpIntro/cpintro.jpg" width="945" height="628"></article>
+
+<header class="rule_title">
+3가지 원칙
+</header>
+
+<figure>
+<img src="images/cpIntro/cp1.jpg">
+<figcaption>
+<ul>
+<li>가칭은 오로지 향신료만을 위한 향신료바라기 입니다.</li><!--
+--><li>식품의약품안전처에서 공식으로 지정한 <h1>SAFETYZONE</h1>이며
+주기적인 유지관리를 통하여 최적의 서비스를 제공합니다.</li><!--
+--><li>가칭의 공간 속에서 향신료에 대한모든 관심을 털어보세요.</li>
+</ul>
+</figcaption>
+</figure>
+
+<figure>
+<img src="images/cpIntro/cp2.jpg">
+<figcaption>
+<ul class="error1">
+<li>가칭은 일류대학의 논문을 바탕으로
+5자기 맛으로 2차분류하여 보다 접근하기 용이합니다.</li><!--
+--><li>또한 다양한 국가과 개성적인 향신료들을 
+이곳 가칭에서 한 눈에 보실 수 있습니다.</li>
+</ul>
+</figcaption>
+</figure>
+
+<figure>
+<img src="images/cpIntro/cp3.jpg">
+<figcaption>
+<ul>
+<li>가칭은 국내 유통망을 최소화하여 현지의 맑은 정기조차 보존합니다.</li><!--
+--><li>해회의 경우 현지판매자와의 주기적인 1:1 면담유통구조를 통하여
+보다 더 빠르며
+보다 더 올바른
+먹거리를 제공 받으실 수 있습니다.</li>
+</ul>
+</figcaption>
+</figure>
+
+</article>
+
+<article id="cont_road">
+<header class="road_title">
+오시는 길
+</header>
+<article class="road_map">
+<a href="http://map.daum.net/?urlX=531961&urlY=947505&urlLevel=4&map_type=TYPE_MAP&map_hybrid=false&SHOWMARK=true" target="_blank"><span style="background:#000;position:absolute;width:557px;opacity:.7;filter:alpha(opacity=70);color:#fff;overflow:hidden;font:12px/1.5 Dotum, '돋움', sans-serif;text-decoration:none;padding:7px 0px 0px 10px; height: 24px;">지도를 클릭하시면 위치정보를 확인하실 수 있습니다.</span><img width="565" height="308" src="http://map2.daum.net/map/mapservice?MX=531961&MY=947505&SCALE=5&IW=565&IH=308&COORDSTM=WCONGNAMUL" style="border:1px solid #bfaeac"></a>
+</article>
+<article class="road_text">
+<table>
+<tr>
+	<th>서울 강남북지역</th>
+<tr>
+<tr>
+	<td>경부고속도로 진입 -> 북천안TG나온 후 -> 1번국도 도달할때까지 직진 -> 1번국도 진입 -> 문예회관 사거리에서 우회전</td>
+</tr>
+<tr>
+	<th>서울 강서지역</th>
+</tr>
+<tr>
+	<td>서해안고속도로진입 -> 서평택안성간 고속도로 진입 -> 경부고속도로 진입(부산방향) -> 북천안TG나온 후 -> 1버국도 도달할때까지 직진 -> 1번국도 진입</td>
+</tr>
+<tr>
+	<th>천안 이남지역</th>
+</tr>
+<tr>
+	<td>북천안TG나온후(직산방향 34번 도로 로 좌회전) -> 1번국도 도달할때까지 직진 -> 1번국도 진입 -> 문예회관 사거리에서 우회전</td>
+</tr>
+</table>
+
+</article>
+</article>
+
+</section>
+
+
+<aside>
+<article id="bottom_bg">
+</article>
+</aside>
+
+
+<section id="bottom_menu">
+<nav id="sub2_menu">
+<ul>
+<li><a href="sub2_00.html">회사소개</a></li><!--
+--><li><a href="sub2_01.jsp">이용약관</a></li><!--
+--><li><a href="sub2_02.jsp">고객센터</a></li><!--
+--><li><a href="sub2_03.jsp">개인정보취급방침</a></li><!--
+--><li><a href="sub2_04.jsp">사이트맵</a></li><!--
+--><li><a href="mnglogin.jsp">관리자로그인</a></li>
+</ul>
+</nav>
+</section>
+
+
+<footer>
+<div id="copyright">
+(주)스파이스퀘어 |  대표자 : 김상엽 <br>
+사업자 등록번호 : 220-86-36066 [사업자번호조회] | 통신판매업신고번호 : 2011-충북천안-02674 <br>
+충청남도 천안시 서북구 성환읍 대학로 91 | 개인정보관리 책임자 : 김상엽 E-mail. sykim10070@naver.com <br>
+고객센터 : (82)02-555-5919 | Fax. 팩스번호 : (82)02-569-5115
+<h2>COPYTRIGHT 2016@spicesquare.co.kr ALL RIGHTS RESERVED</h2>
+</div>
+</footer>
+
+
+</div>
+
+
+
+</body>
+</html>

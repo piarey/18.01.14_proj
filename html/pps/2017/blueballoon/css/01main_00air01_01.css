@@ -1,0 +1,16 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 메인제외 공통*/	
+#middle_qbook #qbook_wrap {
+	display:none;}
+
+#middle_airbook {
+	width:1200px; height:1300px; background-color:#ccc;}
+	
+#book00_header {width:1000px; background-color:#f00;}
+
+#book00_header .airfare_header_name {float:left;}
+
+#book00_body1 {
+	clear:both;}

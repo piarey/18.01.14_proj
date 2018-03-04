@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+#cont_intro span {
+	color:#ff4c2e;}
+	
+#cont_intro .bigtxt {
+	font-family:'NanumGothicExtraBold';
+	font-size:16px;}
+	
+#middle_sect {
+	margin:100px auto 0 auto;
+	width:1200px;}
+
+#middle_sect2{
+	width:1200px; margin:100px auto;
+	text-align:center;
+	font-family:'NanumGothicExtraBold'; font-size:16px;}
+	
+	/*****/
+#middle_sect #cont_intro {
+	width:1200px; margin-bottom:100px;}
+	
+	/* 테이블 */	
+	
+#cont_intro table {
+	margin:0 auto;
+	width:1000px; /*390*/ 
+	border-collapse: collapse;
+	text-align:center;}	
+	
+#cont_intro table tr {
+	border-top:1px solid #bfaeac;
+	box-sizing:border-box;}
+	
+#cont_intro table tr th {
+	background-color:#bfaeac; color:#fff;
+	border-right:1px solid #fff;
+	box-sizing:border-box;}
+	
+#cont_intro table tr th:last-child {
+	border-right:1px solid #bfaeac;
+	box-sizing:border-box;}
+
+#cont_intro table tr td {
+	border-right:1px solid #bfaeac;
+	box-sizing:border-box; 
+	text-align:center;}
+	
+#cont_intro table tr td:last-child {
+	border:0;}
+	
+#cont_intro table tr:last-child {
+	border-top:0;
+	background-color:#fbd864;}
+	
+#cont_intro table tr:last-child td {
+	text-align:center;}
+	
+#cont_intro table tr:last-child td {
+	border-right:1px solid #fff;
+	box-sizing:border-box; }
+	
+	/** 버튼 <a href> 용*/
+#cont_intro #but1 {
+	margin:0 auto;
+	width:315px; height:85px;}
+
+#cont_intro #but1 a {
+	text-align:center;
+	font-weight:bold;
+	margin:50px 35px 0 0;
+	width:140px; height:35px;
+	line-height:35px;
+	background-color:#bfaeac; color:#fff;
+	display:inline-block;}
+	
+#cont_intro #but1 a:last-child {
+	margin:0;}
+	
+#cont_intro #but1 a:hover {
+	background-color:#e5d1cf;}
+
+/***************order 용*************/
+
+#form2 {margin-top:70px;}
+
+#form2 table {
+	width:1000px;}
+	
+#form2 table tr td {
+	padding-left:15px;
+	text-align:left;}
+
+#form2 table tr th {border-top:1px solid #fff;}
+
+#form2 table tr:first-child  th{border-top:1px solid #bfaeac;}
+
+#form2 table tr .sub2color {background-color:#f2ebea;}
+
+/*버튼 용 <input> */
+#cont_intro #but2 {
+	width:320px;
+	margin:40px auto 0 auto;}
+	
+#cont_intro #but2 #btnJoin, #btnCancle {
+	background-color:#bfaeac; color:#fff; border:none; width:140px; height:35px;  cursor:pointer; font-weight:bold;}
+
+#cont_intro #but2 #btnJoin:hover, #btnCancle:hover {background-color:#e5d1cf; font-weight:bold;}
+
+#cont_intro #btnFind {
+	background-color:#f2ebea; cursor:pointer;}

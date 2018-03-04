@@ -1,0 +1,20 @@
+@charset "utf-8";
+/* CSS Document */
+img{
+	border:0px;
+}
+body{
+	margin:0px auto;
+	font-family:"돋움체";
+	font-size:12px;
+}
+span{
+	font-family: "나눔고딕", "Nanum Gothic", "돋움체";
+	font-weight: bold;
+}
+#wrap{
+	margin: 0px auto;
+	width: 700px;
+	height: 670px;
+	background-color: #fff;
+}

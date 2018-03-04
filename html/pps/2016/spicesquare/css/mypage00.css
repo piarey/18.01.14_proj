@@ -1,0 +1,87 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 전체 박스~~~*/
+#middle_sect  {
+	margin:0 auto;
+	position:relative;
+	width:1200px; height:750px;
+	border-bottom:1px solid #bfaeac;}
+	
+/* 왼쪽 메뉴~~~*/	
+#middle_sect #left_menu {
+	position:absolute; top:100px;}
+	
+#left_menu ul li {
+	background-color:rgba(77, 10, 1, 0.6);
+	width:50px; height:50px;
+	/*
+	-moz-box-shadow:0px 5px 10px 0px #000;
+	-webkit-box-shadow:0px 5px 10px 0px #000;
+	box-shadow:0px 5px 10px 0px #555;*/}
+
+#left_menu ul li a {
+	font-size:0; line-height:0;}
+	
+#left_menu ul li a img {
+	float:right; 
+	margin-top:5px;
+	margin-right:5px;
+	width:40px; height:40px; background-color:rgba(0, 0, 0, 0.6);}	
+	
+#left_menu ul li:hover a img {
+	width:40px; height:40px; background-color:#000;}	
+
+#left_menu ul li:hover {
+	background-color:rgba(77, 10, 1, 0.8);
+	width:200px; height:50px;
+	/*
+	-moz-box-shadow:0px;
+	-webkit-box-shadow:0px;
+	box-shadow:none;*/}
+	
+#left_menu ul li:hover a {
+	display:block;
+	font-size:16px; font-weight:bold; color:#fff;
+	text-align:center; line-height:50px; }
+
+
+
+/*******************************************/
+
+/**/
+
+#table_join {
+	margin-top:50px;}
+
+#table_join table {
+	margin: 0 auto;
+	width:700px; height:600px;
+
+	/*background-color:#ccbab8;*/}
+	
+#table_join table tr td {
+	padding:0 0 0 10px;
+	border-top:1px solid #bfaeac;}
+	
+#table_join table tr:last-child td{
+	border-bottom:1px solid #bfaeac;}
+	
+.left_tb {
+	width:200px;
+	background-color:#bfaeac; color:#fff;
+	border:1px solid #fff;}
+	
+/**/ 	
+#but1 {
+	width:160px;
+	margin:20px auto 0 auto;}
+	
+#btnJoin, #btnCancle{
+	background-color:#bfaeac; color:#fff; border:none; width:140px; height:35px;  cursor:pointer;}
+
+#btnJoin:hover, #btnCancle:hover{background-color:#e5d1cf;}
+
+/*****/
+
+

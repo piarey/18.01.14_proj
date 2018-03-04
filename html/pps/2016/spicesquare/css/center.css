@@ -1,0 +1,68 @@
+@charset "utf-8";
+/* CSS Document */
+
+#middle_sect {
+	clear:both;
+	margin:100px auto 0 auto;
+	width:1200px; }
+	
+#middle_sect #center_phone {
+	width:800px; margin:0 auto 50px auto;}
+
+#middle_sect #center_phone table {
+	border-collapse:collapse;}
+	
+#center_phone table tr td .phone_bg {
+	clear:both; float:left;
+	width:40px; height:40px; 
+	background-color:#bfaeac;
+	border:6px solid #fff;
+	box-sizing:border-box;}
+	
+#center_phone table tr td .phone_txt{
+	float:left;
+	width:345px; height:40px; line-height:40px;
+	padding-left:15px;}
+	
+#center_phone table tr td .phone_txt2{
+	float:left;
+	width:745px; height:40px; line-height:40px;
+	padding-left:15px;}
+
+#center_phone table tr td:nth-child(n) {
+	border-top:1px solid #bfaeac;
+	box-sizing:border-box;}
+	
+#center_phone table tr:last-child  {
+	border-bottom:1px solid #bfaeac;
+	box-sizing:border-box;}
+	/***************/
+	
+#middle_sect #center_all {
+	text-align:center;
+	margin:0 auto;
+	width:800px; 
+	margin-bottom:2px;
+	cursor:pointer;}
+	
+#center_all #center_title {
+	background-color:#bfaeac; color:#fff; 
+	height:40px; line-height:40px; 
+	font-family:'pusansea'; letter-spacing:5px;
+	font-size:15px; font-weight:bold;}
+	
+#center_all .switchcontent {
+	padding:40px; line-height:25px;
+	border:1px solid #bfaeac;
+	border-bottom:0;
+	box-sizing:border-box;}
+	
+#center_all #center_txt6 {
+	border-bottom:1px solid #bfaeac;
+	box-sizing:border-box;}
+		
+#middle_sect #center_mgbox {
+	width:1px; height:50px;
+	margin-bottom:50px;}
+	
+	

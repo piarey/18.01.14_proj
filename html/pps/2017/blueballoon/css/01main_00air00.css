@@ -1,0 +1,163 @@
+@charset "utf-8";
+/* CSS Document */
+
+#middle_qbook {
+	width:1180px; height:400px; background-color:#faf;}
+	
+#middle_qbook #qbook_wrap {
+	width:1100px; height:180px; margin:0 auto;
+	background-color:#f00;
+	padding:20px;}
+	
+#middle_qbook #qbook_wrap #qbook_body1 {
+	float:left; width:300px; height:140px; background-color:#aff;
+	margin-right:20px;} /* 265px이 가장 중간 */
+	
+#qbook_body1 .selectric-wrapper  {
+	width:150px;}
+	
+#middle_qbook #qbook_wrap #qbook_body2 {
+	float:left; width:300px; height:140px; background-color:#aff;
+	margin-right:20px;
+	letter-spacing:-0.4em;} /* 265px이 가장 중간 */
+	
+#qbook_body2 .selectric-wrapper  {
+	width:80px;}
+	
+#qbook_body2 p {
+	clear:both;}
+	
+#middle_qbook #qbook_wrap #qbook_body3 {
+	float:left; width:200px; height:140px; background-color:#bff;
+	margin-right:20px;}
+	
+#qbook_body3 .selectric-wrapper  {
+	width:150px;}
+	
+#middle_qbook #qbook_wrap #qbook_body3:last-child {
+	margin:0;}
+	
+
+	/**/
+	
+#middle_event {
+	width:1180px; height:400px; background-color:#fbf;
+	position:relative; }
+	
+#middle_event span {
+	clear:both; float:left;}
+	
+#middle_event .bxslider2 img {
+	float:left; display:none;}
+
+#middle_event .bx-wrapper {width:870px; clear:both; float:left;}
+
+#middle_event .bxslider2_right {margin-left:20px; float:left;}
+	
+#middle_event #event_slider_sub {
+	position:absolute; z-index:3; left:35px; top:310px; /* z-index는 bx~.css 에서 확인 */
+	width:800px; height:50px; background-color:#00f; letter-spacing:-0.4em;
+	text-align:center; line-height:50px;}	
+	
+#event_slider_sub .event_slider_sub_left {
+	display:inline-block; 
+	width:400px; height:50px;}
+
+#event_slider_sub .event_slider_sub_right {
+	display:inline-block;
+	width:400px; height:50px;}
+
+/**/
+.event_slider_sub_hover {
+	background-color:#cff;}
+/**/	
+
+
+/**/
+	
+	
+#middle_inland {
+	width:1180px; height:400px; background-color:#fcf;
+	letter-spacing:-0.4em;}
+	
+#middle_inland span {
+	clear:both; float:left;}
+	
+#inland_body_left {
+	clear:both; float:left;
+	display:inline-block; width:300px; height:150px; background-color:#ffa;}
+	
+#inland_body_right {
+	float:left;
+	display:inline-block; width:300px; height:150px; background-color:#ffc;}
+	
+	
+	
+	
+	
+	
+	
+#middle_dbook {
+	width:1180px; background-color:#fdf;}
+
+#middle_dbook #dbook_btnbar {
+	letter-spacing:-0.4em;}
+
+/* 테이블 양식 */
+#middle_dbook .dbook_table1 {
+	width:1180px;}	
+	
+.dbook_table1 thead {background-color:#f00;}
+
+.dbook_table1 thead tr {height:60px;}
+
+.dbook_table1 thead tr th {border-right:1px solid #000;}
+
+.dbook_table1 thead tr th:last-child {border:0;}
+
+.dbook_table1 thead tr th:hover {
+	background-color:#f55}
+
+.dbook_table1 tbody {
+	background-color:#0f0;
+	text-align:center;}
+	
+.dbook_table1 tbody tr {
+	height:80px;}
+
+.slimtable-paging-btnsdiv {clear:both; float:left;}
+
+.slimtable-paging-btnsdiv .slimtable-page-btn {
+	width:30px; height:30px; 
+	text-align:center; line-height:30px;
+	background-color:#aaa; 
+	cursor:pointer;
+	float:left;}
+	
+.slimtable-paging-seldiv {
+	float:right;}
+	
+/* 요 아래 묶음은 <> 제어문 */
+.slimtable-sprites {
+	margin-right:10px;
+	vertical-align: middle;
+	display: inline-block;
+	background-image: url("../images/air/arrows.png");
+	width: 17px;
+	height: 17px;}
+.slimtable-sortboth {
+	background-position: -1px -1px;}
+.slimtable-sortnone {
+	background-position: -19px -19px;}
+.slimtable-sortasc {
+	background-position: -1px -19px;}
+.slimtable-sortdesc {
+	background-position: -19px -1px;}
+	
+	
+	
+	
+	
+	
+	
+	

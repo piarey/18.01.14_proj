@@ -1,0 +1,108 @@
+@charset "utf-8";
+/* menu.css */
+
+/* 모든 <ul> 태그에 적용 */
+ul{
+	margin-top:0;
+	padding:0;
+	list-style:none;  /* type 없음 */
+}
+
+/********** TOP 메뉴 항목 **********/
+#topMenuBox{
+	float:right; /*오른쪽 정렬 */
+}
+
+
+/********** MAIN 메뉴 항목 **********/
+
+#mainMenuBox{
+	height:80px; 
+	line-height:80px; }	
+	
+#mainMenuBox li{
+	float:left;
+	text-align:center;
+	width:20%;}
+
+/****************************************/
+#mainMenuBox li:first-child {
+	width:13%;
+	position:relative;}
+	
+#mainMenuBox li:first-child a .logo_position {
+	position:absolute; left:40px;}
+/****************************************/
+
+/****************************************/
+#mainMenuBox li:last-child {
+	width:7%;
+	padding:10px auto;
+	position:relative;}
+	
+#moveToTopBtn {
+	position:absolute; top:20px;
+	cursor:pointer;}
+/****************************************/
+	
+#mainMenuBox a{
+	display:block;
+	font-size:14px;
+	font-weight:bold;
+	}
+/**/
+.mainMenuBox_a1 {
+	color:#eee8f3;}
+	
+.mainMenuBox_a2 {
+	color:#551a8b;}
+	
+/**/
+
+/********** SUB 메뉴 항목 **********/
+
+#subMenuBox{ 	
+	width:100%;
+	line-height:35px;
+	text-align:center; 
+	position:relative; 
+	z-index:10; /* 슬라이드쇼 박스 위로 드롭다운 하도록*/}	
+	
+.subMenuItem {width:10%;}
+
+#subMenuItem1 {
+	position:absolute;
+	margin-left:18%;}
+	
+#subMenuItem2 {
+	position:absolute;
+	margin-left:38%;}
+	
+#subMenuItem3 {	
+	position:absolute;
+	margin-left:58%;}
+	
+#subMenuItem4 {
+	position:absolute;
+	margin-left:78%;}
+	
+.subMenuItem ul {
+	background-color:#fff;}
+	
+.subMenuItem li a{
+	color:#551a8b;
+	display:block;
+	text-decoration:none;}
+/***/
+
+.subMenuItem li:nth-child(n) {
+	border-top:1px solid #cfc3d9;}
+	
+.subMenuItem li:last-child {
+	border-bottom:3px solid #551a8b;}
+	
+.subMenuItem a:hover{
+	color:#f26249;
+	display:block;}
+
+

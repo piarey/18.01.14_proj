@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 	이미지 자체에 흰 배경이 위로 40px 만큼 존재함 
+	이거 적용된 상태로 마진값 계산한것	*/
+	
+#middle_sect {
+	margin:50px auto 0 auto;
+	width:1200px; height:3050px;}
+	
+#middle_sect img {
+	padding-top:50px;
+	float:left;}
+	
+#middle_sect img:nth-child(n+3) {
+	margin-top:50px;
+	border-top:5px solid #fbd864;}
+	
+	/**/
+#middle_sect2 #fix1 {
+	width:800px; height:800px;
+	margin:0 auto;}
+	
+#middle_sect2 {
+	margin:50px auto 0 auto;
+	width:1200px;}
+	
+	
+	

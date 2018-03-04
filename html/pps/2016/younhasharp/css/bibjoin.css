@@ -1,0 +1,36 @@
+@charset "utf-8";
+/* CSS Document */
+
+#middle_sect {
+	position:relative; width:1200px; margin:0 auto;}
+	
+#middle_sect_bg {width:100%;
+	border-top:5px solid #551a8b;}
+	
+#middle_sect table {
+	margin:50px auto 0 auto;
+	width:500px;}
+	
+#middle_sect tr {
+	height:50px;}
+	
+#middle_sect table .error1 {
+	text-align:center; line-height:40px;
+	width:60px; height:40px;
+	background-color:#cfc3d9; color:#fff;
+	cursor:pointer;}
+	
+#middle_sect table .error1:hover {
+	background-color:#fff; color:#29284d;}
+	
+#join_button {width:180px; height:60px; margin:0 auto 70px auto;}
+
+#middle_sect2 {
+	width:1200px; height:700px; margin:0 auto;}
+
+#middle_sect2 .img2 {
+	margin:50px 300px;
+	width:600px; height:350px;}
+	
+.txt_op { font-size:10px; font-weight:bold; opacity:0.8; color:#f26249;}
+

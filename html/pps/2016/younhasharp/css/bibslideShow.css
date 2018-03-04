@@ -1,0 +1,28 @@
+@charset "utf-8";
+/* slideShow.css  */
+
+#slideShow { 
+	width:1200px; margin:0 auto 0 auto;
+	clear:both;
+	background-color:#fff;
+	height:900px;}	
+
+#slideShowBox  {
+	margin:50px auto 0 auto;
+    overflow:hidden;
+    position:relative;           
+    width:986px; 
+	height:555px;}
+   
+#slidePanel {
+	width:4930px;
+	position:absolute;}
+/*16:9 사이즈임*/
+.slideImage {
+	float:left;
+	width:986px;
+	height:555px;}
+	
+#prevNextButtonBox {position:relative;}
+#prevButton {position:absolute; top:312px; left:20px; cursor:pointer;}
+#nextButton {position:absolute; top:312px; left:1120px; cursor:pointer;}

@@ -1,0 +1,228 @@
+@charset "utf-8";
+	
+@font-face {
+	font-family:"NanumGothicExtraBold";
+	src:url(../font/NanumGothicExtraBold/NanumGothicExtraBold.eot);
+	src:url(../font/NanumGothicExtraBold/NanumGothicExtraBold.woff) format('woff');}
+	
+@font-face {
+	font-family:"NanumGothic";
+	src:url(../font/NanumGothic/NanumGothic.eot);
+	src:url(../font/NanumGothic/NanumGothic.woff) format('woff');}
+	
+@font-face {
+	font-family:"pusansea";
+	src:url(../font/pusansea/pusansea.eot);
+	src:url(../font/pusansea/pusansea.woff) format('woff');}
+
+/* header 부분*/
+
+header {background-color:#fbd864;}
+
+header nav {width:1200px; height:30px; 
+			margin: 0 auto;}
+						
+header nav #sub1_menu {float:right;}
+
+header nav #sub1_menu > li { 
+	float:left; position:relative;
+	background-color:;
+	width:80px; height:30px;
+	text-align:center;
+	line-height:30px;
+	/*border-right:1px solid #425221; box-sizing:border-box;*/}
+/*			 
+header nav #sub1_menu li:last-child {border-right-width:0px;}*/
+
+header nav #sub1_menu li a {
+	display:block; /*text-shadow:1px 1px 6px #425221;*/}
+
+header nav #sub1_menu li:hover {background-color:;}	
+
+header nav #sub1_menu li:hover > a{
+	font-weight:bold;
+	color:;}
+
+header nav #sub1_menu ul {
+	width:120px; 
+	position:absolute; left:-20px; top:30px;}
+
+/*float:none 을 줌으로서 중앙정렬*/
+header nav #sub1_menu ul li {float:none; width:120px;}	
+
+header nav #sub1_menu ul a {color:;}
+
+header nav #sub1_menu ul li:hover a {background-color:; color:;}
+
+header nav #sub1_menu ul {display:none;}
+
+header nav #sub1_menu li:hover ul {display:block;}
+		   
+
+/* */
+#top_bg {background-color:#fbd864;}
+
+#top_sect_logo {
+	width:200px; height:160px;
+	margin:0 auto;}
+
+#top_sect.scroll-to-fixed-fixed {
+    background-color:#4d0a01;}
+
+
+/* */
+#top_sect {
+	height:50px;
+	margin:0 auto;/*
+	background:url(../images/top_bgcolor.jpg) repeat-x bottom;*/
+	clear:both;
+	background-color:#4d0a01;
+	-moz-box-shadow:0px 5px 10px 0px #000;
+	-webkit-box-shadow:0px 5px 10px 0px #000;
+	box-shadow:0px 5px 10px 0px #000;
+	position:relative;
+	z-index:999;}
+
+#top_sect nav #main_menu {
+	width:1000px; height:50px;
+	margin:0 auto; background-color:;}
+	
+#top_sect #main_menu > li {
+	width:150px; height:50px;
+	float:left; position:relative;
+	margin:0 50px 0 50px;
+	text-align:center; line-height:50px;}
+
+#top_sect #main_menu > li a {	
+	color:#fff;}
+	
+/* 		요 안에 설명
+		바로위 > li 만 넣을경우 '향신료이야기' 와 '스토어'만 position 적용이 안됨
+		뭔 이유인지 모르겠음
+		그래서 이 두개만 따로 class로 또 적용시킨거임*/
+#top_sect #main_menu > .error1 {
+	width:150px; height:50px;
+	float:left; position:relative; 
+	margin:0 50px 0 50px;
+	text-align:center; line-height:50px;
+	color:#fff;}
+	
+#top_sect #main_menu > .error1 a {
+	color:#fff;}
+
+#top_sect #main_menu .error1:hover {background-color:;}
+
+#top_sect #main_menu .error1:hover a {color:#ffd747;}
+
+#top_sect #main_menu .error1:hover ul {display:block;}
+
+#top_sect #main_menu .error1:hover ul a {color:#fff;}
+
+#top_sect #main_menu .error1:hover ul a:hover {color:#ffd747;}
+
+/* ----------------------------------------------------------------------*/
+
+/* 	요게 오른쪽 2개 제어문*/
+#top_sect #main_menu li:hover {
+	background-color:;}
+	
+#top_sect #main_menu li:hover a {color:#fff;}
+
+#top_sect #main_menu li:hover a:hover {color:#ffd747;}
+
+/**/
+
+#top_sect #main_menu .m1 {
+	width:120px; line-height:35px;
+	position:absolute; z-index:1; left:15px; top:50px; 
+	background-color:rgba(77, 10, 1, 0.8);}
+	
+#top_sect #main_menu .m2 {
+	width:120px; line-height:35px;
+	position:absolute; z-index:1; left:15px; top:50px; 
+	background-color:rgba(77, 10, 1, 0.8);}
+	
+#top_sect #main_menu .m3 {
+	width:120px; line-height:35px; 
+	position:absolute; z-index:1; left:15px; top:50px; 
+	background-color:rgba(77, 10, 1, 0.8);}
+	
+#top_sect #main_menu .m4 {
+	width:150px; line-height:35px;
+	position:absolute; z-index:1; left:0px; top:50px; 
+	background-color:rgba(77, 10, 1, 0.8);}
+	
+/* 전체 제어문 */
+#top_sect #main_menu a {
+	display:block;
+	font-size:18px;
+	font-family:'pusansea'; font-weight:bold; letter-spacing:5px;}	
+	
+#top_sect #main_menu ul {display:none;}
+
+#top_sect #main_menu li:hover ul {display:block;}
+	
+/********************************************************************/
+/********************************************************************/
+/********************************************************************/
+
+/* 어사이드 */
+
+aside {
+	margin:50px 0 0 0;
+	clear:both;
+	width:100%;}
+
+aside #bottom_bg {
+	height:80px;
+	background:url(../images/index/bottom_bg.jpg) no-repeat center center fixed;
+	background-size:cover;}
+
+
+/* 서브2메뉴 이자 하단 메뉴 */
+
+#bottom_menu {
+	margin : 20px auto 0px auto;
+	width : 100%;
+	height : 30px;
+	border-top:3px solid #804740;
+	/*border-top:1px solid #425221;
+	border-bottom:1px solid #425221;*/
+}
+
+#bottom_menu #sub2_menu {	
+	width:840px; height:30px;
+	margin: 0 auto;}
+
+#bottom_menu #sub2_menu ul{	}
+
+#bottom_menu #sub2_menu ul li{
+	text-align:center; line-height:30px;
+	width:140px; height:30px;
+	/*text-shadow:1px 1px 6px #425221;*/
+	display: inline-block;} 
+
+#bottom_menu #sub2_menu ul li a {
+	display:block;}
+
+#bottom_menu #sub2_menu ul li:hover{background-color:;}
+
+#bottom_menu #sub2_menu ul li:hover a{font-weight:bold;}
+		   
+		   
+/* 푸터푸터 */
+
+footer {
+	margin:70px auto 0 auto;
+	width:1200px; height:100px;}
+
+footer #copyright {
+	text-align:center;
+	width:800px; height:100px;
+	margin:0 auto 80px auto;
+	letter-spacing:2px;
+	line-height:20px;}
+	
+footer #copyright h2 {
+	margin-top:10px; font-size:14px;}
+

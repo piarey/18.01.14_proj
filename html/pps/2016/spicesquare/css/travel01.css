@@ -1,0 +1,112 @@
+@charset "utf-8";
+/* CSS Document */
+
+#middle_sect {
+	position:relative;
+	width:1200px; height:750px; margin:100px auto 0 auto;}
+	
+#middle_sect #book_all {
+	position:absolute;
+	margin-top:350px; 
+	margin-left:400px;
+	width:420px; height:264px;}
+	
+#middle_sect #book_all #book_each {
+	float:left;
+	width:180px; height:264px; background-color:;}
+
+#middle_sect #book_all #book_each a img {
+	width:180px; height:264px; background-color:;}
+	
+#middle_sect #book_all #book_each a img:hover {
+	position:relative;
+	animation-name:ani1;
+	animation-direction:alternate;
+	animation-duration:1.5s;
+	animation-iteration-count:infinite;
+	-moz-box-shadow:1px 1px 10px #000;
+	-webkit-box-shadow:1px 1px 10px #000;
+	box-shadow:2px 2px 5px #000;}
+	
+#middle_sect #book_all #book_each:nth-child(n) {
+	-moz-box-shadow:1px 1px 10px #000;
+	-webkit-box-shadow:1px 1px 10px #000;
+	box-shadow:2px 2px 5px #000;}	
+		
+#middle_sect #book_all #book_each:nth-child(1) {
+	position:absolute; z-index:11;}
+	
+#middle_sect #book_all #book_each:nth-child(2) {
+	position:absolute; z-index:9; left:60px; top:10px;}
+	
+#middle_sect #book_all #book_each:nth-child(3) {
+	position:absolute; z-index:7; left:120px; top:20px;}
+	
+#middle_sect #book_all #book_each:nth-child(4) {
+	position:absolute; z-index:5; left:180px; top:30px;}
+	
+#middle_sect #book_all #book_each:nth-child(5) {
+	position:absolute; z-index:3; left:240px; top:40px;}
+/*위에는 기본으로 보여주는것. 아래는 호버시 보여주는것*/	
+#middle_sect #book_all #book_each:nth-child(6) {
+	position:absolute; z-index:10;}
+	
+#middle_sect #book_all #book_each:nth-child(7) {
+	position:absolute; z-index:8; left:60px; top:10px;}
+	
+#middle_sect #book_all #book_each:nth-child(8) {
+	position:absolute; z-index:6; left:120px; top:20px;}
+	
+#middle_sect #book_all #book_each:nth-child(9) {
+	position:absolute; z-index:4; left:180px; top:30px;}
+	
+#middle_sect #book_all #book_each:nth-child(10) {
+	position:absolute; z-index:2; left:240px; top:40px;}
+	
+#middle_sect #book_all #book_each:hover:nth-child(1) {
+	z-index:1;}
+	
+#middle_sect #book_all #book_each:hover:nth-child(2) {
+	z-index:1;}
+	
+#middle_sect #book_all #book_each:hover:nth-child(3) {
+	z-index:1;}
+	
+#middle_sect #book_all #book_each:hover:nth-child(4) {
+	z-index:1;}
+
+#middle_sect #book_all #book_each:hover:nth-child(5) {
+	z-index:1;}
+	
+#middle_sect #book_all #book_each:hover:nth-child(n+6) {
+	z-index:11;}
+	
+#middle_sect #book_txt {
+	text-align:center; line-height:20px;
+	position:absolute; 
+	width:180px; height:20px;
+	top:270px; left:500px;
+}
+		
+#middle_sect #book_box {
+	position:absolute; z-index:999; left:250px; top:300px;
+	width:700px; height:400px;
+	-moz-box-shadow:0px 10px 30px #000;
+	-webkit-box-shadow:0px 10px 30px #000;
+	box-shadow:0px 10px 30px #000;
+}
+	/*	도서의 신국판 사이즈는 152*225 임*/
+	
+/*****/
+
+@keyframes ani1 {
+	100%{ transform:scale(1.3);}
+}
+
+@-webkit-keyframes ani1 {
+	100%{ transform:scale(1.3);}
+}
+
+@-moz-keyframes ani1 {
+	100%{ transform:scale(1.3);}
+}

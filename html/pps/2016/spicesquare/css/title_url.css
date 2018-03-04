@@ -1,0 +1,27 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 타이틀! */
+
+#title_box{
+	padding:100px 0 70px 0;
+	margin : 0 auto;
+	width:1200px; height:25px;
+	clear:both;}
+	
+#title_box h2{
+	float:right;
+	display:inline-block;
+	margin:0 30px 10px 0;}
+	
+/* 위에 경로 창*/
+#title_box #title_url {
+	float:left;
+	margin:0 auto 0 auto;
+	border-bottom:1px solid #bfaeac;
+	border-top:3px solid #804740;
+	box-sizing:border-box;
+	background-color:;
+	width:1200px; height:70px; background-color:;}	
+
+#title_box #title_url h1{text-align:center; line-height:70px;}

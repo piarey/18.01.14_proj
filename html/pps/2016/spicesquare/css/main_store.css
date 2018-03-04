@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 	위에 경로창 임 = title_url.css
+	단 store 페이지에서만 main_store.css에 따로 넣어서 씀*/
+
+#middle_sect{
+	/* inline-block 시 생기는 공백 제거*/
+	letter-spacing:-0.4em;
+	/**/
+	padding:100px 0 70px 0;
+	margin : 0 auto;
+	width : 1200px;
+	clear:both;
+	border-bottom:1px solid #bfaeac;}
+	
+#middle_sect h2{
+	float:right;
+	display:inline-block;
+	margin:0 30px 10px 0;}
+	
+#title_url {
+	float:left;
+	margin:0px auto 0 auto;
+	border-bottom:1px solid #bfaeac;
+	border-top:3px solid #804740;
+	box-sizing:border-box;
+	width:1200px; height:70px; background-color:;}	
+	
+#title_url h1 {
+	margin-left:50px; line-height:25px;
+	float:left;
+	opacity:0.6;}
+
+#title_url .select_menu ul{
+	float:left;
+	margin:25px 0 0 30px;}
+
+#title_url .select_menu ul li{
+	float:left;
+	width:80px; height:20px;
+	text-align:center; line-height:20px;
+	border-right:1px solid #bfaeac;
+	box-sizing:border-box;}
+
+#title_url .select_menu ul li:last-child{
+	padding:0 0 0 10px;
+	border:0;}
+
+#title_url .select_menu ul li a{
+	display:block;}
+
+#title_url .select_menu ul li a:hover{
+	font-weight:bold;}
+	
+/***********************************************/
+	
+	
+	
+/* 이하 공용레이아웃 */
+
+#middle_sect h1 {
+	padding:20px 0;}
+
+#middle_sect figure { 
+	margin:80px 100px 0 100px;
+	width:200px; height:270px;
+	display:inline-block;}
+
+#middle_sect figure img {
+	width:200px; height:200px;}
+
+#middle_sect figure figcaption{
+	width:200px; height:70px;}
+	
+#middle_sect figure figcaption ul {
+	text-align:center;
+	line-height:35px;	
+}
+	
+#middle_sect figure figcaption ul li:last-child {
+	border-top:1px solid #bfaeac;
+	box-sizing:border-box;}
+	
+/***************************/
+

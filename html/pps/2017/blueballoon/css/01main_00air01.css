@@ -1,0 +1,128 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 메인제외 공통*/	
+#middle_qbook #qbook_wrap {
+	display:none;}
+	
+/**/
+
+#middle_airfare {
+	width:1200px; height:1400px; background-color:#ffa;
+	margin:0 auto; padding:30px 0 70px 0;}
+	
+.airfare_wrap {
+	width:1100px; height:400px; margin:0 auto 50px auto;}
+	
+.airfare_wrap .airfare_header {
+	width:1000px; height:40px; background-color:#8ff;
+	margin-bottom:10px;}
+	
+.airfare_wrap .airfare_body {
+	width:600px; height:300px;}
+	
+.airfare_wrap .airfare_body .airfare_table_header table {
+	border:1px solid #000; background-color:#aff;
+	width:1100px; height:50px; }
+	
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(1) td:nth-child(1) {width:120px;}
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(1) td:nth-child(2) {width:110px;}
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(1) td:nth-child(3) {width:100px;}
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(1) td:nth-child(4) {width:100px;}
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(1) td:nth-child(5) {width:220px;}
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(1) td:nth-child(6) {width:220px;}
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(1) td:nth-child(7) {width:210px;}	
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(1) td:nth-child(8) {width:20px;}
+
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(2) td:nth-child(1) {width:50px;}
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(2) td:nth-child(2) {width:100px;}
+.airfare_wrap .airfare_body .airfare_table_header table tr:nth-child(2) td:nth-child(3) {width:70px;}
+	
+
+.airfare_wrap .airfare_body .airfare_table_body {
+	width:1100px; height:300px;
+	overflow-y:scroll; background-color:#cff;}
+
+.airfare_wrap .airfare_body .airfare_table_body table {
+	border:1px solid #000;
+	width:1080px;}
+	
+.airfare_wrap .airfare_body .airfare_table_body table tr td {
+	height:40px;}
+	
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(1) {width:120px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(2) {width:110px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(3) {width:100px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(4) {width:100px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(5) {width:50px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(6) {width:100px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(7) {width:70px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(8) {width:50px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(9) {width:100px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(10) {width:70px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(11) {width:50px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(12) {width:100px;}
+.airfare_wrap .airfare_body .airfare_table_body table tr td:nth-child(13) {width:60px;}
+
+
+#middle_airfare #airfare_bottom_box00 {
+	width:1100px; background-color:#f8f;
+	clear:both; float:left; margin:0 50px 10px 50px;}
+	
+#middle_airfare #airfare_bottom_box00 #airfare_box00_header {
+	width:1100px; height:50px; background-color:#666;}
+	
+#middle_airfare #airfare_bottom_box00 table {
+	width:1100px;}
+	
+#middle_airfare #airfare_bottom_box00 thead tr {
+	height:40px;}
+	
+#middle_airfare #airfare_bottom_box00 tbody tr {
+	height:50px;}
+
+#middle_airfare #airfare_bottom_1011wrap {
+	width:1100px; margin:0 auto;}	
+	
+#middle_airfare #airfare_bottom_box10 {
+	width:790px; height:250px; background-color:#faf;
+	clear:both; float:left; margin-right:10px;}
+	
+#middle_airfare #airfare_bottom_box10 table {
+	width:790px; height:250px;}
+	
+#middle_airfare #airfare_bottom_box10 table thead tr {
+	width:790px; height:70px;}
+	
+#middle_airfare #airfare_bottom_box10 table tbody tr {
+	width:790px; height:60px;}
+	
+#middle_airfare #airfare_bottom_box11 {
+	width:300px; height:250px; background-color:#fcf;
+	float:left;}
+	
+#middle_airfare #airfare_bottom_box11 #airfare_box11_header {
+	width:300px; height:150px; background-color:#8ff; margin-bottom:10px;}
+	
+#middle_airfare #airfare_bottom_box11 #airfare_box11_header p:nth-child(2) {
+	font-size:20px; font-weight:bold; color:#f00;}
+	
+#middle_airfare #airfare_bottom_box11 #airfare_box11_body{
+	width:300px; height:90px; background-color:#aff;}
+	
+	
+	
+	
+		
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	

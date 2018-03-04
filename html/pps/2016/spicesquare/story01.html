@@ -1,0 +1,141 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>레이아웃1</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/header_menu_footer.css" rel="stylesheet" type="text/css">
+<link href="css/title_url.css" rel="stylesheet" type="text/css">
+<link href="css/main_story.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script src="http://www.tbctour.com/script/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">  
+$(document).ready(function() {
+$('#top_sect').scrollToFixed();
+var test = $('#top_sect');
+        test.scrollToFixed({
+            marginTop: $('#top_sect').outerHeight(true) + 10,
+            limit: function() {
+                var limit = 0;
+                    limit = $(this).offset().top - $(this).outerHeight(true) - 10;
+                    return limit;
+                },
+                zIndex: 999
+        });
+    });
+</script>
+</head>
+<body>
+
+
+
+<div id="container">
+
+
+<header>
+
+<nav>
+<ul id="sub1_menu">
+<li><a href="login.jsp">로그인</a></li><li><a href="join01.jsp">회원가입</a></li>
+<li><a href="#">마이페이지</a>
+</li>
+<li><a href="#">장바구니</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<div id="top_bg">
+
+<section id="top_sect_logo">
+<article id="logo"><a href="index.html">
+<img src="images/index/logo.png" width="200" height="160" alt="로고" title="로고"></a>
+</article>
+</section>
+
+<section id="top_sect">
+<nav>
+<ul id="main_menu">
+<div class="error1">
+<li><a href="story00.html">향신료 이야기</a></li>
+	<ul class="m1">
+    	<li><a href="story00.html">소개</a></li><li><a href="story01.html">역사</a></li>
+    </ul>
+</div>
+<div class="error1">
+<li><a href="#">스토어</a></li>
+	<ul class="m2">
+    	<li><a href="store.jsp?ctg=Korea">한국</a></li><li><a href="store.jsp?ctg=China">중국</a></li><li><a href="store.jsp?ctg=Tai">태국</a></li><li><a href="store.jsp?ctg=India">인도</a></li><li><a href="store.jsp?ctg=USA">미국</a></li><li><a href="store.jsp?ctg=Italy">이탈리아</a></li>
+    </ul>
+</div>
+<li><a href="travel00.html">향신료 여행</a>
+	<ul class="m3">
+    	<li><a href="travel00.html">영상</a></li><li><a href="travel01.html">도서</a></li>
+    </ul>
+</li>
+<li><a href="board_list.jsp">이벤트</a>
+</li>
+</ul>
+</nav>
+</section>
+
+</div>
+
+
+<section id="title_box">
+
+<h2>홈&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;향신료 이야기<!--
+-->&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;역사</h2>
+
+<article id="title_url">
+<h1>SPICE HISTORY</h1>
+</article>
+
+</section>
+
+
+<section id="middle_sect2">
+<div id="fix1"><img src="images/story/history_graph1.jpg" width="800" height="800" ></div><!--
+-->
+</section>
+
+
+<aside>
+<article id="bottom_bg">
+</article>
+</aside>
+
+
+<section id="bottom_menu">
+<nav id="sub2_menu">
+<ul>
+<li><a href="sub2_00.html">회사소개</a></li><!--
+--><li><a href="sub2_01.jsp">이용약관</a></li><!--
+--><li><a href="sub2_02.jsp">고객센터</a></li><!--
+--><li><a href="sub2_03.jsp">개인정보취급방침</a></li><!--
+--><li><a href="sub2_04.jsp">사이트맵</a></li><!--
+--><li><a href="mnglogin.jsp">관리자로그인</a></li>
+</ul>
+</nav>
+</section>
+
+
+<footer>
+<div id="copyright">
+(주)이언 커뮤니케이션즈 | 호라앤코 HORA&Co. | 대표자 : 김희정 <br>
+사업자 등록번호 : 220-86-36066 [사업자번호조회] | 통신판매업신고번호 : 2011-서울강남-02674 <br>
+서울시 강남구 봉은사로 30길 42 안텍스 빌딩 3층 | 개인정보관리 책임자 : 이정석 E-mail. jeongsuk@horanco.co.kr <br>
+고객센터 : (82)02-555-5919 | Fax. 팩스번호 : (82)02-569-5115
+<h2>COPYTRIGHT 2016@cfy.co.kr ALL RIGHTS RESERVED</h2>
+</div>
+</footer>
+
+
+</div>
+
+
+
+</body>
+</html>

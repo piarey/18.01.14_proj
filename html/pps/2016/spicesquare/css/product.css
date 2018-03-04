@@ -1,0 +1,152 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* 	common 에 100%로 되어있는데, 이걸 안해줄시 레이아웃 깨짐 */
+fieldset, form { float:right; width:500px;}
+/**/
+
+#middle_sect {
+	margin:50px auto 0 auto;
+	width:1200px; }
+	
+	/*****/
+#middle_sect #cont_intro {
+	margin:0 auto;
+	width:1100px; height:500px;}
+	
+#middle_sect #cont_intro img {
+	float:left;
+	width:500px; height:500px;
+	background-color:#ccc;}
+	
+	/* 테이블 */	
+	
+#cont_intro table {
+	float:right;
+	width:500px; height:330px; /*390*/
+	border-collapse: collapse;}	
+
+#cont_intro table tr th {
+	text-align:left; padding-left:15px;
+	width:14%;}
+	
+#cont_intro table tr .not1 {
+	padding:0;}
+	
+#cont_intro table tr td {padding-left:50px;}
+
+#cont_intro table tr .not2 {
+	padding:0;
+	width:60%;}
+	
+#cont_intro table tr th h2 { 
+	text-align:left; font-size:18px;
+	font-family:'NanumGothicExtraBold';}	
+	
+#cont_intro table .tb_border1 {
+	padding:0;
+	border-bottom:2px solid #bfaeac;
+	box-sizing:border-box;}
+	
+#cont_intro table .tb_border2 {
+	height:80px;
+	border-bottom:2px solid #bfaeac;
+	box-sizing:border-box;}
+	
+#cont_intro table .pmButton {
+	border:1px solid #bfaeac;
+	box-sizing:border-box;
+	background-color:#fff;
+	color:#bfaeac;
+	cursor:pointer;}
+
+/***/
+#amount {
+	margin-top:10px;
+	clear:both; float:right;
+	width:500px; height:60px;}
+	
+#amount .amount_txt {
+	font-weight:bold; 
+	float:right;}
+	
+#amount .amount_txt .span_txt {
+	width:180px; height:30px;
+	text-align:center; line-height:40px;
+	border:0; overflow:hidden;
+	font-size:23px;
+	color:#ff4c2e;
+	font-weight:bold;
+	overflow:hidden; }
+
+/* 여기 총 높이는 110 */
+#buttons { 
+	margin-top:10px;
+	text-align:center; line-height:40px;
+	clear:both; float:right;
+	width:500px; height:90px;}
+	
+#btnJoin {
+	background-color:#bfaeac; color:#fff; 
+	width:500px; height:40px; border:0;
+	cursor:pointer; font-weight:bold;}
+
+input[type="button"] {
+	margin:0;}
+
+#btnJoin2 {
+	margin-top:10px;
+	float:left;
+	width:245px; height:40px;
+	background-color:#fff;
+	border:1px solid #bfaeac;
+	box-sizing:border-box;
+	cursor:pointer; font-weight:bold;}
+	
+#btnJoin2:last-child {
+	margin-left:10px;}
+
+
+#btnJoin:hover {background-color:#e5d1cf;}
+
+/* 중간 메뉴? */
+
+#cont_submenu {
+	margin-top:200px;
+	width:1200px; height:50px;
+	background-color:#fff;
+	border-bottom:1px solid #bfaeac;
+	border-top:3px solid #804740;
+	box-sizing:border-box;}
+
+#cont_submenu ul li {
+	padding-left:50px;
+	width:80px; height:50px;
+	line-height:50px;
+	display:inline-block;}
+	
+#cont_submenu ul li:hover {
+	font-weight:bold;
+	border-bottom:2px solid #fff;}	
+	
+#cont_submenu ul li:hover a {
+	display:block;}
+
+/* 아래 3개 사진*/
+#cont_explain {
+	/* 사진 자체에 마진top20이 붙어있어서*/
+	margin:80px auto 0 auto;
+	width:1200px;}
+	
+#cont_explain .pd_box_1 {
+	margin:0 auto;
+	width:1200px; height:400px;}
+	
+#cont_explain .pd_box_2 {
+	margin:100px auto 0 auto;
+	width:1200px; height:600px;}
+	
+#cont_explain .pd_box_3 {
+	margin:0 auto;
+	background-color:#222;
+	width:1200px; height:600px;}

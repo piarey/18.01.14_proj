@@ -1,0 +1,313 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>레이아웃1</title>
+<link href="css/common.css" rel="stylesheet" type="text/css">
+<link href="css/header_menu_footer.css" rel="stylesheet" type="text/css">
+<link href="css/title_url.css" rel="stylesheet" type="text/css">
+<link href="css/travel00.css" rel="stylesheet" type="text/css">
+<link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type="text/javascript">
+		$(function(){
+			$('.sect_txt1').hover(
+				function(){
+					$(this).animate({left:350}, 1000);
+				}
+				);
+			$('.sect_txt2').hover(
+				function(){
+					$(this).animate({left:350}, 1000);
+				}
+				);
+			$('.sect_txt3').hover(
+				function(){
+					$(this).animate({left:350}, 1000);
+				}
+				);
+			$('.sect_txt4').hover(
+				function(){
+					$(this).animate({left:350}, 1000);
+				}
+				);
+		});
+</script>
+<script src="http://www.tbctour.com/script/jquery-scrolltofixed.js" type="text/javascript"></script>
+<script type="text/javascript" charset="utf-8">  
+$(document).ready(function() {
+$('#top_sect').scrollToFixed();
+var test = $('#top_sect');
+        test.scrollToFixed({
+            marginTop: $('#top_sect').outerHeight(true) + 10,
+            limit: function() {
+                var limit = 0;
+                    limit = $(this).outerHeight(true) - 10;
+                    return limit;
+                },
+                zIndex: 999
+        });
+    });
+</script>
+</head>
+<body>
+
+
+
+<div id="container">
+
+<header>
+
+<nav>
+<ul id="sub1_menu">
+<li><a href="login.jsp">로그인</a></li><li><a href="join01.jsp">회원가입</a></li>
+<li><a href="login.jsp">마이페이지</a>
+</li>
+<li><a href="login.jsp">장바구니</a></li>
+</ul>
+</nav>
+
+</header>
+
+
+<div id="top_bg">
+
+<section id="top_sect_logo">
+<article id="logo"><a href="index.html">
+<img src="images/index/logo.png" width="200" height="160" alt="로고" title="로고"></a>
+</article>
+</section>
+
+<section id="top_sect">
+<nav>
+<ul id="main_menu">
+<div class="error1">
+<li><a href="story00.html">향신료 이야기</a></li>
+	<ul class="m1">
+    	<li><a href="story00.html">소개</a></li><li><a href="story01.html">역사</a></li>
+    </ul>
+</div>
+<div class="error1">
+<li><a href="#">스토어</a></li>
+	<ul class="m2">
+    	<li><a href="store.jsp?ctg=Korea">한국</a></li><li><a href="store.jsp?ctg=China">중국</a></li><li><a href="store.jsp?ctg=Tai">태국</a></li><li><a href="store.jsp?ctg=India">인도</a></li><li><a href="store.jsp?ctg=USA">미국</a></li><li><a href="store.jsp?ctg=Italy">이탈리아</a></li>
+    </ul>
+</div>
+<li><a href="travel00.html">향신료 여행</a>
+	<ul class="m3">
+    	<li><a href="travel00.html">영상</a></li><li><a href="travel01.html">도서</a></li>
+    </ul>
+</li>
+<li><a href="board_list.jsp">이벤트</a>
+</li>
+</ul>
+</nav>
+</section>
+
+</div>
+
+
+<section id="title_box">
+
+<h2>홈&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;향신료 여행<!--
+-->&nbsp;&nbsp;&nbsp;->&nbsp;&nbsp;&nbsp;동영상</h2>
+
+<article id="title_url">
+<h1>TRAVEL VIDEO</h1>
+</article>
+
+</section>
+
+
+<section id="middle_sect">
+
+<article id="sect_all">
+
+<div class="sect_video">
+<iframe src='http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=9F14DA6C5E6C2D9796F0EC54D2FC76D25202&outKey=V126fb42b201a92e13f62456eae0b373f00b373601b6f85940982456eae0b373f00b3&controlBarMovable=true&jsCallable=true&isAutoPlay=true&skinName=tvcast_white&wmode=transparent' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='550' HEIGHT='310' allowfullscreen></iframe>
+</div>
+
+<div class="sect_txt1"><b>업로드 된 날짜</b> : 2015.06.23
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt2"><b>제작일</b> : 2015.04.25
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt3">
+<div class="txt1"><b>동영상 제목</b> : 향신료의 나라! 인도 스파이스 블렌딩에 도전하다 1/5
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+<div class="sect_txt4">
+<div class="txt2"><b>동영상 소개</b> : 25세의 젊은이 박준영씨가 주인공이다. 최고 요리사를 꿈꾸는 그는 인도에서 자신만의 요리법을 개발해보려고 한다. 과연 꿈을 이룰 수 있을까. 세계를 향한 젊은이들의 도전을 카메라에 담는 EBS1 ‘청춘! 세계도전기’는 23일 오후 7시50분 ‘향신료의 나라! 인도 스파이스 블렌딩에 도전하다’편을 방송한다.
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+</article>
+
+<article id="sect_all">
+
+<div class="sect_video">
+<iframe src='http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=94ACCCC1943BD18087729FBAC37C07F8CBB8&outKey=V1260320f29cb69bc4c52264feef201e046b67901508ac7a9ebb4264feef201e046b6&controlBarMovable=true&jsCallable=true&isAutoPlay=false&skinName=tvcast_white&wmode=transparent' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='550' HEIGHT='310' allowfullscreen></iframe>
+</div>
+
+<div class="sect_txt1"><b>업로드 된 날짜</b> : 2015.06.29
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt2"><b>제작일</b> : 2015.04.25
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt3">
+<div class="txt1"><b>동영상 제목</b> : 향신료의 나라! 인도 스파이스 블렌딩에 도전하다 2/5
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+<div class="sect_txt4">
+<div class="txt2"><b>동영상 소개</b> : 자신만의 특제 소스로 브랜드를 만들어 전 세계인의 입맛을 사로잡고 싶다는 박준영 씨. 고기의 특성에 따라 다른 향신료를 사용하면 요리의 디테일함을 살릴 수 있다고 합니다.
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+</article>
+
+<article id="sect_all">
+
+<div class="sect_video">
+<iframe src='http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=BA155D4D16E88523944C2DD84F5C312E8A4F&outKey=V125a8b52e48194990e9c5d241b37b14007b510e40fa34505b5c65d241b37b14007b5&controlBarMovable=true&jsCallable=true&isAutoPlay=false&skinName=tvcast_white&wmode=transparent' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='550' HEIGHT='310' allowfullscreen></iframe>
+</div>
+
+<div class="sect_txt1"><b>업로드 된 날짜</b> : 2015.07.04
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt2"><b>제작일</b> : 2015.04.25
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt3">
+<div class="txt1"><b>동영상 제목</b> : 향신료의 나라! 인도 스파이스 블렌딩에 도전하다 3/5
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+<div class="sect_txt4">
+<div class="txt2"><b>동영상 소개</b> : 준영씨가 인도에서 배우고자 하는 건 마살라 배합 비법이다. 마살라는 적게는 서너가지에서 많게는 수십 가지의 재료를 배합해 만든 혼합 향신료로 재료와 비율에 따라서 맛이 천자만별이다.
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+</article>
+
+<article id="sect_all">
+
+<div class="sect_video">
+<iframe src='http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=A7BEB9C47D7D0B480B61E52B44F46D2C673B&outKey=V122e28f6f70443f732c89d4bf3c29f94dff87b6320e5a6c09eb89d4bf3c29f94dff8&controlBarMovable=true&jsCallable=true&isAutoPlay=false&skinName=tvcast_white&wmode=transparent' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='550' HEIGHT='310' allowfullscreen></iframe>
+</div>
+
+<div class="sect_txt1"><b>업로드 된 날짜</b> : 2015.07.10
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt2"><b>제작일</b> : 2015.04.25
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt3">
+<div class="txt1"><b>동영상 제목</b> : 향신료의 나라! 인도 스파이스 블렌딩에 도전하다 4/5
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+<div class="sect_txt4">
+<div class="txt2"><b>동영상 소개</b> : 음식의 색과 향을 결정하는 강황! 생 강황을 뽑고 말리는 고정을 잘 해야 좋은 강홍가루를 얻을 수 있습니다. 준영 씨는 직접 정제 과정을 살펴보기 위해 원산지 군투르로 떠났습니다.
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+</article>
+
+<article id="sect_all">
+
+<div class="sect_video">
+<iframe src='http://serviceapi.rmcnmv.naver.com/flash/outKeyPlayer.nhn?vid=EB84E0BF51C77B9481943F4AA0F0E51ADC0D&outKey=V12633598298961b544c866e8702333ee865b1d1f934921cde80f66e8702333ee865b&controlBarMovable=true&jsCallable=true&isAutoPlay=false&skinName=tvcast_white&wmode=transparent' frameborder='no' scrolling='no' marginwidth='0' marginheight='0' WIDTH='550' HEIGHT='310' allowfullscreen></iframe>
+</div>
+
+<div class="sect_txt1"><b>업로드 된 날짜</b> : 2015.07.16
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt2"><b>제작일</b> : 2015.04.25
+<div class="bgcolor1"></div>
+</div>
+
+<div class="sect_txt3">
+<div class="txt1"><b>동영상 제목</b> : 향신료의 나라! 인도 스파이스 블렌딩에 도전하다 5/5
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+<div class="sect_txt4">
+<div class="txt2"><b>동영상 소개</b> : 자신만의 소스 개발을 위해 인도까지 날아가 마살라 만드는 법, 강황가루 정제법까지 익히고 돌아온 준영 씨는 자신만의 '커리 마요 소스'를 케밥에 활용해 한국인 뿐만 아니라 외국인드의 입맛까지 사로잡았습니다.
+</div>
+<div class="bgcolor1">
+</div>
+</div>
+
+</article>
+
+</section>
+
+
+<aside>
+<article id="bottom_bg">
+</article>
+</aside>
+
+
+<section id="bottom_menu">
+<nav id="sub2_menu">
+<ul>
+<li><a href="sub2_00.html">회사소개</a></li><!--
+--><li><a href="sub2_01.jsp">이용약관</a></li><!--
+--><li><a href="sub2_02.jsp">고객센터</a></li><!--
+--><li><a href="sub2_03.jsp">개인정보취급방침</a></li><!--
+--><li><a href="sub2_04.jsp">사이트맵</a></li><!--
+--><li><a href="mnglogin.jsp">관리자로그인</a></li>
+</ul>
+</nav>
+</section>
+
+
+<footer>
+<div id="copyright">
+(주)스파이스퀘어 |  대표자 : 김상엽 <br>
+사업자 등록번호 : 220-86-36066 [사업자번호조회] | 통신판매업신고번호 : 2011-충북천안-02674 <br>
+충청남도 천안시 서북구 성환읍 대학로 91 | 개인정보관리 책임자 : 김상엽 E-mail. sykim10070@naver.com <br>
+고객센터 : (82)02-555-5919 | Fax. 팩스번호 : (82)02-569-5115
+<h2>COPYTRIGHT 2016@spicesquare.co.kr ALL RIGHTS RESERVED</h2>
+</div>
+</footer>
+
+
+</div>
+
+
+
+</body>
+</html>

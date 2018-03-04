@@ -1,0 +1,47 @@
+@charset "utf-8";
+/* CSS Document */
+
+#title_middle #middle_table1 {
+	border:1px solid #000; margin:0 auto 50px auto;}
+	
+#middle_table1 input, .selectric-wrapper {
+	margin:0 10px 0 10px;}
+	
+#middle_table1 .table_tin {
+	clear:both; float:right;
+	margin-right:100px;}
+
+#middle_table1 tr th {
+	width:150px; height:70px;
+	border:1px solid #000; 
+	background-color:#ffd;}
+	
+#middle_table1 tr td {
+	width:850px;
+	border:1px solid #000;
+	padding-left:30px;
+	background-color:#fdf;}
+	
+#middle_table1 .table1_th1 {
+	width:150px;}
+	
+#middle_table1 .table1_td1 {
+	width:350px;}
+		
+#middle_table1 .table1_address { 
+	height:150px;}
+	
+#middle_table1 .table1_address p {
+	margin-top:10px;} 
+
+#middle_table1 .table1_address p:first-child {
+	margin:0;}
+	
+#title_middle #common_final_button {
+	width:150px; margin:0 auto; }
+	
+#title_middle #common_final_button button:nth-child(n) {
+	margin-right:20px;}
+	
+#title_middle #common_final_button button:last-child {
+	margin:0;}

@@ -1,0 +1,88 @@
+@charset "utf-8";
+/* CSS Document */
+
+#middle_sect {
+	margin:100px auto 0 auto;
+	width:1200px; }
+	
+#middle_sect h3 {
+	margin-left:0px;
+	font-size:12px;}
+
+#middle_sect table {
+	text-align:center;
+	border-collapse:collapse;}
+	
+#middle_sect span {
+	color:#ff4c2e;
+	padding-right:5px;
+	font-size:20px;}
+	
+#middle_sect #list_main {
+	width:1000px; margin:0 auto;}
+	
+#middle_sect #list_main tr:nth-child(1){
+	text-align:right;
+	border:0;}
+	
+#middle_sect #list_main tr:nth-child(2){
+	border:0;}
+
+/**/
+#middle_sect #list_main tr {
+	border-top:1px solid #bfaeac;
+	box-sizing:border-box;}
+	
+#middle_sect #list_main tr:last-child {
+	border-bottom:1px solid #bfaeac;
+	box-sizing:border-box;}
+	
+#middle_sect #list_main tr th {
+	background-color:#bfaeac; color:#fff;
+	border-right:1px solid #fff;
+	box-sizing:border-box;}
+	
+#middle_sect #list_main tr th:last-child {
+	border-right:1px solid #bfaeac;
+	box-sizing:border-box;}
+
+#middle_sect #list_main tr td {
+	border-right:1px solid #bfaeac;
+	box-sizing:border-box; }
+	
+#middle_sect #list_main tr td:last-child {
+	border:0;}
+	
+#middle_sect #list_main tr .list_title {
+	text-align:left;
+	padding-left:15px;}
+	
+#middle_sect #list_main tr .list_title a {
+	font-size:15px;	font-weight:bold; line-height:20px;}
+	
+#middle_sect #list_main tr .list_title a:hover {
+	color:#bfaeac;}
+	
+#middle_sect #list_main tr .list_title2 {
+	text-decoration:underline;}
+	
+#middle_sect #list_main tr .list_title2 a:hover {
+	color:#bfaeac;}
+	
+#middle_sect #list_main tr:nth-child(n+3):hover {	
+	background-color:#f2ebea;}
+			
+	/**/
+#middle_sect #list_se {
+	background-color:#f2ebea;
+	width:1000px; height:60px; 
+	margin:50px auto 100px auto; padding-top:7px;
+	text-align:center;}
+	
+#list_se table {
+	width:200px; margin:0 auto;}
+	
+#list_se .list_img1 {
+	width:73px; height:25px; 
+	margin:0 auto;}
+	

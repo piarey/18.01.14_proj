@@ -1,0 +1,115 @@
+@charset "utf-8";
+/* 18.03.03 에 추가한것 */
+.init_tip1 {position:absolute; padding:10px; line-height:20px; border:5px solid #f00; color:#f00; font-weight:800; top:301px; left:32px; box-sizing:border-box;}
+
+/* CSS Document */
+img{
+	border:0px;
+}
+body{
+	margin:0px auto;
+	font-family:"돋움체";
+	font-size:12px;
+}
+span{
+	font-family: "나눔고딕", "Nanum Gothic", "돋움체";
+}
+#wrap{
+	position: relative;
+	margin: 0px auto;
+	width: 700px;
+	height: 670px;
+	background-color: #FFF;
+}
+
+#header{
+	width: 700px;
+	height: 135px;
+}
+#header .img1{
+	height: 50px;
+	width: 85px;
+	float: right;
+	margin: 5px 60px 0px 0px;
+}
+#header .img2{
+	margin: 30px 0px 5px 70px;
+	float: left;
+	height: 25px;
+	width: 150px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#header .img3{
+	width:700px;
+	height:75px;
+}
+#keyimg1{
+	width: 700px;
+	height: 225px; /*255*/
+	background-color: #fff;
+}
+#keyimg1 .box{
+	margin: 35px auto 0px auto;
+	width: 380px;
+	height: 110px;
+	background-image: url(images_login/login_box.png);
+	font-size: 18px;
+	color: #FFF;
+	font-weight: bold;
+}
+.box .box_click{
+	margin:-75px 30px 0px 0px;
+	height: 70px;
+	width: 70px;
+	float: right;
+}
+.box ul {
+	padding:25px 0px 0px 80px;
+	margin: 0px;
+	list-style-type: none;
+}
+.box ul li{
+	height:35px;
+}
+
+#keyimg1 .que1{
+	height: 55px;
+	width: 145px;
+	background-color: #fff;
+	float: left;
+	margin-top: 25px;
+	margin-right: 0px;
+	margin-bottom: 0px;
+	margin-left: 160px;
+	font-size: 14px;
+	font-weight: bold;
+}
+.que1 img{
+	margin:9px 0px 0px 0px;
+}
+#keyimg1 .que2{
+	height: 55px;
+	width: 135px;
+	background-color: #fff;
+	float: right;
+	margin-top: 25px;
+	margin-right: 160px;
+	margin-bottom: 0px;
+	margin-left: 0px;
+	font-size: 14px;
+	font-weight: bold;
+	text-align: right;
+}
+.que2 img{
+	margin:9px -4px 0px 0px;
+}
+
+#keyimg2{
+	width: 700px;
+	height:280px;
+	background-color: #fff;
+}
+#keyimg2 img{	
+	margin:0px 0px 0px 60px;
+}

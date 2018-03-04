@@ -7,7 +7,7 @@ html, body, div, span
 , header, nav, section, article, footer, aside
 , p, ul, ol, li, dl, dd, dt, h1, h2, h3, h4, h5, h6
 , form, input, fieldset, legend, textarea, select, button, label
-, figure, figcaption
+, figure, figcaption, img
 , table, caption, tbody, tfoot, thead, tr, th, td
 {margin:0; padding:0; box-sizing:border-box;}
 
@@ -16,6 +16,7 @@ html {font-family:"Nanum Gothic"; letter-spacing:2px; font-weight:400; font-size
 a {text-decoration:none; color:inherit;}
 /*
 a:hover {text-decoration:underline;}*/
+ img {-ms-interpolation-mode:bicubic;}
 ul, ol {list-style-type:none;}
 img, fieldset {border:0px;}
 /* tab 접근성때문에 흠... */

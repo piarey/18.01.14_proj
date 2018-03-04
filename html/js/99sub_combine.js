@@ -344,11 +344,27 @@ $(document).ready(function () {
                 ctx.fillStyle = "#f05133";
                 ctx.fillRect(549, 235, -200, 35);
                 ctx.closePath();
-
-
-
             };
             sub03Sec1Cvs4Event();
+            break;
+        case menuName[3]:
+            var ppimgboxHoverEvent = function () {
+                $(".ppimgbox_hover_txt").on("click", function () {
+                    var thisValue = $(this).find("span").text();
+                    var openNewWindow = window.open("about:blank");
+                    switch (thisValue) {
+                        case "1" : openNewWindow.location.href = "../images/04sub/2018/plus/pp1_1.jpg";
+                        break;
+                        case "2" : openNewWindow.location.href = "../images/04sub/2018/plus/pp1_2.jpg";
+                        break;
+                        case "3" : openNewWindow.location.href = "../images/04sub/2018/plus/pp1_3.jpg";
+                        break;
+                        case "4" : openNewWindow.location.href = "../images/04sub/2018/plus/pp1_4.jpg";
+                        break;
+                    }
+                });
+            };
+            ppimgboxHoverEvent();
 
             break;
 

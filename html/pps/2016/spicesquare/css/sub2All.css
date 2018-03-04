@@ -1,0 +1,23 @@
+@charset "utf-8";
+/* CSS Document */
+
+#middle_sect {
+	margin:0 auto;
+	width:1200px;}
+
+#middle_sect #cont_textarea01 {
+	width:1000px; height:800px;
+	padding:100px 100px 100px 100px;
+	margin:0;
+	overflow:hidden; 
+	border:0; background-color:#ece7e6;}
+	
+#middle_sect #cont_textarea03 {
+	width:1000px; height:700px;
+	padding:100px;
+	overflow:hidden; 
+	border:0; background-color:#ece7e6;}
+	
+#middle_sect #sitemap_img {
+	margin-top:100px;
+	margin-bottom:100px;}

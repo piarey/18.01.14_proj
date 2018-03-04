@@ -1,0 +1,140 @@
+@charset "utf-8";
+/* CSS Document */
+
+#title_top {
+	width:100%; height:150px; margin:0 auto; background-color:#eee;}
+		
+.bxslider img {
+	float:left;
+	width:1200px; height:350px;}	
+	
+#title_middle_wrap {
+	width:100%; background-color:#eee;}
+
+#title_middle {
+	width:1200px; margin:0 auto; background-color:#eee; /* height 값은 없앰 */
+	padding:20px 0 50px 0;}
+
+#title_location_wrap {
+	width:100%; background-color:#eee;}
+		
+#title_location {
+	position:relative; z-index:9997; background-color:#fff;
+	width:1200px; height:40px; margin:0 auto; 
+	line-height:40px;}
+		
+#title_location #location_loc1, #title_location #location_loc2, #title_location #location_loc3 {
+	float:right;  /* 백그라운드 이미지로 > 표시 넣을것 */ 
+	width:170px; height:40px; 
+	cursor:pointer;
+	text-align:left;}	
+	
+#title_location #location_loc4 {
+	float:right;
+	width:170px; height:40px; 
+	cursor:default;
+	text-align:left;}
+	
+#location_loc1 ul li, #location_loc2 ul li, #location_loc3 ul li {
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	width:170px; height:40px;}	
+	
+#location_loc1 ul li:hover, #location_loc2 ul li:hover, #location_loc3 ul li:hover {
+	background-color:#ddd;}
+	
+#location_loc1 span, #location_loc2 span, #location_loc3 span, #location_loc4 span  {
+	padding-left:10px;}	
+
+#title_location #location_name {
+	clear:both; float:left; width:650px; height:40px; font-weight:bold;
+	padding-left:10px;
+	border-top:1px solid #ddd;
+	border-bottom:1px solid #ddd;
+	border-left:1px solid #ddd;}
+
+#location_loc1 ul, #location_loc2 ul, #location_loc3 ul {
+	display:none; 
+	background-color:#fff;}
+	
+#location_loc1 ul li a, #location_loc2 ul li a, #location_loc3 ul li a {
+	display:block; padding-left:10px;}
+	
+#title_location #location_home {
+	float:right;}
+	
+#title_location #location_loc1, #title_location #location_loc2 {
+	background-image:url(../images/sub/sub_loc_dpdw1.png);}
+	
+#title_location #location_loc3, #title_location #location_loc4 {
+	background-image:url(../images/sub/sub_loc_dpdw2.png);}
+
+
+/*퀵메뉴 공통*/
+#middle_qbook {
+	width:1200px; height:350px; background-color:#ddd;}
+
+#qbook_other {
+	width:130px; height:80px; background-color:#F90;
+	text-align:center; line-height:80px;
+	cursor:pointer;
+	clear:both; float:right;}
+
+/**/	
+#middle_qbook #qbook_wrap {
+	width:1100px; height:180px; margin:0 auto;
+	background-color:#f00;
+	padding:20px; clear:both;}
+	
+#middle_qbook #qbook_wrap #qbook_body1 {
+	float:left; width:300px; height:140px; background-color:#aff;
+	margin-right:20px;
+	letter-spacing:-0.4em;} /* 265px이 가장 중간 */
+	
+#qbook_body1 .selectric-wrapper  {
+	width:150px;}
+	
+#middle_qbook #qbook_wrap #qbook_body2 {
+	float:left; width:300px; height:140px; background-color:#aff;
+	margin-right:20px;
+	letter-spacing:-0.4em;} /* 265px이 가장 중간 */
+	
+#qbook_body2 .selectric-wrapper  {
+	width:80px;}
+	
+#qbook_body2 p {
+	clear:both;}
+	
+#middle_qbook #qbook_wrap #qbook_body3 {
+	float:left; width:200px; height:140px; background-color:#bff;
+	margin-right:20px;}
+	
+#qbook_body3 .selectric-wrapper  {
+	width:150px;}
+	
+#middle_qbook #qbook_wrap #qbook_body3:last-child {
+	margin:0;}
+/**/
+
+/* 빠른예약 공통 */
+.airfare_header_date {
+	float:left; margin:0 10px 0 10px;}
+
+
+/* 테이블 속성 공통 */
+.common_air_table {}
+
+
+/* 완료박스나 유의사항 박스 공통 */
+.common_sub_completebox {}
+
+
+/* 탑승객정보 아래 공통 */
+
+.common_airdomest_box44_body1 span {
+	font-weight:bold; color:#f00;}
+
+
+
+

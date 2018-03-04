@@ -1,0 +1,85 @@
+@charset "utf-8";
+/* CSS Document */
+img{
+	border:0px;
+}
+
+body{
+	margin:0px auto;
+	font-family:"돋움체";
+	font-size:12px;
+}
+span{
+	font-family: "나눔고딕", "Nanum Gothic", "돋움체";
+	font-weight: bold;
+}
+#wrap{
+	margin: 0px auto;
+	width: 700px;
+	height: 670px;
+	background-color: #fff;
+}
+
+#header{
+	width: 700px;
+	height: 135px;
+}
+#header .img1{
+	height: 50px;
+	width: 85px;
+	float: right;
+	margin: 5px 60px 0px 0px;
+}
+#header .img2{
+	margin: 30px 0px 5px 70px;
+	float: left;
+	height: 25px;
+	width: 150px;
+	font-size: 20px;
+	font-weight: bold;
+}
+#header .img3{
+	width:700px;
+	height:75px;
+}
+#keyimg1{
+	width: 700px;
+	height: 220px; /*255*/
+	background-color: #fff;
+}
+#keyimg1 .box1{
+	margin: 20px auto 0px auto;
+	width: 580px;
+	height: 170px;
+}
+#keyimg1 .box1_hi{
+	margin:10px 0px 0px 60px;
+	font-size:14px;
+}
+#keyimg2{
+	width: 700px;
+	height: 225px; /*255*/
+	background-color: #FFF;
+}
+#keyimg2 .box1{
+	margin: 15px auto 0px auto;
+	width: 580px;
+	height: 170px;
+}
+#keyimg2 .box1_hi{
+	margin:10px 0px 0px 60px;
+	font-size:14px;
+}
+#footer{
+	width: 700px;
+	height: 80px; /*255*/
+	background-color: #FFF;
+}
+#footer .okno{
+	width: 135px;
+	margin-top: 0px;
+	margin-right: auto;
+	margin-bottom: 0px;
+	margin-left: auto;
+	height: 30px;
+}
