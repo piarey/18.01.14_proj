@@ -51,12 +51,12 @@ $(document).ready(function () {
     /* header 동그라미 움직이는 효과 */
     var headerCircleMoveEvent = function () {
         setTimeout(function () {
-            var ranValue1 = Math.floor(Math.random() * 150);
-            var ranValue2 = Math.floor(Math.random() * 150);
-            var thisElement1 = $("#header_svg_circle1");
-            var thisElement2 = $("#header_svg_circle2");
-            thisElement1.animate({ top: ranValue1, left: ranValue2 });
-            thisElement2.animate({ bottom: ranValue1, right: ranValue2 });
+            var ranValue1 = Math.floor(Math.random() * 150)
+                , ranValue2 = Math.floor(Math.random() * 150)
+                , $thisElement1 = $("#header_svg_circle1")
+                , $thisElement2 = $("#header_svg_circle2");
+            $thisElement1.animate({ top: ranValue1, left: ranValue2 });
+            $thisElement2.animate({ bottom: ranValue1, right: ranValue2 });
             headerCircleMoveEvent();
         }, 1000);
     };

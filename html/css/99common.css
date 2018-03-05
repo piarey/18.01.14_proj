@@ -29,7 +29,7 @@ h1,h2,h3,h4,h5,h6 {font-family:"Jeju Gothic"; letter-spacing:3px;}
 fieldset, caption, legend {display:block; overflow:hidden; position:absolute; width:1px; height:1px; margin:-1px;}
 abbr {text-decoration:none;}
 
-input, select, textarea, button {color:inherit; font-size:inherit; font-family: inherit; border:1px solid #d6d6d6; }
+input, select, textarea, button {color:inherit; font:inherit; border:1px solid #d6d6d6; }
 textarea {resize:none;}
 
 /* 크로스브라우징 용(ie10이상) */
@@ -65,7 +65,7 @@ main {display:block;}
 body, #tit_outer, #tit_nav, #tit_header, #tit_main, #tit_aside, #tit_footer {position:relative; width:100%;}
 body {background-color:#f2f3fa; }
 /* overflow 속성을 줘야 margin 값도 인식하여 부모가 height 값을 자동으로 받나봄 */
-#tit_outer {overflow-x:hidden; max-width:2560px; height:auto; margin:0 auto;}
+#tit_outer {/*overflow-x:hidden;*/ max-width:2560px; height:auto; margin:0 auto;}
 
 .sec_whitebox_t, .sec_whitebox_b {z-index:3; position:absolute;}
 .sec_whitebox_t {border-top:9vh solid #f2f3fa; top:0; left:0px; }
@@ -177,5 +177,5 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 }
 
 @media only screen and (max-width:320px) {
-
+    #js_value_ph {width:100%; font-size:12px; letter-spacing:0px;}
 }

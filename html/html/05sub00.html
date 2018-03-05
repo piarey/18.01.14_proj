@@ -12,70 +12,78 @@
     <meta property="og:image" content="http://piarey.dothome.co.kr/images/common/ogimg.jpg"/>
     <meta property="og:description" content="bib의 포트폴리오 사이트"/>
     <title>bib's pray</title>
-    <link rel="shortcut icon" href="http://piarey.dothome.co.kr/images/common/favicon.ico" />
-    <link rel="stylesheet" href="css/99common.css" />
-    <link rel="stylesheet" href="css/00index.css" />
+    <link rel="shortcut icon" href="http://piarey.dothome.co.kr/images/common/favicon.ico">
+    <link rel="stylesheet" href="../css/99common.css" />
+    <link rel="stylesheet" href="../css/99sub_combine.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" charset="utf-8"></script>
-    <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
-    <script src="js/jquery-ui.min.js" charset="utf-8"></script>
-    <script src="js/99common00.js" charset="utf-8"></script>
-    <script src="js/00index.js" charset="utf-8"></script>
+    <script src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script src="../js/jquery-ui.min.js" charset="utf-8"></script>
+    <script src="../js/jquery.ui.touch-punch.min.js" charset="utf-8"></script>
+    <script src="../js/99common00.js" charset="utf-8"></script>
+    <script src="../js/99sub_combine.js" charset="utf-8"></script>
 </head>
 
 <body>
     <div id="tit_outer">
-        <header id="tit_header">
-            <div class="header_bg_common header_bg1 cleartxt_yescont">의자에 쌓인 눈 배경이미지</div>
-            <div class="header_bg_common header_bg2 cleartxt_yescont">아른거리는 반딧불 배경이미지</div>
-            <div class="header_svg_outer">
-                <div class="header_svg_inner">
-                    <span title="의자에 쌓인 눈" id="header_bg1_txt" aria-label="의자에 쌓인 눈-배경에 대한 설명입니다"></span>
-                    <span title="아른거리는 반딧불" id="header_bg2_txt" aria-label="아른거리는 반딧불-배경에 대한 설명입니다"></span>
-                    <div id="header_svg_circle1"></div>
-                    <div id="header_svg_circle2"></div>
-                    <object type="image/svg+xml" data="images/common/headersvg.svg" tabindex="-1">해당 기능을 지원하지 않는 브라우저 입니다</object>
-                </div>   
+        <nav id="tit_nav">
+            <h2 class="cleartxt_nocont">네비게이션</h2>
+            <div id="nav_gnb_outer">
+                <ul class="nav_gnb">
+                    <li><a href="01sub00.html">사용기술목록</a></li>
+                    <li><a href="02sub00.html">자기소개</a></li>
+                    <li><a href="03sub00.html">보유기술</a></li>
+                    <li><a href="04sub00.html">포트폴리오</a></li>
+                    <li><a href="05sub00.html">개인공부정리</a></li>
+                    <li><a href="../index.html" title="홈으로 가기" aria-label="홈으로 가기-현재창에서 이동합니다"><img src="../images/subcommon/headersvg.svg" alt="로고이미지 홈 버튼"></a></li>
+                </ul>
             </div>
-            <h1 class="cleartxt_nocont">bib 의 포트폴리오 메인 페이지</h1>
-            <div class="sec_whitebox_b"></div>
+            <button type="button" class="nav_gnb_mobile_open" title="메뉴열기" aria-hidden="true" aria-label="메뉴열기-메뉴가 열립니다"><span>&#9776;</span></button>
+            <div class="nav_gnb_tooltip_outer">
+                <div class="nav_gnb_tooltip">
+                    <span class="n_g_t_warning" aria-hidden="true" aria-label="주의표시">&#9888;</span>
+                    <strong id="n_g_t_id">이 곳은 클릭 드래그가 불가능합니다</strong>
+                </div>
+            </div>
+        </nav>
+        <nav id="tit_nav_mobile">
+            <h2 class="cleartxt_nocont">네비게이션 모바일</h2>
+            <ul class="nav_mobile_gnb">
+                <li><a href="01sub00.html"><span class="n_m_g_center">사용기술목록</span></a></li>
+                <li><a href="02sub00.html"><span class="n_m_g_center">자기소개</span></a></li>
+                <li><a href="03sub00.html"><span class="n_m_g_center">보유기술</span></a></li>
+                <li><a href="04sub00.html"><span class="n_m_g_center">포트폴리오</span></a></li>
+                <li><a href="05sub00.html"><span class="n_m_g_center">개인공부정리</span></a></li>
+                <li><a href="../index.html"><span class="n_m_g_center">홈으로 가기</span></a></li>
+            </ul>
+            <button type="button" class="nav_mobile_cancel" title="메뉴닫기" aria-hidden="true" aria-label="메뉴닫기-메뉴가 닫힙니다"><span>&#43;</span></button>            
+        </nav>
+        <header id="tit_header">
+            <h1 class="cleartxt_nocont">bib 의 포트폴리오 서브 페이지-개인공부정리</h1>
+            <div class="tit_whitebox">
+                <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+            </div>
+            <div id="header_sec" class="sub05_tit_header_sec">
+                <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+                <h2 id="header_sec_h2">개인공부정리</h2>
+                <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+            </div>
+            <div class="tit_whitebox">
+                <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+            </div>
         </header>
-        <main role="main" id="tit_main">
-            <article>
-                <h2 class="cleartxt_nocont">사이트 주 메뉴</h2>
-                <section class="main_sec">
-                    <a href="at_js">
-                        <h3>사용기술목록</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
-                    </a>
+        <div class="tit_whitebox_main">
+            <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+        </div>
+        <main role="main" id="tit_main" class="sub05_tit_main">
+            <article id="tit_main_inner">
+                <h2 class="cleartxt_nocont">주요 내용</h2>
+                <section>
+                    <h3>주요 소개</h3>
+                    
                 </section>
-                <section class="main_sec">
-                    <a href="at_js">
-                        <h3>자기소개</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
-                    </a>
-                </section>
-                <section class="main_sec">
-                    <a href="at_js">
-                        <h3>보유기술</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
-                    </a>
-                </section>
-                <section class="main_sec">
-                    <a href="at_js">
-                        <h3>포트폴리오</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
-                    </a>
-                </section>
-                <section class="main_sec">
-                    <a href="at_js">
-                        <h3>개인공부정리</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
-                    </a>
+                <section class="main_sec2">
+                    <h3>최근 활동기록</h3>
+  
                 </section>
             </article>
         </main>
@@ -87,22 +95,22 @@
                 <h2 class="cleartxt_nocont">개인 링크 모음</h2>
                 <ul id="sec_iconbox">
                     <li>
-                        <a href="https://blog.naver.com/bekinbum" target="_blank" class="cleartxt_yescont" title="네이버블로그 새창열기">네이버블로그 새창열기</a>
+                        <a href="https://blog.naver.com/bekinbum" target="_blank" class="cleartxt_yescont" title="네이버블로그 새창열기">네이버블로그</a>
                     </li><!--
                     --><li>
-                        <a href="https://www.facebook.com/blueyoun.bek" target="_blank" class="cleartxt_yescont" title="페이스북 새창열기">페이스북 새창열기</a>
+                        <a href="https://www.facebook.com/blueyoun.bek" target="_blank" class="cleartxt_yescont" title="페이스북 새창열기">페이스북</a>
                     </li><!--
                     --><li>
-                        <a href="https://github.com/piarey/18.01.14_proj" target="_blank" class="cleartxt_yescont" title="깃허브 새창열기">깃허브 새창열기</a>
+                        <a href="https://github.com/piarey/18.01.14_proj" target="_blank" class="cleartxt_yescont" title="깃허브 새창열기">깃허브</a>
                     </li><!--
                     --><li>
-                        <a href="https://www.instagram.com/blueyoun/" target="_blank" class="cleartxt_yescont" title="인스타그램 새창열기">인스타그램 새창열기</a>
+                        <a href="https://www.instagram.com/blueyoun/" target="_blank" class="cleartxt_yescont" title="인스타그램 새창열기">인스타그램</a>
                     </li><!--
                     --><li>
-                        <a href="https://www.youtube.com/channel/UCUrN3EyKS43Hn3SPvYB5u2g?view_as=subscriber" target="_blank" class="cleartxt_yescont" title="유튜브 새창열기">유튜브 새창열기</a>
+                        <a href="https://www.youtube.com/channel/UCUrN3EyKS43Hn3SPvYB5u2g?view_as=subscriber" target="_blank" class="cleartxt_yescont" title="유튜브 새창열기">유튜브</a>
                     </li><!--
                     --><li>
-                        <a href="https://twitter.com/" target="_blank" class="cleartxt_yescont" title="트위터 새창열기">트위터 새창열기</a>
+                        <a href="https://twitter.com/" target="_blank" class="cleartxt_yescont" title="트위터 새창열기">트위터</a>
                     </li>
                 </ul>
             </div>
