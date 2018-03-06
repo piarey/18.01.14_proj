@@ -9,6 +9,7 @@ html, body, div, span
 , form, input, fieldset, legend, textarea, select, button, label
 , figure, figcaption, img
 , table, caption, tbody, tfoot, thead, tr, th, td
+, pre, code
 {margin:0; padding:0; box-sizing:border-box;}
 
 /* 사이트 기본 설정 */
@@ -27,8 +28,8 @@ table {border:0px; border-spacing:0px;}
 button > span {position:relative;}
 h1,h2,h3,h4,h5,h6 {font-family:"Jeju Gothic"; letter-spacing:3px;}
 fieldset, caption, legend {display:block; overflow:hidden; position:absolute; width:1px; height:1px; margin:-1px;}
-abbr {text-decoration:none;}
-
+/*abbr {text-decoration:none;}*/
+pre {font-size:12px; letter-spacing:1px;}
 input, select, textarea, button {color:inherit; font:inherit; border:1px solid #d6d6d6; }
 textarea {resize:none;}
 
@@ -54,7 +55,6 @@ article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, 
 main {display:block;}
 
 /* 이하 자주쓰는 css */
-.cleartxt {display:block; text-indent:-9999px; width:0; height:0;}
 .cleartxt_nocont {display:block; overflow:hidden; position:absolute; width:1px; height:1px;}
 .cleartxt_yescont {text-indent:-5000px; overflow:hidden;}
 
