@@ -19,6 +19,7 @@ $(document).ready(function () {
     var timer1 = null;
     var timer2 = null;
     var sec = 100;
+    /* window 는 브라우저창, html은 내부문서 */
     var $winHt = $(window).height();
     var $footer = $("#tit_footer");
     var $titOuter = $("#tit_outer");
@@ -125,6 +126,79 @@ $(document).ready(function () {
         }
     };
     footerCopyEvent();
+
+    /* scrollTopEvent */
+    var scrollTopEvent = function(){
+        var thisElement = $("#scrolltop_btn1");
+        thisElement.on("click", function(){
+            $("html,body").stop().animate({scrollTop:0}, 1200, "easeInOutQuint");
+            thisElement.off("click");
+            setTimeout(function(){
+                scrollTopEvent();
+            },1200);
+        });
+    };
+    scrollTopEvent();
+
+    var scrollMiddleEvent = function(){
+        var thisElement = $("#scrolltop_btn2");
+        winHtReControlEvent();
+        $htmlHtRe();
+        
+
+        thisElement.on("click", function(){
+            $("html,body").stop().animate({scrollTop:$htmlHt/2-$winHt/2}, 1200, "easeInOutQuint");
+            thisElement.off("click");
+            setTimeout(function(){
+                scrollMiddleEvent();
+            },1200);
+        });        
+    };
+    scrollMiddleEvent();
+
+    var scrollBottomEvent = function(){
+        var thisElement = $("#scrolltop_btn3");
+        winHtReControlEvent();
+        $htmlHtRe();
+
+        thisElement.on("click", function(){
+            $("html,body").stop().animate({scrollTop:$htmlHt-$winHt}, 1200, "easeInOutQuint");
+            thisElement.off("click");
+            setTimeout(function(){
+                /*
+                console.log($htmlHt);
+                console.log($winHt);
+                console.log($htmlHt-$winHt);*/
+                scrollBottomEvent();
+            },1200);
+        });        
+    };
+    scrollBottomEvent();
+
+    /* */
+    var scrollBoxOpEvent = function(){
+        var thisElement = $("#tit_scrolltop_box");
+        var $winScrollTop = $(window).scrollTop();
+        winHtReControlEvent();
+
+        var thisEvent = function () {
+            if ($winScrollTop > $winHt/2) {
+                thisElement.stop().animate({"opacity": 1}, 300);
+            } else {
+                thisElement.stop().animate({"opacity": 0.4}, 300);
+            }
+        };
+        thisEvent();
+
+        $(window).on("scroll", function(){
+            clearTimeout(timer2);
+            timer2 = setTimeout(function(){
+                $winScrollTop = $(window).scrollTop();
+                thisEvent();
+            }, sec);
+        });
+    };
+    scrollBoxOpEvent();
 
 });
 

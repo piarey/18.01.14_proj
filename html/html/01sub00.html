@@ -18,13 +18,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
     <script src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
     <script src="../js/jquery-ui.min.js" charset="utf-8"></script>
-    <script src="../js/jquery.ui.touch-punch.min.js" charset="utf-8"></script>
     <script src="../js/99common00.js" charset="utf-8"></script>
     <script src="../js/99sub_combine.js" charset="utf-8"></script>
 </head>
 
 <body>
     <div id="tit_outer">
+        <div id="tit_scrolltop_box">
+            <button type="button" id="scrolltop_btn1"><span>최상단<br />이동</span></button>
+            <button type="button" id="scrolltop_btn2"><span>중단<br />이동</span></button>
+            <button type="button" id="scrolltop_btn3"><span>최하단<br />이동</span></button>
+        </div>
         <nav id="tit_nav">
             <h2 class="cleartxt_nocont">네비게이션</h2>
             <div id="nav_gnb_outer">
@@ -38,12 +42,13 @@
                 </ul>
             </div>
             <button type="button" class="nav_gnb_mobile_open" title="메뉴열기" aria-hidden="true" aria-label="메뉴열기-메뉴가 열립니다"><span>&#9776;</span></button>
+            <!-- 드래거블 제거
             <div class="nav_gnb_tooltip_outer">
                 <div class="nav_gnb_tooltip">
                     <span class="n_g_t_warning" aria-hidden="true" aria-label="주의표시">&#9888;</span>
                     <strong id="n_g_t_id">이 곳은 클릭 드래그가 불가능합니다</strong>
                 </div>
-            </div>
+            </div>-->
         </nav>
         <nav id="tit_nav_mobile">
             <h2 class="cleartxt_nocont">네비게이션 모바일</h2>
@@ -95,16 +100,32 @@
                                 <tr>
                                     <th>화면</th>
                                     <td>
-                                        <img src="../images/01sub/test.jpg" style="max-width:330px; width:100%;" />
+                                        <img src="../images/01sub/test.jpg" />
                                     </td>
                                 </tr>
                                 <tr>
                                     <th>코드</th>
                                     <td>
-                                        <div class="sec_code_c">
-                                            <p data-height="265" data-theme-id="0" data-slug-hash="bLPbwN" data-default-tab="css,result" data-user="piarey" data-embed-version="2" data-pen-title="bLPbwN" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/bLPbwN/">bLPbwN</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p> 
-                                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>  
-                                        </div>
+                                        <!-- pre-line으로 되어있음 -->      
+                                        <pre class="main_pre_c" data-cnt="CSS" aria-hidden="true">
+                                            <code>
+ul#sec_iconbox {text-align:center;}
+ul#sec_iconbox li {display:inline-block;}
+<span class="pre_span_selector">ul#sec_iconbox li a</span> {display:block; width:40px; height:40px; margin:20px 80px; <span class="pre_span_prop_name">background-image</span>:<span class="pre_span_prop_url">url</span>(<span class="pre_span_prop_v_txt">&quot;../images/common/icons1.png&quot;</span>); background-repeat:no-repeat;}
+<span class="pre_span_selector">ul#sec_iconbox li:nth-child(1) a</span> {<span class="pre_span_prop_name">background-position</span>:<span class="pre_span_prop_v_num">0px 0px</span>;}
+ul#sec_iconbox li:nth-child(1) a:hover {background-position:-40px 0px;}
+ul#sec_iconbox li:nth-child(2) a {background-position:0px -40px;}
+ul#sec_iconbox li:nth-child(2) a:hover {background-position:-40px -40px;}
+ul#sec_iconbox li:nth-child(3) a {background-position:0px -80px;}
+ul#sec_iconbox li:nth-child(3) a:hover {background-position:-40px -80px;}
+ul#sec_iconbox li:nth-child(4) a {background-position:0px -120px;}
+ul#sec_iconbox li:nth-child(4) a:hover {background-position:-40px -120px;}
+ul#sec_iconbox li:nth-child(5) a {background-position:0px -160px;}
+ul#sec_iconbox li:nth-child(5) a:hover {background-position:-40px -160px;}
+ul#sec_iconbox li:nth-child(6) a {background-position:0px -200px;}
+ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
+                                            </code>
+                                        </pre>  
                                     </td>
                                 </tr>
                             </tbody>
@@ -114,10 +135,24 @@
                         <h4>익스플로러 9 대응</h4>
                         <ol class="etc_ol_insertion">
                             <li data-cnt="1.">transition, css animate 미사용 <span>&rarr;</span> jquery animate 대체
-                            <div class="sec_code_c">
-                                <p data-height="265" data-theme-id="0" data-slug-hash="VQJMOO" data-default-tab="js,result" data-user="piarey" data-embed-version="2" data-pen-title="VQJMOO" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/VQJMOO/">VQJMOO</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                                <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                            </div>
+                                <!-- pre-line으로 되어있음 -->      
+                                <pre class="main_pre_c" data-cnt="JS" aria-hidden="true">
+                                    <code>
+/* header 동그라미 움직이는 효과 */ 
+var headerCircleMoveEvent = function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var ranValue1 = Math.floor(Math.random() * 150) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, ranValue2 = Math.floor(Math.random() * 150) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, $thisElement1 = $(&quot;#header_svg_circle1&quot;) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, $thisElement2 = $(&quot;#header_svg_circle2&quot;); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_prop_name">$thisElement1</span>.<span class="pre_span_prop_url">animate</span>({ <span class="pre_span_prop_name">top</span>: <span class="pre_span_prop_v_num">ranValue1</span>, <span class="pre_span_prop_name">left</span>: <span class="pre_span_prop_v_num">ranValue2</span> }); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$thisElement2.animate({ bottom: ranValue1, right: ranValue2 }); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;headerCircleMoveEvent(); 
+&nbsp;&nbsp;&nbsp;&nbsp;}, 1000); 
+}; 
+headerCircleMoveEvent();              
+                                    </code>                  
+                                </pre>
                             </li>
                             <li data-cnt="2.">display:flex 미사용</li>
                             <li data-cnt="3.">filter 속성 미사용 <span>&rarr;</span> png 자체에 shadow 넣음</li>
@@ -127,22 +162,42 @@
                         <h4>웹 접근성 준수</h4>
                         <ol class="etc_ol_insertion">
                             <li data-cnt="1.">table caption / scope
-                                <div class="sec_code_c">
-                                    <p data-height="265" data-theme-id="0" data-slug-hash="EQBwyw" data-default-tab="html,result" data-user="piarey" data-embed-version="2" data-pen-title="EQBwyw" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/EQBwyw/">EQBwyw</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                                </div>
+                                <pre class="main_pre_c" data-cnt="HTML" aria-hidden="true">
+                                    <cdoe>
+&lt;table class=&quot;main_tb1 main_tb1_3&quot;&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;<span class="pre_span_prop_name">caption</span>&gt;2016 포트폴리오 '커포예' 의 구체적인 내용이 담긴 테이블&lt;/<span class="pre_span_prop_name">caption</span>&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th <span class="pre_span_prop_name">scope</span>=<span class="pre_span_prop_v_txt">&quot;row&quot;</span>&gt;분류&lt;/th&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; &lt;span class=&quot;td_sort&quot;&gt;HTML4.01&lt;/span&gt; &lt;span class=&quot;td_sort&quot;&gt;DESKTOP&lt;/span&gt; &lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th scope=&quot;row&quot;&gt;제작기간&lt;/th&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt; &lt;time datetime=&quot;2016-05-30&quot;&gt;2016.05.30&lt;/time&gt; ~ &lt;time datetime=&quot;2016-06-15&quot;&gt;2016.06.15&lt;/time&gt; &lt;/td&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt; 
+&lt;/table&gt;                       
+                                    </cdoe>             
+                                </pre>
                             </li>
                             <li data-cnt="2.">aria-hidden / aria-label
-                                <div class="sec_code_c">
-                                    <p data-height="265" data-theme-id="0" data-slug-hash="QQXqVG" data-default-tab="html,result" data-user="piarey" data-embed-version="2" data-pen-title="QQXqVG" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/QQXqVG/">QQXqVG</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                                </div>
+                                <pre class="main_pre_c" data-cnt="HTML" aria-hidden="true">
+                                    <code>
+&lt;button type=&quot;button&quot; class=&quot;nav_gnb_mobile_open&quot; title=&quot;메뉴열기&quot; <span class="pre_span_prop_name">aria-hidden</span>=<span class="pre_span_prop_v_txt">&quot;true&quot;</span> <span class="pre_span_prop_name">aria-label</span>=<span class="pre_span_prop_v_txt">&quot;메뉴열기-메뉴가 열립니다&quot;</span>&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;&amp;#9776;&lt;/span&gt; 
+&lt;/button&gt; 
+&lt;button type=&quot;button&quot; class=&quot;nav_mobile_cancel&quot; title=&quot;메뉴닫기&quot; aria-hidden=&quot;true&quot; aria-label=&quot;메뉴닫기-메뉴가 닫힙니다&quot;&gt; 
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;&amp;#43;&lt;/span&gt; 
+&lt;/button&gt;
+                                    </code>
+                                </pre>
                             </li>
                             <li data-cnt="3.">visibility:none, display:none > overflow:hidden, text-indent
                                 <p>visibility 나 display 는 스크린 리더기에서 읽혀지지가 않음</p>
                             </li>
                             <li data-cnt="4.">tabindex
                                 <p>iframe 요소의 경우에 tab 이 그 안에서 사라지는 현상이 있어 tabindex="-1" 와 같이 처리해줌</p>
+                                <p></p>
                             </li>
                         </ol>
                     </section>    
@@ -158,24 +213,121 @@
                     </section>
                     <section>
                         <h4>footer구역 fixed 문제해결</h4>
-                        <div class="sec_code_c">
-                            <p data-height="265" data-theme-id="0" data-slug-hash="paXdgp" data-default-tab="js,result" data-user="piarey" data-embed-version="2" data-pen-title="paXdgp" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/paXdgp/">paXdgp</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                        </div>
+                        <pre class="main_pre_c" data-cnt="JS" aria-hidden="true">
+                            <code>
+/* footer fixed-static, opacity 이벤트 */ 
+var footerFxOpEVent = function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;var $footerHt = 0; 
+&nbsp;&nbsp;&nbsp;&nbsp;var $winScrollTop = $(window).scrollTop(); 
+    
+&nbsp;&nbsp;&nbsp;&nbsp;/* 일반+리사이즈 */ 
+&nbsp;&nbsp;&nbsp;&nbsp;var thisEvent = function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$winHt = $(window).height(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$footerHt = $footer.innerHeight() - 1; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_if">if</span> (<span class="pre_span_prop_name">$winHt</span> &gt; <span class="pre_span_prop_name">$footerHt</span>) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$footer.css(&quot;position&quot;, &quot;fixed&quot;); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.etc_footer_margintop&quot;).css(&quot;margin-bottom&quot;, $footerHt); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} else { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_prop_name">$footer</span>.<span class="pre_span_prop_url">css</span>(<span class="pre_span_prop_v_txt">&quot;position&quot;</span>, <span class="pre_span_prop_v_txt">&quot;static&quot;</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;.etc_footer_margintop&quot;).css(&quot;margin-bottom&quot;, 0); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thisEvent(); 
+        
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(window).on(&quot;resize&quot;, function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearTimeout(timer1); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setTimeout(function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thisEvent(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thisEvent2(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, sec); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}); 
+&nbsp;&nbsp;&nbsp;&nbsp;}; 
+footerFxOpEVent();
+                            </code>
+                        </pre>
                     </section>
                     <section>
                         <h4>parallax scrolling</h4>
-                        <div class="sec_code_c">
-                            <p data-height="265" data-theme-id="0" data-slug-hash="KQjyzy" data-default-tab="js,result" data-user="piarey" data-embed-version="2" data-pen-title="KQjyzy" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/KQjyzy/">KQjyzy</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                        </div>
+                        <pre class="main_pre_c" data-cnt="JS" aria-hidden="true">
+                            <code>
+/* 스크롤 opacity 이벤트 */ 
+var mainOpcChangeEvent = function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;winHtControlEvent(); 
+&nbsp;&nbsp;&nbsp;&nbsp;var $scrollValue = $(window).scrollTop(); 
+&nbsp;&nbsp;&nbsp;&nbsp;var $sss = $scrollValue / $winHt; 
+    
+&nbsp;&nbsp;&nbsp;&nbsp;if ($sss &lt;= 1) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_prop_url">$</span>(<span class="pre_span_prop_v_txt">&quot;#tit_header&quot;</span>).<span class="pre_span_prop_url">css</span>(<span class="pre_span_prop_v_txt">&quot;opacity&quot;</span>, <span class="pre_span_prop_v_num">1</span> - <span class="pre_span_prop_name">$sss</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_prop_url">$</span>(<span class="pre_span_prop_v_txt">&quot;#tit_main&quot;</span>).<span class="pre_span_prop_url">css</span>(<span class="pre_span_prop_v_txt">&quot;opacity&quot;</span>, <span class="pre_span_prop_name">$sss</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;} else { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;#tit_header&quot;).css(&quot;opacity&quot;, 0); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$(&quot;#tit_main&quot;).css(&quot;opacity&quot;, 1); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+}; 
+mainOpcChangeEvent(); 
+
+$(window).on(&quot;scroll&quot;, function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;mainOpcChangeEvent(); 
+&nbsp;&nbsp;&nbsp;&nbsp;$(window).on(&quot;resize&quot;, function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearTimeout(timer2); timer2 = setTimeout(function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mainOpcChangeEvent(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, sec); 
+&nbsp;&nbsp;&nbsp;&nbsp;}); 
+});
+                            </code>
+                        </pre>
                     </section>
                     <section>
                         <h4>SVG, canvas</h4>
-                        <div class="sec_code_c">
-                            <p data-height="265" data-theme-id="0" data-slug-hash="mXZqrV" data-default-tab="js,result" data-user="piarey" data-embed-version="2" data-pen-title="mXZqrV" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/mXZqrV/">mXZqrV</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                        </div>
+                        <pre class="main_pre_c" data-cnt="JS" aria-hidden="true">
+                            <code>
+var sub03Sec1Cvs1Event = function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;var thisElement = document.getElementById(&quot;sub03_sec1_cvs1&quot;) 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, cvsWidth = thisElement.width 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, cvsHeight = thisElement.height 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, i = 0 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, init = 1 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, grpValue = [-260, -98, -150, -98, -125, -270, -80] 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, i2 = 0 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, ySpeed = 0 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;, timer = null; 
+        
+&nbsp;&nbsp;&nbsp;&nbsp;/* ctx 는 각각 사용해야 함. */ 
+&nbsp;&nbsp;&nbsp;&nbsp;var ctx = thisElement.getContext(&quot;2d&quot;); 
+        
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillStyle = &quot;#ebedf7&quot;; ctx.fillRect(50, 0, 600, 100); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillStyle = &quot;#ebf7ee&quot;; ctx.fillRect(50, 101, 600, 100); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.fillStyle = &quot;#f7f0eb&quot;; ctx.fillRect(50, 201, 600, 100); 
+        
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.beginPath(); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.lineWidth = 2; 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.strokeStyle = &quot;#343642&quot;; 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(30, 1); ctx.lineTo(50, 1); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(30, cvsWidth / 3 + 1); ctx.lineTo(50, cvsWidth / 3 + 1); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(30, cvsWidth / 6 + 1); ctx.lineTo(50, cvsWidth / 6 + 1); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(30, 299); ctx.lineTo(50, 299); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(50, 0); ctx.lineTo(50, 300); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(50, 299); ctx.lineTo(600, 299); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.stroke(); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.closePath(); 
+        
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.beginPath(); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.strokeStyle = &quot;#dadbe3&quot;; 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.lineWidth = 2; for (i = 0; i &lt; 13; i++) { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(51, init + (i * 25)); ctx.lineTo(600, init + (i * 25)); 
+&nbsp;&nbsp;&nbsp;&nbsp;}; 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.stroke(); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.closePath(); 
+        
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.beginPath(); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(51, init + (4 * 25)); ctx.lineTo(600, init + (4 * 25)); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.moveTo(51, init + (8 * 25)); ctx.lineTo(600, init + (8 * 25)); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.strokeStyle = &quot;#b8b8bf&quot;; 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.stroke(); 
+&nbsp;&nbsp;&nbsp;&nbsp;ctx.closePath(); 
+};
+                            </code>
+                        </pre>
                     </section>   
                     <section>
                         <h4><abbr title="Flash Of Unstyled Content">FOUC</abbr>현상 방지</h4>
@@ -188,32 +340,76 @@
                     </section> 
                     <section>
                         <h4>사선효과</h4>
-                        <div class="sec_code_c">
-                            <p data-height="265" data-theme-id="0" data-slug-hash="yvdPPE" data-default-tab="js,result" data-user="piarey" data-embed-version="2" data-pen-title="yvdPPE" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/yvdPPE/">yvdPPE</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                        </div>
+                        <pre class="main_pre_c" data-cnt="JS" aria-hidden="true">
+                            <code>
+/* main 와이트박스 border값 조절 이벤트 */ 
+var whiteboxControlEvent = function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;var thisEvent = function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;winWdControlEvent(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_prop_name">$wboxTop</span>.<span class="pre_span_prop_url">css</span>(<span class="pre_span_prop_v_txt">&quot;border-right&quot;</span>, <span class="pre_span_prop_name">$winWd</span> + <span class="pre_span_prop_v_txt">&quot;px solid transparent&quot;</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_prop_name">$wboxBottom</span>.<span class="pre_span_prop_url">css</span>(<span class="pre_span_prop_v_txt">&quot;border-right&quot;</span>, <span class="pre_span_prop_name">$winWd</span> + <span class="pre_span_prop_v_txt">&quot;px solid #f2f3fa&quot;</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;} 
+&nbsp;&nbsp;&nbsp;&nbsp;thisEvent(); 
+    
+&nbsp;&nbsp;&nbsp;&nbsp;$(window).on(&quot;resize&quot;, function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;clearTimeout(timer); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;timer = setTimeout(function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;thisEvent(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, sec); 
+&nbsp;&nbsp;&nbsp;&nbsp;}); 
+}; 
+whiteboxControlEvent();
+                            </code>
+                        </pre>
                     </section>
                     <section>
                         <h4>파비콘 / SNS 노출이미지</h4>
-                        <div class="sec_code_c">
-                            <p data-height="265" data-theme-id="0" data-slug-hash="NyZwXw" data-default-tab="html,result" data-user="piarey" data-embed-version="2" data-pen-title="NyZwXw" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/NyZwXw/">NyZwXw</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                            <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                        </div>
+                        <pre class="main_pre_c" data-cnt="HTML" aria-hidden="true">
+                            <code>
+&lt;meta property=&quot;og:title&quot; content=&quot;bib's pray&quot;/&gt; 
+&lt;meta property=&quot;og:url&quot; content=&quot;http://piarey.dothome.co.kr/&quot; /&gt; 
+&lt;meta property=&quot;og:image&quot; content=&quot;http://piarey.dothome.co.kr/images/common/ogimg.jpg&quot;/&gt; 
+&lt;meta property=&quot;og:description&quot; content=&quot;bib의 포트폴리오 사이트&quot;/&gt; 
+&lt;title&gt;bib's pray&lt;/title&gt; 
+&lt;link rel=&quot;shortcut icon&quot; href=&quot;http://piarey.dothome.co.kr/images/common/favicon.ico&quot;&gt;
+                            </code>
+                        </pre>
                     </section>
                     <section>
                         <h4>자바스크립트 / 제이쿼리 성능 향상</h4>
                         <ol class="etc_ol_insertion">
                             <li data-cnt="1.">하나의 js 파일로 모으기
-                                <div class="sec_code_c">
-                                    <p data-height="265" data-theme-id="0" data-slug-hash="zRVPjX" data-default-tab="js,result" data-user="piarey" data-embed-version="2" data-pen-title="zRVPjX" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/zRVPjX/">zRVPjX</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                                </div>
+                                <pre class="main_pre_c" data-cnt="JS" aria-hidden="true">
+                                    <code>
+/* 각 페이지별로 분리 안시키고 하나에 몰아서 해봄 */ 
+var headerSecH2 = document.getElementById(&quot;header_sec_h2&quot;) 
+&nbsp;&nbsp;&nbsp;&nbsp;, headerSecH2cont = headerSecH2.innerHTML 
+&nbsp;&nbsp;&nbsp;&nbsp;, <span class="pre_span_prop_name">menuName</span> = [<span class="pre_span_prop_v_txt">&quot;사용기술목록&quot;</span>, <span class="pre_span_prop_v_txt">&quot;자기소개&quot;</span>, <span class="pre_span_prop_v_txt">&quot;보유기술&quot;</span>, <span class="pre_span_prop_v_txt">&quot;포트폴리오&quot;</span>, <span class="pre_span_prop_v_txt">&quot;개인공부정리&quot;</span>]; 
+    
+<span class="pre_span_if">switch</span> (<span class="pre_span_prop_name">headerSecH2cont</span>) { 
+&nbsp;&nbsp;&nbsp;&nbsp;case menuName[2]: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~ 
+&nbsp;&nbsp;&nbsp;&nbsp;break; 
+&nbsp;&nbsp;&nbsp;&nbsp;case menuName[3]: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;~~~~ 
+&nbsp;&nbsp;&nbsp;&nbsp;break; 
+};
+                                    </code>
+                                </pre>
                             </li>
                             <li data-cnt="2.">timer 개념으로 함수 한번만 실행하기
-                                <div class="sec_code_c">
-                                    <p data-height="265" data-theme-id="0" data-slug-hash="eVweLx" data-default-tab="js,result" data-user="piarey" data-embed-version="2" data-pen-title="eVweLx" class="codepen">See the Pen <a href="https://codepen.io/piarey/pen/eVweLx/">eVweLx</a> by piarey (<a href="https://codepen.io/piarey">@piarey</a>) on <a href="https://codepen.io">CodePen</a>.</p>
-                                    <script async src="https://static.codepen.io/assets/embed/ei.js"></script>
-                                </div>
+                                <pre class="main_pre_c" data-cnt="JS" aria-hidden="true">
+                                    <code>
+var winHtReControlEvent = function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;$(window).on(&quot;resize&quot;, function () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_prop_url">clearTimeout</span>(<span class="pre_span_prop_name">timer1</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="pre_span_prop_url">setTimeout</span>(<span class="pre_span_prop_name">function</span> () { 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$winHt = $(window).height(); 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}, <span class="pre_span_prop_name">sec</span>); 
+&nbsp;&nbsp;&nbsp;&nbsp;}); 
+};
+                                    </code>
+                                </pre>
                             </li>
                             <li data-cnt="3.">조건문에서 쉬운 조건이 앞에 오게 하기</li>
                             <li data-cnt="4.">var 끼리 묶기</li>
@@ -223,7 +419,9 @@
                     <section>
                         <h4>반응형 / 모바일</h4>
                         <ol class="etc_ol_insertion">
-                            <li data-cnt="1.">이미지 용량 최적화</li>
+                            <li data-cnt="1.">이미지 용량 최적화
+                                <img src="" />
+                            </li>
                             <li data-cnt="2.">canvas 반응형</li>
                             <li data-cnt="3.">동영상 대신 GIF 로 대체</li>
                         </ol>

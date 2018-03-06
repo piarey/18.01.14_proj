@@ -7,29 +7,43 @@
     <meta name="author" content="blueyoun" />
     <meta name="description" content=" html5/웹표준/웹접근성 지켜서 만든 포폴 사이트" />
     <meta name="keywords" content="html5, web standard, web accessibility" />
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        <script src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
+    <script src="../js/jquery-ui.min.js" charset="utf-8"></script>
+    <script src="http://static.jsbin.com/js/embed.min.js?4.1.2"></script>
 
-        ul {
-            overflow: hidden;
-        }
-
-        li {
-            margin: 20px 0 20px 0;
-        }
-    </style>
 </head>
 
 <body>
+    
+<script>
+
+    /* main 와이트박스 border값 조절 이벤트 */
+
+    var whiteboxControlEvent = function () {
+
+        var thisEvent = function () {
+            //winWdControlEvent();
+            $wboxTop.css("border-right", $winWd + "px solid transparent");
+            $wboxBottom.css("border-right", $winWd + "px solid #f2f3fa");
+        }
+        thisEvent();
+
+        $(window).on("resize", function () {
+            clearTimeout(timer);
+            timer = setTimeout(function () {
+                thisEvent();
+            }, sec);
+        });
+    };
+    whiteboxControlEvent();
+   
 
 
 
+
+
+</script>
 
 </body>
 
 </html>
-

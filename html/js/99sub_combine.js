@@ -5,6 +5,7 @@ $(document).ready(function () {
         var $thisElement = $("#tit_nav_mobile");
         $(".nav_gnb_mobile_open").on("click", function () {
             $thisElement.show().stop().animate({ opacity: 1 }, 300);
+            document.body.style.overflowY = "hidden";
         });
 
     };
@@ -15,8 +16,10 @@ $(document).ready(function () {
         var $thisElement = $("#tit_nav_mobile");
         $(".nav_mobile_cancel").on("click", function () {
             $thisElement.stop().animate({ opacity: 0 }, 300);
+            document.body.style.overflowY = "scroll";
             setTimeout(function () {
                 $thisElement.css("display", "none");
+                
             }, 200);
         });
     };
@@ -507,12 +510,12 @@ $(window).on("load", function () {
             $scrollValue = $(this).scrollTop();
             if ($scrollValue > $winHt) {
                 $titNav.css({ "position": "fixed", "height": "0px" });
-                $navGnb.css({ "position": "relative", "transform": "translate(-50%)", "margin": "0" });
+                //$navGnb.css({ "position": "relative", "transform": "translate(-50%)", "margin": "0" });
             }
             else {
                 $titNav.css({ "position": "absolute", "height": "61px" });
                 /* draggable 이벤트보다 나중에 실행되어야 함 */
-                $navGnb.css({ "position": "static", "left": "none", "top": "none", "transform": "none", "margin": "6px auto 0 auto" });
+                //$navGnb.css({ "position": "static", "left": "none", "top": "none", "transform": "none", "margin": "6px auto 0 auto" });
             }
         };
         thisEvent();
@@ -524,13 +527,10 @@ $(window).on("load", function () {
                 $scrollValue = $(this).scrollTop();
                 if ($scrollValue > $winHt && $scrollValue > lastScroll) {
                     $titNav.css({ "position": "fixed", "height": "0px" });
-                    $navGnb.css({ "position": "relative", "transform": "translate(-50%)", "margin": "0" });
-                }
-                else if ($scrollValue > $winHt && $scrollValue <= lastScroll) {
-                    $titNav.css({ "position": "absolute", "height": "61px" });
+                    //$navGnb.css({ "position": "relative", "transform": "translate(-50%)", "margin": "0" });
                 }
                 else {
-                    $navGnb.css({ "position": "static", "left": "none", "top": "none", "transform": "none", "margin": "6px auto 0 auto" });
+                    //$navGnb.css({ "position": "static", "left": "none", "top": "none", "transform": "none", "margin": "6px auto 0 auto" });
                     $titNav.css({ "position": "absolute", "height": "61px" });
                 }
                 lastScroll = $scrollValue;
@@ -539,7 +539,8 @@ $(window).on("load", function () {
 
     };
 
-    gnbDragHoverEvent();
+    /* 일단 드래거블 이벤트 제거 */
+    //gnbDragHoverEvent();
     /* draggable 이벤트보다 나중에 실행되어야 함 */
     gnbScrollEvent();
 
