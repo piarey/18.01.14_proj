@@ -1,0 +1,78 @@
+@charset "utf-8";
+/* CSS Document */
+
+/**/
+@font-face {
+  font-family: 'Jeju Gothic';
+  font-style: normal;
+  font-weight: 400;
+  src:url(../common/font/JejuGothic-Regular.ttf) format('truetype');
+}
+
+
+/**/
+.no_js {display:none;}
+
+html {font:bold 12px "Nanum Gothic"; color:#2e2e2e; letter-spacing:1px; font-weight:400; background-color:#fafafa;}
+
+a {text-decoration:none; color:inherit;}
+
+p, figure, figcaption {margin:0; padding:0;}
+
+ul, li {margin:0; padding:0; list-style:none;}
+
+input:focus, button:focus, textarea:focus {outline:none;}
+
+textarea {resize:none; padding:20px; line-height:18px;}
+
+.etc_btn_toggle {padding:0 0 0 3px;}
+
+button {  
+	background: none;
+    border: 0;
+    color: inherit;
+	cursor:pointer;
+    font: inherit;
+    line-height: normal;
+    overflow: visible;
+    padding: 0;
+	-webkit-appearance: button; 
+    -webkit-user-select: none; 
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+input:focus::-webkit-input-placeholder {color: transparent;}  
+input:focus::-moz-placeholder {color: transparent;}        
+
+button:disabled, select:disabled, input:disabled {cursor:not-allowed;}
+select:focus, input:focus, textarea:focus {border:1px solid #cc435a;}
+input:read-only, textarea:read-only {cursor:not-allowed;}
+
+input, select, textarea {color:inherit; border:1px solid #d6d6d6;}
+input[type="text"], input[type="password"] {height:30px; line-height:30px; padding:0 0 0 10px; letter-spacing:2px;}
+select {height:30px; line-height:30px;}
+
+input[type="checkbox"] {width:20px; height:20px;}
+
+/**/
+button:active {padding:0px;}
+button > span {position:relative;}
+/**/
+button.common_btn {width:110px; height:40px; background-color:#4e5061; color:#fafafa; letter-spacing:3px; font-weight:bold;}
+button.common_btn:hover {background-color:#62647a;}
+
+textarea, section, div, input[type="text"], input[type="password"], select, table, tbody, thead, tfoot, td, th {box-sizing:border-box;}
+
+h1,h2,h3,h4,h5,h6 {margin:0 0 20px 0; font-family: 'Jeju Gothic'; font-weight:bold; letter-spacing:2px;}
+h1 {border-left:8px solid #cc435a; padding:0 0 0 10px; font-size:1.7em;}
+
+table {padding:0; border-spacing:0px; border-collapse:collapse; border:0;}
+th {letter-spacing:2px;}
+th, td {padding:0px;}
+
+fieldset {margin:0; padding:0; border:0px;}
+legend {display:none;}
+
+/**/
+
+

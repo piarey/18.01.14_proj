@@ -1,0 +1,193 @@
+<!doctype html>
+<html class="no_js">
+<head>
+<meta charset="utf-8">
+<title>FC Groupware project</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" />
+<link rel="stylesheet" href="../css/99common00.css" />
+<link rel="stylesheet" href="../css/99common01.css" />
+<link rel="stylesheet" href="../css/99common02.css" />
+<script src="../common/js/jquery-3.2.1.min.js"></script>
+<script src="../common/js/jquery-ui.min.js"></script>
+<script src="../js/99common00.js"></script>
+<script src="../js/99ie9support.js"></script>
+<link rel="stylesheet" href="../css/01sub00.css" />
+<link rel="stylesheet" href="../css/99subcommon00.css" />
+<script type="text/javascript" src="../common/js/checkNull.js"></script>
+<script type="text/javascript" >
+function setPage(page) {
+	$("#page").val(page);
+	$("#deleNotie").attr({
+		"method" : "GET",
+		"action" : "/notice/seleNoti.do"
+	});
+	$("#deleNotie").submit();
+}
+$(function () {
+	$("#deleNoti").click(function () {
+		if (!$("input:checkbox[id='n_numCheck']").is(":checked")){
+			alert("삭제할 공지를 선택해주세요");
+			return ;
+		}
+		
+		$("#deleNotie").attr({
+			"method" : "POST"
+			,"action" : "/notice/deleNoti.do"
+		});
+		$("#deleNotie").submit();
+	});
+	/* print view message count after keep the pageSize */
+	if ("<c:out value='${data.pageSize}' />" != "") {
+		$("#pageSize").val("<c:out value='${data.pageSize}' />");
+	}
+	
+	/* change print view message count event */
+	$("#pageSize").change(function () {
+		setPage(1);
+	});
+});
+</script>
+<style>
+
+#sec1_table1 {width:1100px; border-top:3px solid #6b6b6b; margin:10px 0 10px 0; text-align:center;} 
+#sec1_table1 thead tr th:first-child {width:70px; height:60px;}
+#sec1_table1 thead tr th {background-color:#d6d6d6; border-right:1px solid #f5f6f7;}
+#sec1_table1 thead tr th:last-child {width:70px; border:0px;}
+#sec1_table1 thead tr th:nth-child(2) {width:670px;}
+
+#sec1_table1 tbody tr td:first-child {height:50px;}
+#sec1_table1 tbody tr td:nth-child(2) {text-align:left; padding:0 0 0 20px;}
+#sec1_table1 tbody tr td {border-bottom:1px solid #d6d6d6; border-right:1px solid #d6d6d6;}
+#sec1_table1 tbody tr td:last-child {border-right:0;}
+#sec1_table1 tbody tr:hover {background-color:#d6d6d6;}
+
+#sec1_table1 tbody tr td a {display:block; height:50px; line-height:50px;}
+#sec1_table1 tbody tr td a:hover {text-decoration:underline;}
+
+#bottom_btns_box_cont button {margin:0px 5px;}
+
+</style>
+<body>
+<header id="title_head_outer">
+<div id="title_head_outer_line"></div>
+<div id="title_head">
+<a href="/draft/rSelDraft.do"><img src="../images/common/logo2.png" alt="FC 그룹웨어 로고 이미지" /><strong><span>GROUP</span><span>WARE</span></strong></a>
+<ul>
+
+<c:choose>
+	<c:when test="${not empty loginInfo}">
+		<li><a href="/member/listForm.do">사원검색</a></li>
+		<li id="head_li_log">
+			<p>${loginInfo.m_code}(<span>${loginInfo.m_name}</span>)&nbsp;님</p>
+			<button type="button" id="logout" onclick="location.href='/member/logoMemb.do';">로그아웃</button></li>
+	</c:when>
+		<c:otherwise>
+		</c:otherwise>
+</c:choose>
+</ul>
+</div>
+</header>
+
+
+<section id="title_nav">
+<nav id="nav_gnb">
+		<ul>
+			<li>
+				<div class="etc_boxshadow"></div><a href="/draft/rSelDraft.do"><div class="etc_mov_horz_t"></div>
+				<div class="etc_mov_vert_t"></div><div class="etc_mov_horz_b"></div><div class="etc_mov_vert_b"></div>
+				<div class="gnb_li_rotate"><i class="fas fa-file"></i></div>전자결재</a>
+			</li><!--  
+			--><li>
+				<div class="etc_boxshadow"></div><a href="/notice/seleNoti.do"><div class="etc_mov_horz_t"></div>
+				<div class="etc_mov_vert_t"></div><div class="etc_mov_horz_b"></div><div class="etc_mov_vert_b"></div>
+				<div class="gnb_li_rotate"><i class="fas fa-align-justify"></i></div>공지사항</a>
+			</li><!--  
+
+			--><!--  
+--><li><div class="etc_boxshadow"></div><button type="button" id="qq2"><div class="etc_mov_horz_t"></div>
+				<div class="etc_mov_vert_t"></div><div class="etc_mov_horz_b"></div><div class="etc_mov_vert_b"></div>
+				<div class="gnb_li_rotate"><i class="fas fa-address-book"></i></div><span>계정관리<span class="etc_btn_toggle">▼</span></span></button>
+<ul>
+<li><a href="/member/regiForm.do">사원 등록</a></li>
+<li><a href="/member/listForm.do">사원 검색 및 수정</a></li>
+</ul>
+</li>
+		</ul>
+
+</nav><div id="nav_location">
+<p><i class="fas fa-home"></i><span class="location_gt">&gt;</span><span id="etc_navi_title">공지사항</span><span class="location_gt">&gt;</span>공지사항<span class="location_gt">&gt;</span>공지사항 목록</p>
+</div>
+</section>
+
+<main role="main" id="title_main">
+
+<section id="main_cont"> 
+<article id="cont_sec1">
+<div class="cont_sec_txtinitial">
+<h1>공지사항 목록</h1>
+
+<form id="deleNotie" name="deleNotie">
+<input type="hidden" id="page" name="page" value="${data.page}" />
+	<select id="pageSize" name="pageSize">
+		<option value="10">10개씩 보기</option>
+		<option value="20">20개씩 보기</option>
+		<option value="20">50개씩 보기</option>
+	</select>
+<table id="sec1_table1">
+	<thead>
+		<tr>
+			<th>글번호</th>
+			<th>제목</th>
+			<th>등록일</th>
+			<th>작성자</th>
+			<th>삭제여부</th>
+		</tr>
+	</thead>
+	<tbody>
+		<c:choose>
+			<c:when test="${not empty list}">
+				<c:forEach var="list" items="${list}">
+					<tr data-num="${list.n_num}">
+					<td>${list.n_num}</td>
+					<td><a href="sOneNoti.do?n_num=${list.n_num}">${list.n_subject}</a></td>
+					<td>${list.n_insertdate}</td>
+					<td>${list.m_name}</td>
+					<td><input type="checkbox" id="n_numCheck" name="n_numCheck"
+					value="${list.n_num}"  onclick="checkOnly('${list.n_num}');" /></td>
+					</tr>
+				</c:forEach>
+				<!-- <button type="button" id="sOne" name="sOne" >공지상세보기</button> -->
+			</c:when>
+			<c:otherwise>
+			<tr>
+
+				<td colspan="5">게시물이 존재하지않습니다</td> 
+			</tr>
+			</c:otherwise>
+		</c:choose>
+	</tbody>
+
+</table>
+</form>
+<div id="bottom_btns_box">
+<div id="boardPage">
+		<tag:paging page="${param.page}" total="${total}" listSize="${data.pageSize}" />
+</div>
+<div id="bottom_btns_box_cont">
+	 <c:if test="${loginInfo.m_adminYN eq 'Y'}">
+	 <button type="button" class="common_btn" onclick="location.href='/notice/inseForm.do'"><span>공지사항 등록</span></button>
+	 <button type="button" class="common_btn" id="deleNoti" name="deleNoti"><span>삭제</span></button>
+</c:if> 
+</div>
+</div>
+
+
+
+</div>
+</article>
+</section>
+
+</main>
+</body>
+</html>

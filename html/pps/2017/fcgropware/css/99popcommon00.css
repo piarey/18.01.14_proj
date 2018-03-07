@@ -1,0 +1,13 @@
+@CHARSET "UTF-8";
+
+select:focus, input:focus, textarea:focus {border:1px solid #6b6b6b;}
+
+/* common */
+#title_cont_p {height:auto; margin:50px auto;}
+#bottom_btns_box {text-align:center; margin:20px 0 0 0;}
+#top_btns_box {text-align:right; margin:0 0 10px 0;}
+
+.pop_btn_m, .pop_btn_s {height:30px; border-radius:5px; border:1px solid #6b6b6b;  background: linear-gradient(#fff, #d6d6d6); }
+.pop_btn_m:hover, .pop_btn_s:hover {background:#e3e3e3;}
+.pop_btn_m {width:45px;}
+.pop_btn_s {width:30px;}

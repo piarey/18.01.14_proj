@@ -1,0 +1,180 @@
+<!doctype html>
+<html class="no_js">
+<head>
+<meta charset="utf-8">
+<title>FC Groupware project</title>
+<link rel="stylesheet" href="http://fonts.googleapis.com/earlyaccess/nanumgothic.css" />
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.1/css/all.css" />
+<link rel="stylesheet" href="../css/99common00.css" />
+<link rel="stylesheet" href="../css/99common01.css" />
+<link rel="stylesheet" href="../css/99common02.css" />
+<script src="../common/js/jquery-3.2.1.min.js"></script>
+<script src="../common/js/jquery-ui.min.js"></script>
+<script src="../js/99common00.js"></script>
+<script src="../js/99ie9support.js"></script>
+<link rel="stylesheet" href="../css/02sub00.css" />
+<script src="../js/02sub00.js"></script>
+<script type="text/javascript">
+function detailDraft(dd_code){
+	
+    var pop_title = "상세 문서 보기" ;  
+ 	
+	$("#dd_code").val(dd_code);
+	$("#draftForm").submit();
+
+}
+</script>
+<style>
+
+
+#sec1_table1 {width:900px; text-align:center;}
+#sec1_table1 thead {background-color:#d6d6d6;}
+#sec1_table1 thead tr th:first-child {height:60px; width:50px;}
+#sec1_table1 thead tr th {border-top:3px solid #6b6b6b; border-right:1px solid #fafafa;}
+#sec1_table1 thead tr th:nth-child(3) {width:460px;}
+#sec1_table1 thead tr th:last-child {border-right:0; width:130px;}
+#sec1_table1 tbody tr td:first-child {height:50px;}
+#sec1_table1 tbody tr td {border-bottom:1px solid #d6d6d6; border-right:1px solid #d6d6d6;}
+#sec1_table1 tbody tr td:nth-child(3) {text-align:left; padding:0 0 0 20px;}
+#sec1_table1 tbody tr td:last-child {border-right:0px; }
+#sec1_table1 tbody tr:hover {background-color:#d6d6d6;}
+
+
+</style>
+</head>
+<body>
+<header id="title_head_outer">
+<div id="title_head_outer_line"></div>
+<div id="title_head">
+<a href="/draft/rSelDraft.do"><img src="../images/common/logo2.png" alt="FC 그룹웨어 로고 이미지" /><strong><span>GROUP</span><span>WARE</span></strong></a>
+<ul>
+
+<c:choose>
+	<c:when test="${not empty loginInfo}">
+		<li><a href="/member/listForm.do">사원검색</a></li>
+		<li id="head_li_log">
+			<p>${loginInfo.m_code}(<span>${loginInfo.m_name}</span>)&nbsp;님</p>
+			<button type="button" id="logout" onclick="location.href='/member/logoMemb.do';">로그아웃</button></li>
+	</c:when>
+		<c:otherwise>
+		</c:otherwise>
+</c:choose>
+</ul>
+</div>
+</header>
+
+
+<section id="title_nav">
+<nav id="nav_gnb">
+		<ul>
+			<li>
+				<div class="etc_boxshadow"></div><a href="/draft/rSelDraft.do"><div class="etc_mov_horz_t"></div>
+				<div class="etc_mov_vert_t"></div><div class="etc_mov_horz_b"></div><div class="etc_mov_vert_b"></div>
+				<div class="gnb_li_rotate"><i class="fas fa-file"></i></div>전자결재</a>
+			</li><!--  
+			--><li>
+				<div class="etc_boxshadow"></div><a href="/notice/seleNoti.do"><div class="etc_mov_horz_t"></div>
+				<div class="etc_mov_vert_t"></div><div class="etc_mov_horz_b"></div><div class="etc_mov_vert_b"></div>
+				<div class="gnb_li_rotate"><i class="fas fa-align-justify"></i></div>공지사항</a>
+			</li><!--  
+
+			--><!--  
+--><li><div class="etc_boxshadow"></div><button type="button" id="qq2"><div class="etc_mov_horz_t"></div>
+				<div class="etc_mov_vert_t"></div><div class="etc_mov_horz_b"></div><div class="etc_mov_vert_b"></div>
+				<div class="gnb_li_rotate"><i class="fas fa-address-book"></i></div><span>계정관리<span class="etc_btn_toggle">▼</span></span></button>
+<ul>
+<li><a href="/member/regiForm.do">사원 등록</a></li>
+<li><a href="/member/listForm.do">사원 검색 및 수정</a></li>
+</ul>
+</li>
+		</ul>
+
+</nav><div id="nav_location">
+<p><i class="fas fa-home"></i><span class="location_gt">&gt;</span><span id="etc_navi_title">전자결재</span><span class="location_gt">&gt;</span>완료 문서함</p>
+</div>
+</section>
+
+<main role="main" id="title_main">
+<section id="main_subnav">
+<ul>
+<li><div class="etc_mov2_rl"></div><div class="etc_mov2_lr"></div><button type="button" onclick="window.open('/draft/regiForm.do')"><i class="fas fa-plus"></i>기안</button></li>
+<li><div class="etc_mov2_rl"></div><div class="etc_mov2_lr"></div><button type="button" id="ww1"><span><i class="fas fa-folder-open"></i>결재<span class="etc_btn_toggle">▼</span></span></button>
+	<ul>
+	<li><div class="etc_mov2_rl_in"></div><div class="etc_mov2_lr_in"></div><a href="/draft/rSelDraft.do"><i class="fas fa-folder"></i>결재대기</a></li>
+	<li><div class="etc_mov2_rl_in"></div><div class="etc_mov2_lr_in"></div><a href="/draft/pSelDraft.do"><i class="fas fa-folder"></i>결재진행</a></li>
+	</ul>
+</li>
+<li><div class="etc_mov2_rl"></div><div class="etc_mov2_lr"></div><button type="button" id="ww1"><span><i class="fas fa-folder-open"></i>개인문서함<span class="etc_btn_toggle">▼</span></span></button>
+	<ul>
+	<li><div class="etc_mov2_rl_in"></div><div class="etc_mov2_lr_in"></div><a href="/draft/selTemDraft.do"><i class="fas fa-folder"></i>임시보관함</a></li>
+	<li><div class="etc_mov2_rl_in"></div><div class="etc_mov2_lr_in"></div><a href="/draft/cSelDraft.do"><i class="fas fa-folder"></i>완료문서함</a></li>
+	</ul>
+</li>
+</ul>
+</section> 
+
+
+<section id="main_cont">   
+
+<article id="cont_sec1">
+<h1>완료 문서함</h1>
+<form id="draftForm" action="/draft/detailDraft.do" target="pop_title">
+<input type="hidden" id="dd_code" name="dd_code" />
+	<table id="sec1_table1">
+		<thead>
+			<tr>
+				<th>번 호</th>
+				<th>기안자</th>
+				<th>제 목</th>
+				<th>결 과</th>
+				<th>조 회</th>
+			</tr>
+		</thead>
+		<tbody>
+		<c:choose>
+		<c:when test="${not empty dList}">
+			<c:forEach var="draft" items="${dList}">
+				<tr>
+					<td>${draft.dd_code}</td>
+					<td>${draft.d_name} / ${draft.g_name} / ${draft.m_name}</td>
+					<td>${draft.dd_title}</td>
+					<td>
+					<c:choose>
+						<c:when test="${draft.dd_status eq 7}">
+							결재완료
+						</c:when>
+						<c:when test="${draft.dd_status eq 8}">
+							결재반려
+						</c:when>
+						<c:when test="${draft.dd_status eq 9}">
+							전결
+						</c:when>
+						<c:otherwise>
+							예외
+						</c:otherwise>
+					</c:choose>
+					</td>
+					<td>
+						<button type="button" class="common_btn" onclick="detailDraft('${draft.dd_code}')"><span>상세</span></button>
+					</td>
+				</tr>
+			</c:forEach>
+		</c:when>
+		<c:otherwise>
+			<tr>
+				<td colspan="5">결재 완료된 문서가 없습니다.</td>
+			</tr>
+		</c:otherwise>
+		</c:choose>
+		</tbody>	
+	</table>
+
+</form>
+
+
+</article>
+</section>
+
+</main>
+</body>
+</html>

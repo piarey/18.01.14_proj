@@ -82,13 +82,188 @@
         <main role="main" id="tit_main" class="sub05_tit_main">
             <article id="tit_main_inner">
                 <h2 class="cleartxt_nocont">주요 내용</h2>
+                <!--
                 <section>
-                    <h3>주요 소개</h3>
-                    
+                    <h3><attr title="hyper text markup language">HTML</attr></h3>
                 </section>
-                <section class="main_sec2">
-                    <h3>최근 활동기록</h3>
-  
+                <section>
+                    <h3><attr title="Cascading Stylesheets">CSS</attr></h3>
+                </section>
+                <section>
+                    <h3><attr title="Javascript">JS</attr> / jquery</h3>
+                </section>
+                <section>
+                    <h3>JAVA</h3>
+                </section> -->
+                <section>
+                    <h3>git / github</h3>
+                    <section>
+                        <h4><abbr title="Command Prompt Commands">CMD</abbr> 내부에서의 기본적인 명령어</h4>
+                        <table class="main_tb1">
+                            <tbody>
+                                <tr>
+                                    <th scope="row">git</th>
+                                    <td>git 명령어 설명서 출력</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">cd d:</th>
+                                    <td>d 드라이브로 이동</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">pwd</th>
+                                    <td>현재 위치 출력</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">mkdir 폴더명</th>
+                                    <td>현재 위치에 폴더만들기</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">ls -al</th>
+                                    <td>현재 폴더의 파일목록</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">clear</th>
+                                    <td>창 내용 클리어</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git init</th>
+                                    <td>현재 폴더를 git의 저장소로 만듬 (초기화)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">vim 파일명.확장자명</th>
+                                    <td>파일명 새것 = 파일 생성 / 파일명 중복 = 수정
+                                        <ul>
+                                            <li>i : insert 모드 변환</li>
+                                            <li>esc : insert 모드 종료</li>
+                                            <li>r : 자세한건 모르겠는데 포커스 된 곳만 수정가능한듯?</li>
+                                            <li>: (콜론) : 명령어 모드 변환
+                                                <ul>
+                                                    <li>w : 저장</li>
+                                                    <li>q : 종료</li>
+                                                    <li>wq : 저장 후 종료</li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">cat 파일명.확장자명</th>
+                                    <td>내용 출력</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git status</th>
+                                    <td>현재 git이 관리하고 있는 파일에 대한 상태</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git add 파일명.확장자명</th>
+                                    <td>최초 버전관리 시작 = git에게 '추적' 하라는 명령 내림 / 수정한 파일을 'Staged' 상태로 만듬</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git config --global user .name 이름</th>
+                                    <td>버전 만든이 명시</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git config --global user .email 이메일주소</th>
+                                    <td>버전 만든이 이메일주소 명시
+                                        <span>맨처음 한번만 하면 나머지 버전에 적용 + 다른 사용자가 해당 버전의 만든이를 알 수 있음. <br />또한 수정하려면 동일한 명령어를 적으면 덮어쓰는 개념임.
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git commit</th>
+                                    <td>현재 버전에 대한 메시지 작성
+                                        <span># 은 주석임<br />어떠한 변화 / 변경된 이유 <br />vim 실행상태가 됨</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git log</th>
+                                    <td>버전관리 기록 출력</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">cp 파일명1.확장자명 파일명2.확장자명</th>
+                                    <td>파일명1을 복사하여 파일명2 라는 새로운 파일을 생성</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git log -p</th>
+                                    <td>버전관리 기록 자세히</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git reset 고유주소 --hard</th>
+                                    <td>고유주소를 최신버전으로 함 (상위 버전은 어딘가에 남아있음)</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git revert 고유주소</th>
+                                    <td>나중에</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">q</th>
+                                    <td>git log 읽기모드? 같은 모드에서 나가기</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git commit --help</th>
+                                    <td>commit 메시지에 대한 도움말 보기</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git commit -a</th>
+                                    <td>수정/삭제된 파일을 자동으로 'Staged' 상태로 만듬</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git commit -m "커밋메시지"</th>
+                                    <td>commit 메시지 작성모드 대신에 간략하게 작성 하는것</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git commit -am "커밋메시지"</th>
+                                    <td>둘이 합친거</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git clone 복제할주소 폴더명</th>
+                                    <td>주소에 있는 원격저장소를 '폴더명' 에 복제 (git init 과 동일선상임)
+                                        <span>현재폴더에다 할거면 '.' 만 적으3</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git log --reverse</th>
+                                    <td>거꾸로 버전관리 기록 출력</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git checkout 커밋고유주소</th>
+                                    <td>일단 패스</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">echo 옵션 문자열</th>
+                                    <td>환경변수 / 입력내용 출력 = 지정한 문자열을 출력함</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git remote add origin 주소</th>
+                                    <td>로컬저장소에 해당 주소(=원격저장소)를 연결시키는 것
+                                        <span>origin = 주소에 대한 별칭임</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git remote</th>
+                                    <td>원격저장소 정보보기</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git remote -v</th>
+                                    <td>원격저장소 정보 상세보기</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git remote --help</th>
+                                    <td>remote 명령어에 대한 도움말보기</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git remote remove 별칭</th>
+                                    <td>해당 원격저장소 삭제</td>
+                                </tr>
+                                <tr>
+                                    <th scope="row">git push -u origin master</th>
+                                    <td>로컬저장소의 작업을 원격저장소로 올림
+                                        <span>로컬저장소의 브랜치와 origin 원격저장소의 마스터 브랜치를 서로 연결 시켜서, 다음번에 사용할때는 git push만 입력할수있게 하는 명령어</span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>  
+                    </section>
                 </section>
             </article>
         </main>

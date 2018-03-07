@@ -133,9 +133,10 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 .footer_copyright {float:left; width:100%; margin:70px 0 0 0; clear:both; text-align:center; font-size:12px;}
 
 /* */
-#tit_scrolltop_box {position:fixed; z-index:5; width:50px; font-size:12px; color:#f2f3fa; bottom:5%; right:2%; background-color:rgba(52,54,66,0.6); border-radius:10px 0;}
-#tit_scrolltop_box button {padding:6px 0 6px 0;}
-#tit_scrolltop_box button:nth-child(1), #tit_scrolltop_box button:nth-child(3) {border-radius:10px 0;}
+#tit_scrolltop_box {position:fixed; z-index:5; width:50px; font-family:"Jeju Gothic"; font-size:12px; color:#f2f3fa; bottom:5%; right:2%; background-color:rgba(52,54,66,0.5); border-radius:10px 0;}
+#tit_scrolltop_box button {padding:5px 0 5px 0; line-height:14px;}
+#tit_scrolltop_box button:nth-child(1) {padding:8px 0 5px 0; border-radius:10px 0 0 0;}
+#tit_scrolltop_box button:nth-child(3) {border-radius:0 0 10px 0;}
 #tit_scrolltop_box button:hover {background-color:#4d4f5c;}
 
 /* 미디어쿼리 */
@@ -171,7 +172,9 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 }
 
 @media only screen and (max-width:480px) {
-    #tit_scrolltop_box {bottom:1%; right:1%;}
+    #tit_scrolltop_box {bottom:0%; right:0%;}
+    #tit_scrolltop_box button {padding:3px 0 3px 0;}
+    #tit_scrolltop_box button:nth-child(1) {padding:8px 0 3px 0;}
 
     .sec_whitebox_t {border-top:4vh solid #f2f3fa;}
     .sec_whitebox_b {border-top:4vh solid transparent;}

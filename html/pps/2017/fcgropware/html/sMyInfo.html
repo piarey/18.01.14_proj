@@ -1,0 +1,103 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ include file="/common/inc/sub1top.jsp" %>
+<script type="text/javascript" src="/common/js/checkNull.js"></script>
+<script type="text/javascript">
+$(function () {
+	$("#updateMember").click(function () {
+		$("#memUpdateForm").attr({
+			"method" : "POST"
+			,"action" : "/member/updaMemb.do"
+		});
+		$("#memUpdateForm").submit();
+	});
+});
+</script>
+<style>
+
+
+#sec1_table1 {width:1100px; border-top:5px solid #6b6b6b; margin:0px 0 30px 0;}
+#sec1_table1 tbody tr td:hover {background-color:#d6d6d6;}
+#sec1_table1 tbody tr th {width:100px; height:70px; background-color:#d6d6d6; border-bottom:1px solid #fafafa;}
+#sec1_table1 tbody tr td {padding:0 0 0 10px; border-bottom:1px solid #d6d6d6; height:70px;}
+#sec1_table1 tbody tr:last-child th {border-bottom:0px;}
+
+#bottom_btns_box {text-align:center;}
+#bottom_btns_box button {margin:0 10px 0 0;}
+#bottom_btns_box button:last-child {margin:0px;}
+
+</style>
+</head>
+<body>
+<%@ include file="/common/inc/commonHead1.jsp" %>
+<p><i class="fas fa-home"></i><span class="location_gt">&gt;</span><span id="etc_navi_title">나의정보</span></p>
+<%@ include file="/common/inc/commonHead2.jsp" %>
+
+<section id="main_cont"> 
+<article id="cont_sec1">
+<div class="cont_sec_txtinitial">
+<h1>나의정보</h1>
+<form id="memUpdateForm">
+<input type="hidden" id="m_code" name="m_code" value="${member.m_code}"/>
+<table id="sec1_table1">
+<tbody>
+		<tr>
+			<th>사원ID</th>
+			<td>${member.m_code}</td>
+			<th>사원직급</th>
+			<td>${member.g_name}</td>
+			<th>소속부서</th>
+			<td>${member.d_name}</td>
+		</tr>
+		<tr>
+			<th>사원이름</th>
+			<td><input type="text" id="m_name" name="m_name" value="${member.m_name}"/></td>
+			<th>비밀번호</th>
+			<td colspan="3"><input type="password" id="m_pwd" name="m_pwd"/></td>
+		</tr>
+		<tr>
+			<th>주소</th>
+			<td><input type="text" id="m_address" name="m_address" value="${member.m_address}"/></td>
+			<th>생일</th>
+			<td><input type="text" id="m_birth" name="m_birth" value="${member.m_birth}"/></td>
+			<th>전화번호</th>
+			<td><input type="text" id="m_tel" name="m_tel" value="${member.m_tel}"/></td>
+		</tr>
+		<tr>
+			<th>등록일</th>
+			<td>${member.m_registdate}</td>
+			<th>수정일</th>
+			<td colspan="3">${member.m_modifidate}</td>
+		</tr>
+	<!--  
+		<tr>
+		
+			<td>해당하는 사원이 없습니다.</td>
+			
+		</tr>-->
+
+</tbody>
+</table>
+</form>
+<div id="bottom_btns_box">
+	<button type="button" class="common_btn" id="updateMember"><span>수정</span></button>
+	<button type="button" class="common_btn" onclick="location.href='/draft/rSelDraft.do';"><span>취소</span></button>
+</div>
+<c:if test="${empty loginInfo || (loginInfo.m_adminYN == 'N' && loginInfo.m_code != loginInfo.m_code)}">
+<script type="text/javascript">
+	$("input").attr("readonly", true);
+	$("select").attr("onFocus", "this.initialSelect = this.selectedIndex;").attr("onChange", "this.selectedIndex = this.initialSelect;");
+	$("#updateMember").attr("disabled", true);
+</script>
+</c:if>
+
+
+
+</div>
+</article>
+</section>
+
+</main>
+</body>
+</html>

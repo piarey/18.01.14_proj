@@ -1,0 +1,66 @@
+@charset "utf-8";
+/* CSS Document */
+
+
+
+
+/*
+#title_slideimg {position:relative; width:100%; height:200px; box-shadow:0px 0px 20px #333 inset; background:center center/cover no-repeat; background-image:url(../images/slideimg_bg1.jpg); overflow:hidden;
+	transition:all 1s;}
+
+#slideimg_box {text-align:center;}
+#slideimg_box:after {content:""; clear:both; display:block;}
+
+
+#slideimg_box div {display:inline-block; vertical-align:top; width:50px; height:100px; box-sizing:border-box; border:1px solid #00f; transition:all 0.5s;}
+*/
+
+
+
+
+/* 이 아래는 그거임. 결재 메뉴 페이지만 */
+
+#title_main {width:1200px; margin:20px auto 0px auto;}
+#title_main:after {content:""; display:block; clear:both;}
+
+#title_main #main_subnav {float:left; width:170px; height:100%; margin:0 30px 0 0; color:#f5f6f7;}
+
+
+
+
+#main_subnav > ul {margin:70px 0 0 0; padding:40px 20px 40px 20px; background-color:#4e5061;}
+#main_subnav ul li {margin: 0 0 10px 0; position:relative;}
+
+#main_subnav ul li .etc_mov2_lr, #main_subnav ul li .etc_mov2_rl, #main_subnav ul li .etc_mov2_lr_in, #main_subnav ul li .etc_mov2_rl_in {position:absolute; height:3px; background-color:#cc435a;}
+#main_subnav ul li .etc_mov2_lr {left:65px; top:20px;}
+#main_subnav ul li .etc_mov2_rl {right:65px; top:20px;}
+#main_subnav ul li .etc_mov2_lr_in {left:55px; top:20px;}
+#main_subnav ul li .etc_mov2_rl_in {right:55px; top:20px;}
+
+#main_subnav > ul > li:last-child {margin:0px;}
+#main_subnav > ul > li > ul > li:last-child {margin:0px;}
+#main_subnav ul li i {font-size:20px; color:#f5f6f7; vertical-align:middle; margin:0 5px 0 0;}
+
+
+
+#main_subnav ul li a {display:block;}
+#main_subnav ul li img{width:30px; height:30px; vertical-align:middle;}
+
+
+#main_subnav > ul > li:nth-of-type(2) > ul, #main_subnav > ul > li:nth-of-type(3) > ul {padding-left:20px; margin:10px 0 0 0;}
+
+
+#main_subnav button { 
+	width:100%; text-align:left;
+}
+
+
+#ww1, #ww2 {cursor:pointer;}
+
+
+/**/
+#title_main #main_cont {float:left; width:1000px; height:auto; padding:80px 50px 80px 50px;}
+
+
+
+
