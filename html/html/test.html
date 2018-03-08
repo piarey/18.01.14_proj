@@ -7,42 +7,21 @@
     <meta name="author" content="blueyoun" />
     <meta name="description" content=" html5/웹표준/웹접근성 지켜서 만든 포폴 사이트" />
     <meta name="keywords" content="html5, web standard, web accessibility" />
-        <script src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
-    <script src="../js/jquery-ui.min.js" charset="utf-8"></script>
-    <script src="http://static.jsbin.com/js/embed.min.js?4.1.2"></script>
-
+    <style>
+        ol li:before {content:attr(data-cnt); display:block;}
+    </style>
 </head>
 
 <body>
-    
-<script>
-
-    /* main 와이트박스 border값 조절 이벤트 */
-
-    var whiteboxControlEvent = function () {
-
-        var thisEvent = function () {
-            //winWdControlEvent();
-            $wboxTop.css("border-right", $winWd + "px solid transparent");
-            $wboxBottom.css("border-right", $winWd + "px solid #f2f3fa");
-        }
-        thisEvent();
-
-        $(window).on("resize", function () {
-            clearTimeout(timer);
-            timer = setTimeout(function () {
-                thisEvent();
-            }, sec);
-        });
-    };
-    whiteboxControlEvent();
-   
 
 
+    <ol>
+        <li data-cnt="1.">일반적인 쇼핑몰을 넘어 향신료에 대한 소개나 동영상, 사용방법 등 다채로운 콘텐츠를 이용할 수 있게 만들었습니다.</li>
+        <li data-cnt="2.">로그인한 사용자 별로 선호하는 상품이 보여지게 만들었습니다.</li>
+        <li data-cnt="*">JSP 언어 특성과 DB문제로 기능이나 링크연결이 정상적으로 되지 않습니다.
+            <br />(향신료 이야기 - 소개, 역사 / 향신료 여행 - 영상, 도서 / 회사소개 만 html 처리)</li>
+    </ol>
 
-
-
-</script>
 
 </body>
 

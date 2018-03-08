@@ -43,8 +43,8 @@ textarea {resize:none;}
     overflow: visible;
 }
 /* placeholder 크로스브라우징 */
-input:focus::-webkit-input-placeholder {color: transparent;}  
-input:focus::-moz-placeholder {color: transparent;}  
+input:focus:-webkit-input-placeholder {/* WebKit browsers */color:transparent;} 
+input:focus:-moz-placeholder {/* Mozilla Firefox 4 to 18 */color:transparent;} 
 
 /* 익스9 부터는 구지 안적어도 되지만 일단 적어놓음 */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display: block;}

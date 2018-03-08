@@ -336,6 +336,9 @@ font-size:11px; color:#f2f3fa; border-radius:10px;}
     
     /* 01sub00_tit_main */
     .sub01_tit_main .main_pre_c {padding:5px 10px 5px 10px; letter-spacing:0;}
+
+    /**/
+    .sub05_tit_main .main_tb1 tr td ul {padding:0 0 0 15px; color:#cc435a;}
 }
 
 @media only screen and (max-width:320px) {
