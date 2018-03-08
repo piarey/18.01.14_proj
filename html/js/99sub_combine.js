@@ -19,7 +19,7 @@ $(document).ready(function () {
             document.body.style.overflowY = "scroll";
             setTimeout(function () {
                 $thisElement.css("display", "none");
-                
+
             }, 200);
         });
     };
@@ -377,16 +377,16 @@ $(document).ready(function () {
 $(window).on("load", function () {
 
     /* 전역변수 */
-    var $outerWd = $("#tit_outer").width();
-    var sec = 100;
-    var timer = null;
-    var timer1 = null;
-    var timer2 = null;
-    var timer3 = null;
-    var $winWd = 0;
-    var $winHt = 0;
-    var $wboxTop = $(".sec_whitebox_t");
-    var $wboxBottom = $(".sec_whitebox_b");
+    var $outerWd = $("#tit_outer").width()
+        , sec = 100
+        , timer = null
+        , timer1 = null
+        , timer2 = null
+        , timer3 = null
+        , $winWd = 0
+        , $winHt = 0
+        , $wboxTop = $(".sec_whitebox_t")
+        , $wboxBottom = $(".sec_whitebox_b");
 
     /* window 너비 해상도에 따라 조절 이벤트 */
     var winWdControlEvent = function () {

@@ -2,12 +2,12 @@ $(document).ready(function () {
 
     /* header 글씨 써지는 효과 */
     var headerWriteEvent = function () {
-        var hBg1TxtElement = document.getElementById("header_bg1_txt");
-        var hBg2TxtElement = document.getElementById("header_bg2_txt");
-        var hBg1TxtCont = "의 자 에 쌓 인 눈";
-        var hBg2TxtCont = "아 른 거 리 는 반 딧 불";
-        var hBg1TxtSplit = hBg1TxtCont.split(" ");
-        var hBg2TxtSplit = hBg2TxtCont.split(" ");
+        var hBg1TxtElement = document.getElementById("header_bg1_txt")
+            , hBg2TxtElement = document.getElementById("header_bg2_txt")
+            , hBg1TxtCont = "의 자 에 쌓 인 눈"
+            , hBg2TxtCont = "아 른 거 리 는 반 딧 불"
+            , hBg1TxtSplit = hBg1TxtCont.split(" ")
+            , hBg2TxtSplit = hBg2TxtCont.split(" ");
 
 
         var thisEvent = function ee(counter, evInhBgTxtElement, evInhBgTxtSplit) {
@@ -69,18 +69,18 @@ $(document).ready(function () {
 $(window).on("load", function () {
 
     /* 전역변수 */
-    var $outerWd = $("#tit_outer").width();
-    var sec = 100;
-    var timer = null;
-    var timer2 = null;
-    var timer3 = null;
-    var $winWd = 0;
-    var $winHt = 0;
-    var $wboxTop = $(".sec_whitebox_t");
-    var $wboxBottom = $(".sec_whitebox_b");
-    var speed150 = 150;
-    var speed250 = 250;
-    var speed300 = 300;
+    var $outerWd = $("#tit_outer").width()
+        , sec = 100
+        , timer = null
+        , timer2 = null
+        , timer3 = null
+        , $winWd = 0
+        , $winHt = 0
+        , $wboxTop = $(".sec_whitebox_t")
+        , $wboxBottom = $(".sec_whitebox_b")
+        , speed150 = 150
+        , speed250 = 250
+        , speed300 = 300;
 
     /* window 너비 해상도에 따라 조절 이벤트 */
     var winWdControlEvent = function () {
