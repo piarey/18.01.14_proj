@@ -15,11 +15,11 @@
     <link rel="shortcut icon" href="http://piarey.dothome.co.kr/images/common/favicon.ico">
     <link rel="stylesheet" href="../css/99common.css" />
     <link rel="stylesheet" href="../css/99sub_combine.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" charset="utf-8"></script>
-    <script src="../js/jquery-3.2.1.min.js" charset="utf-8"></script>
-    <script src="../js/jquery-ui.min.js" charset="utf-8"></script>
-    <script src="../js/99common00.js" charset="utf-8"></script>
-    <script src="../js/99sub_combine.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="../js/jquery-ui.min.js"></script>
+    <script src="../js/99common00.js"></script>
+    <script src="../js/99sub_combine.js"></script>
 </head>
 
 <body>
@@ -29,7 +29,21 @@
             <button type="button" id="scrolltop_btn2"><span>중단<br />이동</span></button>
             <button type="button" id="scrolltop_btn3"><span>최하단<br />이동</span></button>
         </div>  
-        <nav id="tit_nav">
+        <header role="banner" id="tit_header">
+            <h1 class="cleartxt_nocont">bib 의 포트폴리오 서브 페이지-보유기술</h1>
+            <div class="tit_whitebox" aria-hidden="true">
+                <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+            </div>
+            <div id="header_sec" class="sub03_tit_header_sec" aria-hidden="true">
+                <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+                <em id="header_sec_h2">보유기술</em>
+                <div class="sec_whitebox_b cleartxt_nocont" aria-hidden="true">아래구분선</div>
+            </div>
+            <div class="tit_whitebox" aria-hidden="true">
+                <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
+            </div>
+        </header>        
+        <nav role="navigation" id="tit_nav">
             <h2 class="cleartxt_nocont">네비게이션</h2>
             <div id="nav_gnb_outer">
                 <ul class="nav_gnb">
@@ -38,10 +52,10 @@
                     <li><a href="03sub00.html">보유기술</a></li>
                     <li><a href="04sub00.html">포트폴리오</a></li>
                     <li><a href="05sub00.html">개인공부정리</a></li>
-                    <li><a href="../index.html" title="홈으로 가기" aria-label="홈으로 가기-현재창에서 이동합니다"><img src="../images/subcommon/headersvg.svg" alt="로고이미지 홈 버튼"></a></li>
+                    <li><a href="../index.html" title="홈으로 가기" aria-label="홈으로 가기-현재창에서 이동합니다"><img src="../images/subcommon/headersvg.svg" alt="이미지-영문 BIB 가 적힌 로고 이미지 입니다"></a></li>
                 </ul>
             </div>
-            <button type="button" class="nav_gnb_mobile_open" title="메뉴열기" aria-hidden="true" aria-label="메뉴열기-메뉴가 열립니다"><span>&#9776;</span></button>
+            <button type="button" class="nav_gnb_mobile_open" title="메뉴열기" aria-label="버튼-모바일 전용 메뉴가 열립니다"><span aria-hidden="true">&#9776;</span></button>
             <!-- 드래거블 제거
             <div class="nav_gnb_tooltip_outer">
                 <div class="nav_gnb_tooltip">
@@ -50,7 +64,7 @@
                 </div>
             </div>-->
         </nav>
-        <nav id="tit_nav_mobile">
+        <nav role="navigation" id="tit_nav_mobile">
             <h2 class="cleartxt_nocont">네비게이션 모바일</h2>
             <ul class="nav_mobile_gnb">
                 <li><a href="01sub00.html"><span class="n_m_g_center">사용기술목록</span></a></li>
@@ -60,23 +74,9 @@
                 <li><a href="05sub00.html"><span class="n_m_g_center">개인공부정리</span></a></li>
                 <li><a href="../index.html"><span class="n_m_g_center">홈으로 가기</span></a></li>
             </ul>
-            <button type="button" class="nav_mobile_cancel" title="메뉴닫기" aria-hidden="true" aria-label="메뉴닫기-메뉴가 닫힙니다"><span>&#43;</span></button>            
+            <button type="button" class="nav_mobile_cancel" title="메뉴닫기" aria-label="버튼-모바일 전용 메뉴가 닫힙니다"><span aria-hidden="true">&#43;</span></button>            
         </nav>
-        <header id="tit_header">
-            <h1 class="cleartxt_nocont">bib 의 포트폴리오 서브 페이지-보유기술</h1>
-            <div class="tit_whitebox">
-                <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
-            </div>
-            <div id="header_sec" class="sub03_tit_header_sec">
-                <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                <h2 id="header_sec_h2">보유기술</h2>
-                <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
-            </div>
-            <div class="tit_whitebox">
-                <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-            </div>
-        </header>
-        <div class="tit_whitebox_main">
+        <div class="tit_whitebox_main" aria-hidden="true">
             <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
         </div>
         <main role="main" id="tit_main" class="sub03_tit_main">
@@ -88,14 +88,14 @@
                         <h4>FRONT-END</h4>
                         <div id="sub03_sec1_cvs1_box" class="sub03_sec1_cvs_common">
                             <canvas id="sub03_sec1_cvs1" width="600" height="300">canvas를 지원하지 않는 브라우저 입니다.</canvas>
-                            <span>고급</span>
-                            <span>중급</span>
-                            <span>초급</span>
-                            <span>100</span>
-                            <span>66</span>
-                            <span>33</span>
-                            <span>0</span>
-                            <span>TOUCH</span>
+                            <span aria-hidden="true">고급</span>
+                            <span aria-hidden="true">중급</span>
+                            <span aria-hidden="true">초급</span>
+                            <span aria-hidden="true">100</span>
+                            <span aria-hidden="true">66</span>
+                            <span aria-hidden="true">33</span>
+                            <span aria-hidden="true">0</span>
+                            <span aria-hidden="true">TOUCH</span>
                             <ol class="sub03_sec1_cvs_common_ol">
                                 <li>웹 표준<span>80</span></li>
                                 <li>웹 접근성<span>33</span></li>
@@ -108,7 +108,7 @@
                         </div>
                         <div id="sub03_sec1_cvs2_box" class="sub03_sec1_cvs_common">
                             <canvas id="sub03_sec1_cvs2" width="600" height="300">canvas를 지원하지 않는 브라우저 입니다.</canvas>
-                            <span>TOUCH</span>
+                            <span aria-hidden="true">TOUCH</span>
                             <ol class="sub03_sec1_cvs_common_ol">
                                 <li>Javascript<span>45</span></li>
                                 <li>Jquery<span>60</span></li>
@@ -142,17 +142,17 @@
                         <h4>BACK-END</h4>
                         <div id="sub03_sec1_cvs3_box" class="sub03_sec1_cvs_common">
                             <canvas id="sub03_sec1_cvs3" width="600" height="600">canvas를 지원하지 않는 브라우저 입니다.</canvas>
-                            <span>Java</span>
-                            <span>JSP</span>
-                            <span>MySQL</span>
-                            <span>MS SQL</span>
-                            <span>Oracle</span>
-                            <span>Spring <br/>Framework</span>
-                            <span>mybatis</span>
-                            <span>0</span>
-                            <span>33</span>
-                            <span>66</span>
-                            <span>100</span>
+                            <span aria-hidden="true">Java</span>
+                            <span aria-hidden="true">JSP</span>
+                            <span aria-hidden="true">MySQL</span>
+                            <span aria-hidden="true">MS SQL</span>
+                            <span aria-hidden="true">Oracle</span>
+                            <span aria-hidden="true">Spring <br/>Framework</span>
+                            <span aria-hidden="true">mybatis</span>
+                            <span aria-hidden="true">0</span>
+                            <span aria-hidden="true">33</span>
+                            <span aria-hidden="true">66</span>
+                            <span aria-hidden="true">100</span>
                         </div>
                         <ol class="ol3">
                             <li>Java<span>42</span></li>
@@ -166,13 +166,13 @@
                         <h4>기타</h4>
                         <div id="sub03_sec1_cvs4_box" class="sub03_sec1_cvs_common">
                             <canvas id="sub03_sec1_cvs4" width="600" height="300">canvas를 지원하지 않는 브라우저 입니다.</canvas>
-                            <span>Photo<br/>shop</span>
-                            <span>Illust<br/>rator</span>
-                            <span>Git</span>
-                            <span>100</span>
-                            <span>66</span>
-                            <span>33</span>
-                            <span>0</span>
+                            <span aria-hidden="true">Photo<br/>shop</span>
+                            <span aria-hidden="true">Illust<br/>rator</span>
+                            <span aria-hidden="true">Git</span>
+                            <span aria-hidden="true">100</span>
+                            <span aria-hidden="true">66</span>
+                            <span aria-hidden="true">33</span>
+                            <span aria-hidden="true">0</span>
                         </div>
                         <ol class="ol4">
                             <li>Photoshop<span>45</span></li>
@@ -197,18 +197,18 @@
                         <ul>
                             <li>MySQL</li>
                             <li>MS SQL</li>
-                            <li>Oracle<span class="tb1_help" aria-hidden="true" aria-label="도움말표시입니다">&#63;<span>버전 : 11g / 12c</span></span></li>
+                            <li>Oracle<span class="tb1_help" aria-label="도움표시-부가적인 설명입니다">&#63;<span>버전 : 11g / 12c</span></span></li>
                             <li>eXERD</li>
-                            <li>Apache Tomcat<span class="tb1_help" aria-hidden="true" aria-label="도움말표시입니다">&#63;<span>버전 : 8.0 / 9.0</span></span></li>
-                            <li>Java JDK<span class="tb1_help" aria-hidden="true" aria-label="도움말표시입니다">&#63;<span>버전 : 1.7</span></span></li>
+                            <li>Apache Tomcat<span class="tb1_help" aria-label="도움표시-부가적인 설명입니다">&#63;<span>버전 : 8.0 / 9.0</span></span></li>
+                            <li>Java JDK<span class="tb1_help" aria-label="도움표시-부가적인 설명입니다">&#63;<span>버전 : 1.7</span></span></li>
                         </ul>
                     </section>
                     <section>
                         <h4>편집기</h4>
                         <ul>
-                            <li>Eclipse<span class="tb1_help" aria-hidden="true" aria-label="도움말표시입니다">&#63;<span>버전 : Lunar / Oxygen</span></span></li>
+                            <li>Eclipse<span class="tb1_help" aria-label="도움표시-부가적인 설명입니다">&#63;<span>버전 : Lunar / Oxygen</span></span></li>
                             <li>EditPlus</li>
-                            <li>Adobe Dreamweaver<span class="tb1_help" aria-hidden="true" aria-label="도움말표시입니다">&#63;<span>버전 : CS6</span></span></li>
+                            <li>Adobe Dreamweaver<span class="tb1_help" aria-label="도움표시-부가적인 설명입니다">&#63;<span>버전 : CS6</span></span></li>
                             <li>Visual Studio Code</li>
                             <li>Sublime Text3</li>
                         </ul>                    
@@ -216,14 +216,14 @@
                     <section>
                         <h4>디자인</h4>
                         <ul>
-                            <li>Adobe Photoshop<span class="tb1_help" aria-hidden="true" aria-label="도움말표시입니다">&#63;<span>버전 : CS6</span></span></li>
-                            <li>Adobe Ilustrator<span class="tb1_help" aria-hidden="true" aria-label="도움말표시입니다">&#63;<span>버전 : CS6</span></span></li>
+                            <li>Adobe Photoshop<span class="tb1_help" aria-label="도움표시-부가적인 설명입니다">&#63;<span>버전 : CS6</span></span></li>
+                            <li>Adobe Ilustrator<span class="tb1_help" aria-label="도움표시-부가적인 설명입니다">&#63;<span>버전 : CS6</span></span></li>
                         </ul>                        
                     </section>
                 </section>
             </article>
         </main>
-        <div class="tit_whitebox_a_common tit_whitebox_aside1">
+        <div class="tit_whitebox_a_common tit_whitebox_aside1" aria-hidden="true">
             <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
         </div>
         <aside id="tit_aside">
@@ -251,7 +251,7 @@
                 </ul>
             </div>
         </aside>
-        <div class="tit_whitebox_a_common tit_whitebox_aside2 etc_footer_margintop">
+        <div class="tit_whitebox_a_common tit_whitebox_aside2 etc_footer_margintop" aria-hidden="true">
             <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
         </div>
         <footer id="tit_footer">
@@ -262,7 +262,7 @@
                         <dt>만든이</dt>
                         <dd>백인범</dd>
                         <dt>연락처</dt>
-                        <dd><input type="text" value="010 7774 8695" id="js_value_ph" title="연락처-010 7774 8695" readonly="readonly" /><button id="footer_btn_copy" type="button" title="연락처 복사하기"><span aria-hidden="true" aria-label="복사하기 표시입니다">&#10063;</span></button></dd>
+                        <dd><input type="text" value="010 7774 8695" id="js_value_ph" title="연락처-010 7774 8695" readonly="readonly" /><button id="footer_btn_copy" type="button" title="연락처 복사하기" aria-label="버튼-누르면 만든이의 연락처가 복사됩니다"><span aria-hidden="true">&#10063;</span></button></dd>
                         <dt>이메일</dt>
                         <dd>bekinbum @ naver.com</dd>                      
                     </dl>
@@ -292,7 +292,7 @@
                         </dd>
                     </dl>
                 </div>
-                <span class="footer_copyright"><em aria-hidden="true" aria-label="저작권표시입니다">&copy;</em> 2018 백인범 All pictures cannot be copied without permission.</span>
+                <span class="footer_copyright"><em aria-label="도움표시-저작권 표시입니다">&copy;</em> 2018 백인범 All pictures cannot be copied without permission.</span>
             </div>
         </footer>
     </div>

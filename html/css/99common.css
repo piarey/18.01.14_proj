@@ -13,7 +13,7 @@ html, body, div, span
 {margin:0; padding:0; box-sizing:border-box;}
 
 /* 사이트 기본 설정 */
-html {font-family:"Nanum Gothic"; letter-spacing:2px; font-weight:400; font-size:16px; color:#2e2e2e; word-break:keep-all;}
+html {letter-spacing:2px; font:400 100%/1em "Nanum Gothic"; color:#2e2e2e; word-break:keep-all;}
 a {text-decoration:none; color:inherit;}
 /*
 a:hover {text-decoration:underline;}*/
@@ -55,7 +55,6 @@ main {display:block;}
 /* 이하 자주쓰는 css */
 .cleartxt_nocont {display:block; overflow:hidden; position:absolute; width:1px; height:1px;}
 .cleartxt_yescont {text-indent:-5000px; overflow:hidden;}
-
 .central_sorting {position:absolute; top:50%;left:50%; transform:translate(-50%, -50%);}
 
 /**/
@@ -77,7 +76,8 @@ body {background-color:#f2f3fa;}
 #tit_outer > .tit_whitebox_aside2 .sec_whitebox_t {border-color:#cc435a;}
 
 /* index는 h3, sub은 h2 메뉴글씨 공통 */
-.main_sec a h3, #header_sec h2 {position:absolute; left:50%;top:50%; transform:translate(-50%, -50%); color:#f2f3fa; letter-spacing:10px; white-space:nowrap; font-size:20px;}
+.main_sec a h3, #header_sec_h2 {position:absolute; left:50%;top:50%; transform:translate(-50%, -50%); color:#f2f3fa; letter-spacing:10px; white-space:nowrap; font-size:1.25rem;}
+#header_sec_h2 {font-family:"Jeju Gothic"; font-weight:bold;}
 
 /* title_aside */
 #tit_aside {z-index:2; background-color:#cc435a;}
@@ -106,10 +106,10 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 #footer_sec {width:1200px; height:auto; margin:0 auto;}
 #footer_sec:after {content:""; display:block; clear:both;}
 
-#footer_sec .footer_tname {display:block; margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #f2f3fa; font-family:"Jeju Gothic"; font-size:24px; font-weight:600; letter-spacing:3px;} 
+#footer_sec .footer_tname {display:block; margin:0 0 5px 0; padding:0 0 5px 0; border-bottom:1px solid #f2f3fa; font-family:"Jeju Gothic"; font-size:1.5rem; font-weight:600; letter-spacing:3px;} 
 
 #footer_sec dl:after {content:""; display:block; clear:both;}
-#footer_sec dt, #footer_sec dd {height:40px; line-height:40px;}
+#footer_sec dt, #footer_sec dd {height:40px; line-height:2.500rem;}
 #footer_sec dt {margin:0 20px 0 0;}
 
 .footer_address {float:left;}
@@ -130,11 +130,11 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 .footer_certify dt {float:left; clear:both;}
 .footer_certify dd {float:left;}
 
-.footer_copyright {float:left; width:100%; margin:70px 0 0 0; clear:both; text-align:center; font-size:12px;}
+.footer_copyright {float:left; width:100%; margin:70px 0 0 0; clear:both; text-align:center; font-size:0.75rem;}
 
 /* */
-#tit_scrolltop_box {position:fixed; z-index:5; width:50px; font-family:"Jeju Gothic"; font-size:12px; color:#f2f3fa; bottom:5%; right:2%; background-color:rgba(52,54,66,0.5); border-radius:10px 0;}
-#tit_scrolltop_box button {padding:5px 0 5px 0; line-height:14px;}
+#tit_scrolltop_box {position:fixed; z-index:5; width:50px; font-family:"Jeju Gothic"; font-size:0.75rem; color:#f2f3fa; bottom:5%; right:2%; background-color:rgba(52,54,66,0.5); border-radius:10px 0;}
+#tit_scrolltop_box button {padding:5px 0 5px 0; line-height:0.875rem;}
 #tit_scrolltop_box button:nth-child(1) {padding:8px 0 5px 0; border-radius:10px 0 0 0;}
 #tit_scrolltop_box button:nth-child(3) {border-radius:0 0 10px 0;}
 #tit_scrolltop_box button:hover {background-color:#4d4f5c;}
@@ -178,11 +178,11 @@ ul#sec_iconbox li:nth-child(6) a:hover {background-position:-40px -200px;}
 
     .sec_whitebox_t {border-top:4vh solid #f2f3fa;}
     .sec_whitebox_b {border-top:4vh solid transparent;}
-    #tit_footer {padding:50px 30px 50px 30px; font-size:14px;}
+    #tit_footer {padding:50px 30px 50px 30px; font-size:0.875rem;}
 
 }
 
 @media only screen and (max-width:320px) {
-    #tit_footer {padding:40px 20px 40px 20px; font-size:12px;}
-    #js_value_ph {width:100%; font-size:10px; letter-spacing:0px;}
+    #tit_footer {padding:40px 20px 40px 20px; font-size:0.75rem;}
+    #js_value_ph {width:100%; font-size:0.625rem; letter-spacing:0px;}
 }

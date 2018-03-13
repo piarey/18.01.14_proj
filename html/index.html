@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="bib" />
     <meta name="description" content=" html5/웹표준/웹접근성 지켜서 만든 포트폴리오 사이트(ie9 이상 지원)" />
-    <meta name="keywords" content="html5, web standard, web accessibility, ie9" />
+    <meta name="keywords" content="HTML5, web standard, web accessibility, ie9" />
     <meta property="og:title" content="bib's pray"/>
     <meta property="og:url" content="http://piarey.dothome.co.kr/" />
     <meta property="og:image" content="http://piarey.dothome.co.kr/images/common/ogimg.jpg"/>
@@ -15,11 +15,11 @@
     <link rel="shortcut icon" href="http://piarey.dothome.co.kr/images/common/favicon.ico" />
     <link rel="stylesheet" href="css/99common.css" />
     <link rel="stylesheet" href="css/00index.css" />
-    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" charset="utf-8"></script>
-    <script src="js/jquery-3.2.1.min.js" charset="utf-8"></script>
-    <script src="js/jquery-ui.min.js" charset="utf-8"></script>
-    <script src="js/99common00.js" charset="utf-8"></script>
-    <script src="js/00index.js" charset="utf-8"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/jquery-ui.min.js"></script>
+    <script src="js/99common00.js"></script>
+    <script src="js/00index.js"></script>
 </head>
 
 <body>
@@ -29,16 +29,16 @@
             <button type="button" id="scrolltop_btn2"><span>중단<br />이동</span></button>
             <button type="button" id="scrolltop_btn3"><span>최하단<br />이동</span></button>
         </div>  
-        <header id="tit_header">
+        <header role="banner" id="tit_header">
             <div class="header_bg_common header_bg1 cleartxt_yescont">의자에 쌓인 눈 배경이미지</div>
             <div class="header_bg_common header_bg2 cleartxt_yescont">아른거리는 반딧불 배경이미지</div>
             <div class="header_svg_outer">
                 <div class="header_svg_inner">
-                    <span title="의자에 쌓인 눈" id="header_bg1_txt" aria-label="의자에 쌓인 눈-배경에 대한 설명입니다"></span>
-                    <span title="아른거리는 반딧불" id="header_bg2_txt" aria-label="아른거리는 반딧불-배경에 대한 설명입니다"></span>
-                    <div id="header_svg_circle1"></div>
-                    <div id="header_svg_circle2"></div>
-                    <object type="image/svg+xml" data="images/common/headersvg.svg" tabindex="-1">해당 기능을 지원하지 않는 브라우저 입니다</object>
+                    <span title="의자에 쌓인 눈" id="header_bg1_txt" aria-hidden="true"></span>
+                    <span title="아른거리는 반딧불" id="header_bg2_txt" aria-hidden="true"></span>
+                    <div id="header_svg_circle1" aria-hidden="true"></div>
+                    <div id="header_svg_circle2" aria-hidden="true"></div>
+                    <object type="image/svg+xml" data="images/common/headersvg.svg" tabindex="-1" aria-label="이미지-영문 BIB 가 적힌 로고 이미지 입니다">해당 기능을 지원하지 않는 브라우저 입니다</object>
                 </div>   
             </div>
             <h1 class="cleartxt_nocont">bib 의 포트폴리오 메인 페이지</h1>
@@ -50,41 +50,41 @@
                 <section class="main_sec">
                     <a href="at_js">
                         <h3>사용기술목록</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                        <div class="sec_whitebox_t cleartxt_nocont" aria-hidden="true">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont" aria-hidden="true">아래구분선</div>
                     </a>
                 </section>
                 <section class="main_sec">
                     <a href="at_js">
                         <h3>자기소개</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                        <div class="sec_whitebox_t cleartxt_nocont" aria-hidden="true">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont" aria-hidden="true">아래구분선</div>
                     </a>
                 </section>
                 <section class="main_sec">
                     <a href="at_js">
                         <h3>보유기술</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                        <div class="sec_whitebox_t cleartxt_nocont" aria-hidden="true">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont" aria-hidden="true">아래구분선</div>
                     </a>
                 </section>
                 <section class="main_sec">
                     <a href="at_js">
                         <h3>포트폴리오</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                        <div class="sec_whitebox_t cleartxt_nocont" aria-hidden="true">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont" aria-hidden="true">아래구분선</div>
                     </a>
                 </section>
                 <section class="main_sec">
                     <a href="at_js">
                         <h3>개인공부정리</h3>
-                        <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
-                        <div class="sec_whitebox_b cleartxt_nocont">아래구분선</div>
+                        <div class="sec_whitebox_t cleartxt_nocont" aria-hidden="true">윗구분선</div>
+                        <div class="sec_whitebox_b cleartxt_nocont" aria-hidden="true">아래구분선</div>
                     </a>
                 </section>
             </article>
         </main>
-        <div class="tit_whitebox_a_common tit_whitebox_aside1">
+        <div class="tit_whitebox_a_common tit_whitebox_aside1" aria-hidden="true">
             <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
         </div>
         <aside id="tit_aside">
@@ -112,7 +112,7 @@
                 </ul>
             </div>
         </aside>
-        <div class="tit_whitebox_a_common tit_whitebox_aside2 etc_footer_margintop">
+        <div class="tit_whitebox_a_common tit_whitebox_aside2 etc_footer_margintop" aria-hidden="true">
             <div class="sec_whitebox_t cleartxt_nocont">윗구분선</div>
         </div>
         <footer id="tit_footer">
@@ -123,7 +123,7 @@
                         <dt>만든이</dt>
                         <dd>백인범</dd>
                         <dt>연락처</dt>
-                        <dd><input type="text" value="010 7774 8695" id="js_value_ph" title="연락처-010 7774 8695" readonly="readonly" /><button id="footer_btn_copy" type="button" title="연락처 복사하기"><span aria-hidden="true" aria-label="복사하기 표시입니다">&#10063;</span></button></dd>
+                        <dd><input type="text" value="010 7774 8695" id="js_value_ph" title="연락처-010 7774 8695" readonly="readonly" /><button id="footer_btn_copy" type="button" title="연락처 복사하기" aria-label="버튼-누르면 만든이의 연락처가 복사됩니다"><span aria-hidden="true">&#10063;</span></button></dd>
                         <dt>이메일</dt>
                         <dd>bekinbum @ naver.com</dd>                      
                     </dl>
@@ -153,7 +153,7 @@
                         </dd>
                     </dl>
                 </div>
-                <span class="footer_copyright"><em aria-hidden="true" aria-label="저작권표시입니다">&copy;</em> 2018 백인범 All pictures cannot be copied without permission.</span>
+                <span class="footer_copyright"><em aria-label="도움표시-저작권 표시입니다">&copy;</em> 2018 백인범 All pictures cannot be copied without permission.</span>
             </div>
         </footer>
     </div>

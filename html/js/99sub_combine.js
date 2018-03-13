@@ -35,6 +35,35 @@ $(document).ready(function () {
     };
     titMainHelpEvnet();
 
+    /* ㅇㅇ */
+    var aa = function () {
+        var thisElement = $(".nav_gnb_mobile_open");
+        var thisElement2 = $(".nav_mobile_cancel");
+        var tabName = ["#tit_scrolltop_box button", "#tit_nav a", "#tit_nav button", "#tit_aside a", "#js_value_ph", "#footer_btn_copy", "#tit_footer a"];
+        var tabNameLength = tabName.length;;
+        var tabNameResult = "";
+
+        var a = function () {
+            for (var i = 0; i < tabNameLength; i++) {
+                if (i == tabNameLength - 1) {
+                    tabNameResult += tabName[i]
+                    return false;
+                };
+                tabNameResult += tabName[i] + ", ";
+            };
+        };
+        a();
+        console.log(tabNameResult);
+        thisElement.on("click", function () {
+            $(tabNameResult).attr("tabindex", -1);
+        });
+
+        thisElement2.on("click", function (){
+            $(tabNameResult).attr("tabindex", 0);
+        })
+    };
+    aa();
+
     /* 각 페이지별로 분리 안시키고 하나에 몰아서 해봄 */
     var headerSecH2 = document.getElementById("header_sec_h2")
         , headerSecH2cont = headerSecH2.innerHTML
