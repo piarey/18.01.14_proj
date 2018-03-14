@@ -35,34 +35,22 @@ $(document).ready(function () {
     };
     titMainHelpEvnet();
 
-    /* ㅇㅇ */
-    var aa = function () {
-        var thisElement = $(".nav_gnb_mobile_open");
-        var thisElement2 = $(".nav_mobile_cancel");
-        var tabName = ["#tit_scrolltop_box button", "#tit_nav a", "#tit_nav button", "#tit_aside a", "#js_value_ph", "#footer_btn_copy", "#tit_footer a"];
-        var tabNameLength = tabName.length;;
-        var tabNameResult = "";
+    /* 18.03.14 일단 이렇게 접근성적으로 막아놓기 */
+    var navAccessibleEvent = function () {
+        var navOpen = $(".nav_gnb_mobile_open");
+        var navCancel = $(".nav_mobile_cancel");
+        var thisElement = $("#tit_scrolltop_box, #tit_header, #tit_nav, #tit_main, #tit_aside, #tit_footer, .tit_whitebox_a_common, .tit_whitebox_main");
 
-        var a = function () {
-            for (var i = 0; i < tabNameLength; i++) {
-                if (i == tabNameLength - 1) {
-                    tabNameResult += tabName[i]
-                    return false;
-                };
-                tabNameResult += tabName[i] + ", ";
-            };
-        };
-        a();
-        console.log(tabNameResult);
-        thisElement.on("click", function () {
-            $(tabNameResult).attr("tabindex", -1);
+        navOpen.on("click", function () {
+            $(thisElement).hide(0);
         });
 
-        thisElement2.on("click", function (){
-            $(tabNameResult).attr("tabindex", 0);
+        navCancel.on("click", function () {
+            $(thisElement).show(0);
         })
     };
-    aa();
+
+    navAccessibleEvent();
 
     /* 각 페이지별로 분리 안시키고 하나에 몰아서 해봄 */
     var headerSecH2 = document.getElementById("header_sec_h2")
